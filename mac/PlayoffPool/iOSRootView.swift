@@ -131,13 +131,23 @@ struct iOSRootView: View {
         if let data = service.data {
             VStack(alignment: .leading, spacing: 4) {
                 Label("\(data.gamesProcessed) games processed", systemImage: "hockey.puck.fill")
+                Label("Data from \(relativeUpdated(data.updatedAt))",
+                      systemImage: "icloud.and.arrow.down")
                 if let t = service.lastRefreshedAt {
-                    Label("Refreshed \(t.formatted(date: .omitted, time: .standard))",
+                    Label("Fetched \(t.formatted(date: .omitted, time: .shortened))",
                           systemImage: "clock")
                 }
             }
             .font(.caption)
         }
+    }
+
+    private func relativeUpdated(_ date: Date) -> String {
+        let f = RelativeDateTimeFormatter()
+        f.unitsStyle = .abbreviated
+        let rel = f.localizedString(for: date, relativeTo: Date())
+        let abs = date.formatted(date: .omitted, time: .shortened)
+        return "\(rel) (\(abs))"
     }
 }
 
