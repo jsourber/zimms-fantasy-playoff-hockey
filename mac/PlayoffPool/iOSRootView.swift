@@ -159,16 +159,20 @@ private struct iOSSettingsSheet: View {
         NavigationStack {
             Form {
                 Section {
-                    TextField("https://raw.githubusercontent.com/.../public/standings.json",
+                    TextField("standings.json URL",
                               text: $service.standingsUrl, axis: .vertical)
                         .textInputAutocapitalization(.never)
                         .autocorrectionDisabled()
                         .lineLimit(3, reservesSpace: true)
                         .font(.footnote.monospaced())
+                    Button("Reset to default") {
+                        service.standingsUrl = StandingsService.defaultStandingsUrl
+                    }
+                    .font(.footnote)
                 } header: {
                     Text("Standings JSON URL")
                 } footer: {
-                    Text("Paste the raw GitHub URL to public/standings.json from your fantasy-hockey repo. The GitHub Action refreshes it every 10 minutes.")
+                    Text("Defaults to Zimm's league feed on GitHub, which auto-refreshes every 10 minutes. Only change this if you know what you're doing.")
                 }
 
                 Section {

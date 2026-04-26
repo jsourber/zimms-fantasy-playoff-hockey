@@ -15,8 +15,10 @@ final class StandingsService: ObservableObject {
         didSet { UserDefaults.standard.set(pythonPath, forKey: "pythonPath") }
     }
     #else
-    /// iOS: URL of the hosted standings.json (e.g. raw.githubusercontent.com/...)
-    @Published var standingsUrl: String = UserDefaults.standard.string(forKey: "standingsUrl") ?? "" {
+    /// iOS: URL of the hosted standings.json. Defaults to the league's GitHub-hosted feed.
+    static let defaultStandingsUrl = "https://raw.githubusercontent.com/jsourber/zimms-fantasy-playoff-hockey/main/public/standings.json"
+
+    @Published var standingsUrl: String = UserDefaults.standard.string(forKey: "standingsUrl") ?? StandingsService.defaultStandingsUrl {
         didSet { UserDefaults.standard.set(standingsUrl, forKey: "standingsUrl") }
     }
     #endif
