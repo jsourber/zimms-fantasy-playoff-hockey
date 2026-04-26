@@ -134,8 +134,24 @@ def daterange(start: date, end: date):
         cur += timedelta(days=1)
 
 
+FINISHED_STATES = ("OFF", "FINAL", "OVER")
+LIVE_STATES = ("LIVE", "CRIT")
+
+
+def is_finished(state: str) -> bool:
+    return state in FINISHED_STATES
+
+
+def is_live(state: str) -> bool:
+    return state in LIVE_STATES
+
+
 def collect_playoff_games(start: date, end: date) -> list[dict]:
-    """Return list of finished playoff games between start and end (inclusive)."""
+    """Return list of playoff games (finished + live) between start and end (inclusive).
+
+    Live games are included so skater goals/assists count in real time.
+    classify_team_result() gates W/OTL/SO/5+G points on game completion.
+    """
     games: dict[int, dict] = {}
     for d in daterange(start, end):
         try:
@@ -147,8 +163,7 @@ def collect_playoff_games(start: date, end: date) -> list[dict]:
             if g.get("gameType") != PLAYOFF_GAME_TYPE:
                 continue
             state = g.get("gameState", "")
-            # OFF/FINAL = official final; OVER = ended but unofficial
-            if state not in ("OFF", "FINAL", "OVER"):
+            if not (is_finished(state) or is_live(state)):
                 continue
             games[g["id"]] = g
     return list(games.values())
@@ -157,7 +172,9 @@ def collect_playoff_games(start: date, end: date) -> list[dict]:
 # ---------- Scoring ----------
 
 def classify_team_result(game: dict, tricode: str) -> tuple[int, list[str]]:
-    """Return (points, reason_list) for a team in a finished game."""
+    """Return (points, reason_list) for a team. Returns (0, []) if game isn't final."""
+    if not is_finished(game.get("gameState", "")):
+        return 0, []
     away = game["awayTeam"]
     home = game["homeTeam"]
     if tricode == away["abbrev"]:
@@ -238,7 +255,9 @@ def cmd_score(args) -> int:
         print(f"Fetching playoff games {start} → {end} ...")
     games = collect_playoff_games(start, end)
     if not args.json:
-        print(f"  found {len(games)} finished playoff game(s)")
+        finished = sum(1 for g in games if is_finished(g.get("gameState", "")))
+        live = len(games) - finished
+        print(f"  found {finished} finished + {live} live playoff game(s)")
 
     # Build all wanted player IDs
     all_skater_ids: set[int] = set()
@@ -257,11 +276,13 @@ def cmd_score(args) -> int:
     team_results: list[tuple[int, str, int, list[str], dict]] = []  # (gameId, tricode, pts, reasons, game)
 
     for g in games:
-        # team results for both teams (we'll filter later by who owns them)
-        for tri in (g["awayTeam"]["abbrev"], g["homeTeam"]["abbrev"]):
-            pts, reasons = classify_team_result(g, tri)
-            team_results.append((g["id"], tri, pts, reasons, g))
-        # skater stats
+        # Team results & game-log entries only for FINISHED games — live game outcomes
+        # are unknown until the buzzer.
+        if is_finished(g.get("gameState", "")):
+            for tri in (g["awayTeam"]["abbrev"], g["homeTeam"]["abbrev"]):
+                pts, reasons = classify_team_result(g, tri)
+                team_results.append((g["id"], tri, pts, reasons, g))
+        # Skater stats accumulate from live + finished games.
         per_game = collect_skater_stats(g["id"], all_skater_ids)
         for pid, line in per_game.items():
             skater_totals[pid]["goals"] += line["goals"]
