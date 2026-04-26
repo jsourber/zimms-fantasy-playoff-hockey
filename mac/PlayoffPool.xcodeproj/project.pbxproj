@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00781F3A56D84967BCB8CC6B /* hero-8478403.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7451D00D43AF7B2DDFA6DDEA /* hero-8478403.jpg */; };
 		0087816203806420F002474A /* headshot-8479420.png in Resources */ = {isa = PBXBuildFile; fileRef = 68C52139DE221B51A35113DB /* headshot-8479420.png */; };
+		0108F86A04EC570DB5C47FCC /* hero-8478403.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7451D00D43AF7B2DDFA6DDEA /* hero-8478403.jpg */; };
 		02A4FEB4283ADB54B96F12A3 /* headshot-8480018.png in Resources */ = {isa = PBXBuildFile; fileRef = EA3B0230640A362C4545B3F8 /* headshot-8480018.png */; };
 		02ECE230747CA301ACD228AF /* headshot-8478178.png in Resources */ = {isa = PBXBuildFile; fileRef = 49845EDADD62E8DB380DB071 /* headshot-8478178.png */; };
 		02EF86505B178F564D9AFC37 /* headshot-8475913.png in Resources */ = {isa = PBXBuildFile; fileRef = 089B2D92B6363D95E2A261D9 /* headshot-8475913.png */; };
@@ -17,60 +19,97 @@
 		085342F567A028BA9792AA17 /* headshot-8480069.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BE4AE05D94268C9E8DE9504 /* headshot-8480069.png */; };
 		0A0A882BE9EE95473C058685 /* headshot-8478402.png in Resources */ = {isa = PBXBuildFile; fileRef = 8291285F0B89E0469E5A5968 /* headshot-8478402.png */; };
 		0B517D0C66321AA77172CCA2 /* headshot-8478483.png in Resources */ = {isa = PBXBuildFile; fileRef = 48839EEDB108EF0FFD88FBBB /* headshot-8478483.png */; };
+		0C0E97049B8F84A8F8597736 /* hero-8480039.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 673F7BB3E502DB980F041939 /* hero-8480039.jpg */; };
 		0F03D7FCA97D06CA70E0B3F8 /* headshot-8480803.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F06114A1BEEACBF05866F67 /* headshot-8480803.png */; };
 		0F6ACE70EB614309D4164FA2 /* PlayoffPoolApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6451D8B3CF7EADEA190384FB /* PlayoffPoolApp.swift */; };
 		1020EFF59F09B74599FFA412 /* headshot-8480027.png in Resources */ = {isa = PBXBuildFile; fileRef = D59B5AF36DBA9C7E8D0B9490 /* headshot-8480027.png */; };
 		11DDFF767F835980E7F4AAE6 /* headshot-8479420.png in Resources */ = {isa = PBXBuildFile; fileRef = 68C52139DE221B51A35113DB /* headshot-8479420.png */; };
 		171AE1A8C09B2CEBD5EB11B0 /* logo-CAR.png in Resources */ = {isa = PBXBuildFile; fileRef = 879B85E2F964A660F2D5C648 /* logo-CAR.png */; };
 		1AFAE3917AECE1F149F722F3 /* headshot-8482093.png in Resources */ = {isa = PBXBuildFile; fileRef = 25C34F2E2BA8B8DDC18AE266 /* headshot-8482093.png */; };
+		1C3DE423CDB5220D26A8783C /* hero-8480018.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9ECB7CC2D3B8871D32E8296C /* hero-8480018.jpg */; };
 		1C671801A410C8BBBE3744D2 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA29CC1B9F72B76833CC9E2B /* TodayView.swift */; };
+		1E0ABFED33BB0FC56FF4F0ED /* hero-8481557.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C3D3E032095BF81419A5F5B /* hero-8481557.jpg */; };
+		208BB78D018A116EA0438B18 /* hero-8475913.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 99ABB082DA6EBF24177422E1 /* hero-8475913.jpg */; };
 		20A82A14BE95F054E1CFB0E1 /* logo-LAK.png in Resources */ = {isa = PBXBuildFile; fileRef = BBEA87511BBEFD36E1076736 /* logo-LAK.png */; };
 		20FF787D6FBED28F748F193F /* headshot-8477949.png in Resources */ = {isa = PBXBuildFile; fileRef = 8835FD65F8352193B1FB3F4E /* headshot-8477949.png */; };
 		28F6BF1557776AA872123721 /* RosterIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D89C42D1E17615D5C6AF699 /* RosterIndex.swift */; };
 		2D44EB11508D8A3C4B9D8F53 /* headshot-8480839.png in Resources */ = {isa = PBXBuildFile; fileRef = 76B564BA2DD1CEA8E34978CB /* headshot-8480839.png */; };
+		2E008066BB47E6A43D8DB470 /* hero-8477404.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B82CA43FF55476939DB45C30 /* hero-8477404.jpg */; };
+		2E83CD10CAF1A0089357B4B7 /* hero-8481540.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A24C3FF3810F0CF5D1F9484F /* hero-8481540.jpg */; };
 		2ED4E60125EAED296FECC6D3 /* headshot-8480839.png in Resources */ = {isa = PBXBuildFile; fileRef = 76B564BA2DD1CEA8E34978CB /* headshot-8480839.png */; };
 		2FB3E7042274D0DA892F943B /* headshot-8478010.png in Resources */ = {isa = PBXBuildFile; fileRef = A755FE7DF03053044F07A988 /* headshot-8478010.png */; };
+		322D0BB2B201604AB478A391 /* hero-8476453.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04D38561DED6DD31F5244B4A /* hero-8476453.jpg */; };
+		3415A284D487DD0556BE4340 /* hero-8477940.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 600B74FEF9C5A37A38C1B444 /* hero-8477940.jpg */; };
 		36D7867D444EC0DFBB469405 /* ManagerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D547AC34BDD76554CCBE8A /* ManagerDetailView.swift */; };
 		37E3FEB45DEA642078DCD67A /* GameLandingCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAECFB1C73AF4A554AFC4DDF /* GameLandingCache.swift */; };
 		37E424CD04E0B2D2C305163C /* headshot-8479343.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B91818A8741AB24ECB0740D /* headshot-8479343.png */; };
 		38509CC728726F74EE0986C2 /* logo-PHI.png in Resources */ = {isa = PBXBuildFile; fileRef = E0C2FE7F36A8F4743E308BFC /* logo-PHI.png */; };
 		3B185874ADA7A67F69C4EF7E /* headshot-8477940.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DC13EFC06CE65020E00C55B /* headshot-8477940.png */; };
 		3BCA9051C736F8AD30AACAC3 /* logo-UTA.png in Resources */ = {isa = PBXBuildFile; fileRef = FD13B0552BD88EC6FBA4E46D /* logo-UTA.png */; };
+		3C6D87CFD05D0BA2ACE07F9F /* hero-8475913.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 99ABB082DA6EBF24177422E1 /* hero-8475913.jpg */; };
 		3CFF48B6E4559D3ADD6A20C7 /* headshot-8481557.png in Resources */ = {isa = PBXBuildFile; fileRef = 582A7F92433F5BAAFF90532F /* headshot-8481557.png */; };
+		3E56FCC9F80B99C4B3C2F7BF /* hero-8478420.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1418ABCC4905EF4EFCD4E897 /* hero-8478420.jpg */; };
+		40D650C6EC0BCBB245020679 /* hero-8478402.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FF5CB33651C1FD710AD3B435 /* hero-8478402.jpg */; };
+		41A1993AFEF6A027BA6E32FB /* hero-8479542.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9802CD6AC4EA2A1929FCF329 /* hero-8479542.jpg */; };
 		43DAC544D6B565658C927F76 /* headshot-8477940.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DC13EFC06CE65020E00C55B /* headshot-8477940.png */; };
 		4676B6DD6ACC96F1109AECAD /* PlatformShim.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF85C41F17D31068F8BDE37F /* PlatformShim.swift */; };
+		48CDB03991435D5DCCAF4159 /* hero-8475754.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 923CB4E1AB8B7215A162CD33 /* hero-8475754.jpg */; };
 		49926D4CD15B1040AA0C471D /* headshot-8478178.png in Resources */ = {isa = PBXBuildFile; fileRef = 49845EDADD62E8DB380DB071 /* headshot-8478178.png */; };
 		49B5772A9A7F101774BFECBB /* LeagueExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F1DB1025760B04712AAF90 /* LeagueExtensions.swift */; };
+		4B84D45C964394274D55ACFA /* hero-8480830.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B686E153969DBC9B7938A00D /* hero-8480830.jpg */; };
 		4C2057104AFE20775C03F95E /* logo-PIT.png in Resources */ = {isa = PBXBuildFile; fileRef = F1A8195F0F60446136FE7CD1 /* logo-PIT.png */; };
 		4F06F80A625F20CCD455FFA8 /* logo-MTL.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A9F65A64D8428409E03CC98 /* logo-MTL.png */; };
+		4FACC0FF07494092E0132E4D /* hero-8475754.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 923CB4E1AB8B7215A162CD33 /* hero-8475754.jpg */; };
 		502D18384CC853C8834CB67D /* logo-EDM.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DE4C8B966C949BF6AFF90C2 /* logo-EDM.png */; };
 		503AE40AB3675908DC599935 /* headshot-8480803.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F06114A1BEEACBF05866F67 /* headshot-8480803.png */; };
+		51F21AA51894EF881EC4C337 /* hero-8477949.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23A1E722BA92080D8C39B4C3 /* hero-8477949.jpg */; };
 		522B1C388B67A37C61425AC7 /* headshot-8476453.png in Resources */ = {isa = PBXBuildFile; fileRef = 41C817F898AA2D09DD6B8270 /* headshot-8476453.png */; };
+		52AF7D817D5113FB8D78468D /* hero-8479420.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F122C5D6B518387AFE031B45 /* hero-8479420.jpg */; };
 		545CDCC91240FD7E1F774C43 /* headshot-8478427.png in Resources */ = {isa = PBXBuildFile; fileRef = A45DD40F99D1C2A6D82C4BA0 /* headshot-8478427.png */; };
 		5A4DBBB2F9E05D36B7F6092E /* TeamRankingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FCFF4EECB81CF692365348 /* TeamRankingsView.swift */; };
+		5AC40B72F42B291E48680D6B /* hero-8478010.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF57FA56402B09AED714E642 /* hero-8478010.jpg */; };
+		5AD32AF99C9A2A7A71785077 /* hero-8477476.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8CCE67DB147C827755CC8DE /* hero-8477476.jpg */; };
+		5C6CAE8048A46103128E317D /* hero-8477934.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3A3AFC9F4D20F74A61A2BDE3 /* hero-8477934.jpg */; };
+		5E1844ECEBD4125992D062DE /* hero-8482093.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7E0BBC59DFDDBF78D8D5A67A /* hero-8482093.jpg */; };
 		5FC7F12299888723E9E1F35B /* headshot-8481557.png in Resources */ = {isa = PBXBuildFile; fileRef = 582A7F92433F5BAAFF90532F /* headshot-8481557.png */; };
 		6010109EA9707CB0952CAB73 /* headshot-8477949.png in Resources */ = {isa = PBXBuildFile; fileRef = 8835FD65F8352193B1FB3F4E /* headshot-8477949.png */; };
+		602229AFA04BE456000F369A /* hero-8479343.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE92203BEA9316320158B482 /* hero-8479343.jpg */; };
 		6031CAC9946FF7819A03B8B6 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA29CC1B9F72B76833CC9E2B /* TodayView.swift */; };
 		6047D5DACDF21ECA4E7273BE /* headshot-8477404.png in Resources */ = {isa = PBXBuildFile; fileRef = 776918266B5A7FE87228E387 /* headshot-8477404.png */; };
+		606696BBE3059AC75A200515 /* hero-8478864.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F2F484BEE1FFA429B7C1C070 /* hero-8478864.jpg */; };
 		60C56778268C2B158AA0B0D0 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = C600E45EC9EBC680184D86F7 /* Models.swift */; };
 		60F1672D352A9A436A4D6421 /* headshot-8485406.png in Resources */ = {isa = PBXBuildFile; fileRef = 32D0756076BA5772763EB183 /* headshot-8485406.png */; };
+		63AFB6A363C57E8F9EEA706B /* hero-8480830.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B686E153969DBC9B7938A00D /* hero-8480830.jpg */; };
 		640F08B55B411942153301E6 /* ManagerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D547AC34BDD76554CCBE8A /* ManagerDetailView.swift */; };
 		641C5118C3BB8620D67C6D35 /* logo-MIN.png in Resources */ = {isa = PBXBuildFile; fileRef = 61E321E7E96916566598B8B6 /* logo-MIN.png */; };
 		65EDE7E8108A59F3EAA8C344 /* rosters.json in Resources */ = {isa = PBXBuildFile; fileRef = 36C599289EDB68D996C95D0B /* rosters.json */; };
+		668DCFEDC7012B06F5F692F6 /* SkaterHeroImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD699AA4A65BB61B9806A921 /* SkaterHeroImage.swift */; };
+		67A397B3C4B225C3AE0A2AF0 /* hero-8481540.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A24C3FF3810F0CF5D1F9484F /* hero-8481540.jpg */; };
 		699129EA87CA02C83CD45E7C /* headshot-8481540.png in Resources */ = {isa = PBXBuildFile; fileRef = FD9415DB466FDF19B14B9629 /* headshot-8481540.png */; };
+		69CBD89874069DA35A0B2EEE /* hero-8482740.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E7AFBB25718BB4A80F632F45 /* hero-8482740.jpg */; };
+		69EA83BF0C2EC503A545C6BA /* hero-8477940.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 600B74FEF9C5A37A38C1B444 /* hero-8477940.jpg */; };
 		6A812AC54386C7B79EBD0E9B /* headshot-8480830.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B5DD721B621348D502858A3 /* headshot-8480830.png */; };
+		6DBF78C6A051DA7B6896C1DF /* hero-8478178.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4F3308AB4E4D28D85C61EE25 /* hero-8478178.jpg */; };
 		6E650A7E92D16E2017F9FFD1 /* headshot-8481540.png in Resources */ = {isa = PBXBuildFile; fileRef = FD9415DB466FDF19B14B9629 /* headshot-8481540.png */; };
 		6FBDD5A88D564B35515115CF /* iOSRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9697C831BDA6DB362534A02E /* iOSRootView.swift */; };
+		700F939C4D0A46B085235A84 /* hero-8478402.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FF5CB33651C1FD710AD3B435 /* hero-8478402.jpg */; };
 		7180D1C2F52C87C43114AD37 /* logo-ANA.png in Resources */ = {isa = PBXBuildFile; fileRef = 888672DBA348DFEC90DA12AB /* logo-ANA.png */; };
+		729925B769FDEFCFEFAEBF60 /* hero-8480803.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 646189771F200C58FC916730 /* hero-8480803.jpg */; };
 		730BD5D4C8030F6F04E2AC87 /* TeamRankingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FCFF4EECB81CF692365348 /* TeamRankingsView.swift */; };
 		734F3802E91C29714ED5F648 /* logo-UTA.png in Resources */ = {isa = PBXBuildFile; fileRef = FD13B0552BD88EC6FBA4E46D /* logo-UTA.png */; };
 		7384A659D465474821075FCC /* logo-EDM.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DE4C8B966C949BF6AFF90C2 /* logo-EDM.png */; };
 		7B9D41AFE0084F4D3580C260 /* headshot-8480027.png in Resources */ = {isa = PBXBuildFile; fileRef = D59B5AF36DBA9C7E8D0B9490 /* headshot-8480027.png */; };
+		7BBCC97490058ECAF3C76E82 /* hero-8479343.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE92203BEA9316320158B482 /* hero-8479343.jpg */; };
 		7BBE9B2F692DDFB3750C0B9F /* RosterIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D89C42D1E17615D5C6AF699 /* RosterIndex.swift */; };
 		7BD4F3C9A465A5BCB4044B04 /* headshot-8477934.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CDE8D41CB67EF0EB6FEA9D1 /* headshot-8477934.png */; };
+		7C4DC8C77095E20996A8342C /* hero-8478010.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF57FA56402B09AED714E642 /* hero-8478010.jpg */; };
 		7F69EC30D955C1214B801A27 /* PlayoffPoolApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6451D8B3CF7EADEA190384FB /* PlayoffPoolApp.swift */; };
+		7F7AAFE16430CD5566E849B6 /* hero-8479420.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F122C5D6B518387AFE031B45 /* hero-8479420.jpg */; };
+		808270EA88B8D3B233CC0CB5 /* hero-8478483.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DEC0686B2CFB8314AECEA777 /* hero-8478483.jpg */; };
 		81BB136F0C95E65815FF69E2 /* headshot-8478420.png in Resources */ = {isa = PBXBuildFile; fileRef = 14D2FDCC9902C235B7E782E4 /* headshot-8478420.png */; };
+		83CAD5C5E10EC980DD8C1EA7 /* hero-8476453.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04D38561DED6DD31F5244B4A /* hero-8476453.jpg */; };
 		8459F5741D3929000AD07045 /* SkaterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F28104B0172759056A68A36 /* SkaterDetailView.swift */; };
+		8535CCF5AFDC0D5F7EB1D28B /* hero-8480039.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 673F7BB3E502DB980F041939 /* hero-8480039.jpg */; };
 		85B87360BD0A062A47061250 /* headshot-8478010.png in Resources */ = {isa = PBXBuildFile; fileRef = A755FE7DF03053044F07A988 /* headshot-8478010.png */; };
 		86124026A143F9ADD18B86BB /* logo-PIT.png in Resources */ = {isa = PBXBuildFile; fileRef = F1A8195F0F60446136FE7CD1 /* logo-PIT.png */; };
 		86763C712447D6A9B308EC1B /* headshot-8477404.png in Resources */ = {isa = PBXBuildFile; fileRef = 776918266B5A7FE87228E387 /* headshot-8477404.png */; };
@@ -80,26 +119,37 @@
 		8AEA90C301869CD2219EAF52 /* logo-COL.png in Resources */ = {isa = PBXBuildFile; fileRef = D7AE25B4B0F10E9C27422306 /* logo-COL.png */; };
 		8BE67BD46EC0C028D52140E6 /* headshot-8480018.png in Resources */ = {isa = PBXBuildFile; fileRef = EA3B0230640A362C4545B3F8 /* headshot-8480018.png */; };
 		8C408225B915044D6E575F78 /* headshot-8475754.png in Resources */ = {isa = PBXBuildFile; fileRef = FF64AC9B39C53A281DF4C297 /* headshot-8475754.png */; };
+		8E407D056FE058588043C927 /* hero-8480069.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8058939F95E54F3522A78821 /* hero-8480069.jpg */; };
 		906D51E932C71EB1451DFF64 /* logo-PHI.png in Resources */ = {isa = PBXBuildFile; fileRef = E0C2FE7F36A8F4743E308BFC /* logo-PHI.png */; };
+		9220FF24DF15F11AF23CE755 /* hero-8480803.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 646189771F200C58FC916730 /* hero-8480803.jpg */; };
 		925FF365CB6E98A64DDAB74F /* logo-COL.png in Resources */ = {isa = PBXBuildFile; fileRef = D7AE25B4B0F10E9C27422306 /* logo-COL.png */; };
 		94CC242EBFFC2909235FB462 /* TeamLogoImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744BAF9369369E9064D89750 /* TeamLogoImage.swift */; };
 		953BFD6E7304EF3C30DC9E0A /* headshot-8475754.png in Resources */ = {isa = PBXBuildFile; fileRef = FF64AC9B39C53A281DF4C297 /* headshot-8475754.png */; };
 		95CC5DC4CE2D29598C09ADCD /* SkaterRankingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B191AD9376EA9F4370EB54 /* SkaterRankingsView.swift */; };
 		95DBF2293F41CC7532C2989E /* headshot-8480069.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BE4AE05D94268C9E8DE9504 /* headshot-8480069.png */; };
 		966C3713C0FC5CCF67B32045 /* NHLAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45074BD59D24DCE90CEE32DA /* NHLAPI.swift */; };
+		975D2BA233FC917C0251B03E /* hero-8478420.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1418ABCC4905EF4EFCD4E897 /* hero-8478420.jpg */; };
 		983D57525BF0A3D4109909F3 /* headshot-8478427.png in Resources */ = {isa = PBXBuildFile; fileRef = A45DD40F99D1C2A6D82C4BA0 /* headshot-8478427.png */; };
 		995E326216088B7DB109E46A /* NHLAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45074BD59D24DCE90CEE32DA /* NHLAPI.swift */; };
+		9AD3A812C8A1C3226A10A7C1 /* hero-8480018.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9ECB7CC2D3B8871D32E8296C /* hero-8480018.jpg */; };
 		9CFB9E596FF9DED53403FC9C /* SkaterHeadshotImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6BB09C3682AD19EAA11421 /* SkaterHeadshotImage.swift */; };
+		9D942F34AA07413961866953 /* hero-8480069.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8058939F95E54F3522A78821 /* hero-8480069.jpg */; };
+		9F9AF640AC3E4550441B6F4D /* hero-8477934.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3A3AFC9F4D20F74A61A2BDE3 /* hero-8477934.jpg */; };
 		A2E1F841CE52B2053DE265F5 /* rosters.json in Resources */ = {isa = PBXBuildFile; fileRef = 36C599289EDB68D996C95D0B /* rosters.json */; };
+		A4C65C637D6027AA41516274 /* hero-8477949.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23A1E722BA92080D8C39B4C3 /* hero-8477949.jpg */; };
+		A678BEB5F4FCDA22F5708DE1 /* hero-8485406.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A98E33A740BD954E758D7B79 /* hero-8485406.jpg */; };
+		A6D408A6AE23A997987525EC /* hero-8480027.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AEFF39E8B43C3714C07F020F /* hero-8480027.jpg */; };
 		A957BAA0D85283ACB7A86232 /* headshot-8477492.png in Resources */ = {isa = PBXBuildFile; fileRef = D6BE2D9DFE1637CFABBD8EAC /* headshot-8477492.png */; };
 		AC3028FFDAAFF769F9969A3B /* ScoringEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6010D09A4D7FEFE965D7C3 /* ScoringEngine.swift */; };
 		ACB250B182478A0725D6E81D /* LeaderboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A313CC129C3E33B3A6CEA03B /* LeaderboardView.swift */; };
 		AD00C19CADBE5C745203AED0 /* headshot-8480039.png in Resources */ = {isa = PBXBuildFile; fileRef = 90C89847EA4920543F24033B /* headshot-8480039.png */; };
 		B144865B85F268F69E4DA99A /* logo-TBL.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A1239F9DEF8144033B0E1FD /* logo-TBL.png */; };
+		B198728A1E930FAF4DEC452C /* hero-8485406.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A98E33A740BD954E758D7B79 /* hero-8485406.jpg */; };
 		B29C38385381019403E95A80 /* logo-DAL.png in Resources */ = {isa = PBXBuildFile; fileRef = 591672C5AAC7A0BC311BE0DC /* logo-DAL.png */; };
 		B794EC52164DB8A7BD5BA884 /* headshot-8478864.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CC7EDA1F26A424A49116D4A /* headshot-8478864.png */; };
 		B8FE35E1F5A78E77179D91F3 /* headshot-8482093.png in Resources */ = {isa = PBXBuildFile; fileRef = 25C34F2E2BA8B8DDC18AE266 /* headshot-8482093.png */; };
 		BB97AE82B9677A4DB9ECBEBF /* headshot-8476453.png in Resources */ = {isa = PBXBuildFile; fileRef = 41C817F898AA2D09DD6B8270 /* headshot-8476453.png */; };
+		BBD5136F1B0A3C13D01B384F /* hero-8478427.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C7DD8BD57D7A67C3A19EB72E /* hero-8478427.jpg */; };
 		BCB8F9A98DBBEA606C2BF22E /* ScoringEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6010D09A4D7FEFE965D7C3 /* ScoringEngine.swift */; };
 		BD9C393DD07A18DB3ED424BF /* headshot-8478403.png in Resources */ = {isa = PBXBuildFile; fileRef = 590DB4B0ECFD8A27EF3F7F09 /* headshot-8478403.png */; };
 		BE7ABB447150AE27ACA7E3CD /* headshot-8477492.png in Resources */ = {isa = PBXBuildFile; fileRef = D6BE2D9DFE1637CFABBD8EAC /* headshot-8477492.png */; };
@@ -109,24 +159,36 @@
 		C157F2A2051AE52D5BD0B779 /* logo-MTL.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A9F65A64D8428409E03CC98 /* logo-MTL.png */; };
 		C16CEBAD6C6177E35EDCA2F4 /* logo-BUF.png in Resources */ = {isa = PBXBuildFile; fileRef = 682694418774AB6CE70AF675 /* logo-BUF.png */; };
 		C195F721DA6C375D5B81DC2F /* LeaderboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A313CC129C3E33B3A6CEA03B /* LeaderboardView.swift */; };
+		C3CFB74016E6B8F09AE5DC29 /* hero-8477492.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 11E2660AB46C95AD5F900184 /* hero-8477492.jpg */; };
+		C46077F1A029886EB4402A2B /* hero-8481557.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C3D3E032095BF81419A5F5B /* hero-8481557.jpg */; };
 		C832DBFF8ED447371686F944 /* GameLandingCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAECFB1C73AF4A554AFC4DDF /* GameLandingCache.swift */; };
 		CBC24A85A6817091DAA09422 /* logo-CAR.png in Resources */ = {isa = PBXBuildFile; fileRef = 879B85E2F964A660F2D5C648 /* logo-CAR.png */; };
+		CED977BC21C160F1F9ADD807 /* hero-8477492.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 11E2660AB46C95AD5F900184 /* hero-8477492.jpg */; };
 		CFB2A9E53EDDFE0B7842CFB3 /* logo-VGK.png in Resources */ = {isa = PBXBuildFile; fileRef = C8619695F7F05A5DF98B315D /* logo-VGK.png */; };
 		D019CC14A29F2845D3584623 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = C600E45EC9EBC680184D86F7 /* Models.swift */; };
 		D079BB9EE6D803E665BBD26A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA2095696D242AA5150C95A9 /* Assets.xcassets */; };
 		D0F30A726CBCBA56D3B7F4D9 /* logo-VGK.png in Resources */ = {isa = PBXBuildFile; fileRef = C8619695F7F05A5DF98B315D /* logo-VGK.png */; };
+		D1F40C9A2CEA04D4D7A162C0 /* hero-8478178.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4F3308AB4E4D28D85C61EE25 /* hero-8478178.jpg */; };
+		D3B9C2450A1A85208A1EEBDB /* hero-8477404.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B82CA43FF55476939DB45C30 /* hero-8477404.jpg */; };
+		D3C02E5634ED608F7E2C4293 /* hero-8478427.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C7DD8BD57D7A67C3A19EB72E /* hero-8478427.jpg */; };
 		D3CB08A8E85A517D2B5C0D16 /* logo-BUF.png in Resources */ = {isa = PBXBuildFile; fileRef = 682694418774AB6CE70AF675 /* logo-BUF.png */; };
+		D4DF5223C7DDF521D37F1EEF /* hero-8480839.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE8A9F5794E1C8A8AB8CDA21 /* hero-8480839.jpg */; };
 		D5CCA26198BE72648C4D400B /* headshot-8485406.png in Resources */ = {isa = PBXBuildFile; fileRef = 32D0756076BA5772763EB183 /* headshot-8485406.png */; };
+		D5E513F540034F235B8D2805 /* SkaterHeroImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD699AA4A65BB61B9806A921 /* SkaterHeroImage.swift */; };
 		D857BC00FDD47801821361E8 /* logo-TBL.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A1239F9DEF8144033B0E1FD /* logo-TBL.png */; };
 		D967F87A1E937AB17DFBA283 /* logo-LAK.png in Resources */ = {isa = PBXBuildFile; fileRef = BBEA87511BBEFD36E1076736 /* logo-LAK.png */; };
 		DA60707CDB13D239E923D017 /* headshot-8478402.png in Resources */ = {isa = PBXBuildFile; fileRef = 8291285F0B89E0469E5A5968 /* headshot-8478402.png */; };
 		DC6DA30FE98623E883568592 /* headshot-8478483.png in Resources */ = {isa = PBXBuildFile; fileRef = 48839EEDB108EF0FFD88FBBB /* headshot-8478483.png */; };
 		DC7C13438675D1C8A2FF9435 /* logo-ANA.png in Resources */ = {isa = PBXBuildFile; fileRef = 888672DBA348DFEC90DA12AB /* logo-ANA.png */; };
 		DD9496B0CD1CB42A036FDA21 /* headshot-8479343.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B91818A8741AB24ECB0740D /* headshot-8479343.png */; };
+		DF5BD871E0D0FA8A22E4F0C0 /* hero-8480839.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE8A9F5794E1C8A8AB8CDA21 /* hero-8480839.jpg */; };
+		DFB3FB350C85E2D0142BF2AC /* hero-8482740.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E7AFBB25718BB4A80F632F45 /* hero-8482740.jpg */; };
+		DFD4AD3F54B6BB58F792718D /* hero-8478483.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DEC0686B2CFB8314AECEA777 /* hero-8478483.jpg */; };
 		DFF366EDCC5794E58B4A4A2A /* TeamLogoImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744BAF9369369E9064D89750 /* TeamLogoImage.swift */; };
 		E16A4F6E1880B63C8022FD6B /* headshot-8482740.png in Resources */ = {isa = PBXBuildFile; fileRef = C1EEA359CB68C7D6E16313C3 /* headshot-8482740.png */; };
 		E2A993E24C2060221F8EA0D8 /* logo-OTT.png in Resources */ = {isa = PBXBuildFile; fileRef = 789372EFC892D8F19426AF4D /* logo-OTT.png */; };
 		E31D4FB4809D05671E49272E /* PlatformShim.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF85C41F17D31068F8BDE37F /* PlatformShim.swift */; };
+		E32F635AF74681A6E879407C /* hero-8482093.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7E0BBC59DFDDBF78D8D5A67A /* hero-8482093.jpg */; };
 		E492632FA66A41F1837AC222 /* logo-BOS.png in Resources */ = {isa = PBXBuildFile; fileRef = A1B4DFDB24272754BDFD7CAC /* logo-BOS.png */; };
 		E537D1A091FC568B1D28EA7C /* headshot-8477476.png in Resources */ = {isa = PBXBuildFile; fileRef = 66FD2EB7339286F4A4EE13F9 /* headshot-8477476.png */; };
 		E5BF10A8430EA1305AD3F540 /* headshot-8482740.png in Resources */ = {isa = PBXBuildFile; fileRef = C1EEA359CB68C7D6E16313C3 /* headshot-8482740.png */; };
@@ -140,22 +202,31 @@
 		F1744EFE6DCE9C86098BB773 /* headshot-8478864.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CC7EDA1F26A424A49116D4A /* headshot-8478864.png */; };
 		F2D99190A01B218E86ED7480 /* StandingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60AA52A176D77E5D136D8CA /* StandingsService.swift */; };
 		F3220BC55DE99A976D33F1A0 /* logo-BOS.png in Resources */ = {isa = PBXBuildFile; fileRef = A1B4DFDB24272754BDFD7CAC /* logo-BOS.png */; };
+		F44CFBC7A3E90782CE827CAF /* hero-8480027.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AEFF39E8B43C3714C07F020F /* hero-8480027.jpg */; };
 		F53B864356AEEDD1E1B48B46 /* SkaterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F28104B0172759056A68A36 /* SkaterDetailView.swift */; };
+		F6383D825BE7C229809D72FE /* hero-8478864.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F2F484BEE1FFA429B7C1C070 /* hero-8478864.jpg */; };
 		FA1E5A2230547AAC67C07B16 /* iOSRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9697C831BDA6DB362534A02E /* iOSRootView.swift */; };
+		FCCD5F2F88DCA895BBFE2A30 /* hero-8477476.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8CCE67DB147C827755CC8DE /* hero-8477476.jpg */; };
+		FE3F2E74E0A637640BCA888C /* hero-8479542.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9802CD6AC4EA2A1929FCF329 /* hero-8479542.jpg */; };
 		FF43789F672005470C371C34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA2095696D242AA5150C95A9 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		00FCFF4EECB81CF692365348 /* TeamRankingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamRankingsView.swift; sourceTree = "<group>"; };
+		04D38561DED6DD31F5244B4A /* hero-8476453.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "hero-8476453.jpg"; sourceTree = "<group>"; };
 		089B2D92B6363D95E2A261D9 /* headshot-8475913.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "headshot-8475913.png"; sourceTree = "<group>"; };
 		0F6010D09A4D7FEFE965D7C3 /* ScoringEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoringEngine.swift; sourceTree = "<group>"; };
+		11E2660AB46C95AD5F900184 /* hero-8477492.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "hero-8477492.jpg"; sourceTree = "<group>"; };
+		1418ABCC4905EF4EFCD4E897 /* hero-8478420.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "hero-8478420.jpg"; sourceTree = "<group>"; };
 		14D2FDCC9902C235B7E782E4 /* headshot-8478420.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "headshot-8478420.png"; sourceTree = "<group>"; };
 		1DC13EFC06CE65020E00C55B /* headshot-8477940.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "headshot-8477940.png"; sourceTree = "<group>"; };
+		23A1E722BA92080D8C39B4C3 /* hero-8477949.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "hero-8477949.jpg"; sourceTree = "<group>"; };
 		25C34F2E2BA8B8DDC18AE266 /* headshot-8482093.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "headshot-8482093.png"; sourceTree = "<group>"; };
 		2A1239F9DEF8144033B0E1FD /* logo-TBL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-TBL.png"; sourceTree = "<group>"; };
 		2A9F65A64D8428409E03CC98 /* logo-MTL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-MTL.png"; sourceTree = "<group>"; };
 		32D0756076BA5772763EB183 /* headshot-8485406.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "headshot-8485406.png"; sourceTree = "<group>"; };
 		36C599289EDB68D996C95D0B /* rosters.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = rosters.json; sourceTree = "<group>"; };
+		3A3AFC9F4D20F74A61A2BDE3 /* hero-8477934.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "hero-8477934.jpg"; sourceTree = "<group>"; };
 		3DE4C8B966C949BF6AFF90C2 /* logo-EDM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-EDM.png"; sourceTree = "<group>"; };
 		41C817F898AA2D09DD6B8270 /* headshot-8476453.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "headshot-8476453.png"; sourceTree = "<group>"; };
 		45074BD59D24DCE90CEE32DA /* NHLAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NHLAPI.swift; sourceTree = "<group>"; };
@@ -163,19 +234,24 @@
 		49845EDADD62E8DB380DB071 /* headshot-8478178.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "headshot-8478178.png"; sourceTree = "<group>"; };
 		4B5DD721B621348D502858A3 /* headshot-8480830.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "headshot-8480830.png"; sourceTree = "<group>"; };
 		4F28104B0172759056A68A36 /* SkaterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkaterDetailView.swift; sourceTree = "<group>"; };
+		4F3308AB4E4D28D85C61EE25 /* hero-8478178.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "hero-8478178.jpg"; sourceTree = "<group>"; };
 		582A7F92433F5BAAFF90532F /* headshot-8481557.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "headshot-8481557.png"; sourceTree = "<group>"; };
 		590DB4B0ECFD8A27EF3F7F09 /* headshot-8478403.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "headshot-8478403.png"; sourceTree = "<group>"; };
 		591672C5AAC7A0BC311BE0DC /* logo-DAL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-DAL.png"; sourceTree = "<group>"; };
+		600B74FEF9C5A37A38C1B444 /* hero-8477940.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "hero-8477940.jpg"; sourceTree = "<group>"; };
 		60F648ADBF0033C36A4FCF78 /* PlayoffPoolIOS.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = PlayoffPoolIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61E321E7E96916566598B8B6 /* logo-MIN.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-MIN.png"; sourceTree = "<group>"; };
 		6451D8B3CF7EADEA190384FB /* PlayoffPoolApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayoffPoolApp.swift; sourceTree = "<group>"; };
+		646189771F200C58FC916730 /* hero-8480803.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "hero-8480803.jpg"; sourceTree = "<group>"; };
 		66FD2EB7339286F4A4EE13F9 /* headshot-8477476.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "headshot-8477476.png"; sourceTree = "<group>"; };
+		673F7BB3E502DB980F041939 /* hero-8480039.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "hero-8480039.jpg"; sourceTree = "<group>"; };
 		682694418774AB6CE70AF675 /* logo-BUF.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-BUF.png"; sourceTree = "<group>"; };
 		68C52139DE221B51A35113DB /* headshot-8479420.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "headshot-8479420.png"; sourceTree = "<group>"; };
 		6AE4C6BD47F197B5E3D53BC0 /* headshot-8479542.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "headshot-8479542.png"; sourceTree = "<group>"; };
 		6E2ACCB2881EFFCB74B5C196 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		6F06114A1BEEACBF05866F67 /* headshot-8480803.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "headshot-8480803.png"; sourceTree = "<group>"; };
 		744BAF9369369E9064D89750 /* TeamLogoImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamLogoImage.swift; sourceTree = "<group>"; };
+		7451D00D43AF7B2DDFA6DDEA /* hero-8478403.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "hero-8478403.jpg"; sourceTree = "<group>"; };
 		76B564BA2DD1CEA8E34978CB /* headshot-8480839.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "headshot-8480839.png"; sourceTree = "<group>"; };
 		776918266B5A7FE87228E387 /* headshot-8477404.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "headshot-8477404.png"; sourceTree = "<group>"; };
 		789372EFC892D8F19426AF4D /* logo-OTT.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-OTT.png"; sourceTree = "<group>"; };
@@ -183,25 +259,43 @@
 		7C6BB09C3682AD19EAA11421 /* SkaterHeadshotImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkaterHeadshotImage.swift; sourceTree = "<group>"; };
 		7CDE8D41CB67EF0EB6FEA9D1 /* headshot-8477934.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "headshot-8477934.png"; sourceTree = "<group>"; };
 		7D89C42D1E17615D5C6AF699 /* RosterIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterIndex.swift; sourceTree = "<group>"; };
+		7E0BBC59DFDDBF78D8D5A67A /* hero-8482093.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "hero-8482093.jpg"; sourceTree = "<group>"; };
+		8058939F95E54F3522A78821 /* hero-8480069.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "hero-8480069.jpg"; sourceTree = "<group>"; };
 		8291285F0B89E0469E5A5968 /* headshot-8478402.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "headshot-8478402.png"; sourceTree = "<group>"; };
 		879B85E2F964A660F2D5C648 /* logo-CAR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-CAR.png"; sourceTree = "<group>"; };
 		8835FD65F8352193B1FB3F4E /* headshot-8477949.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "headshot-8477949.png"; sourceTree = "<group>"; };
 		888672DBA348DFEC90DA12AB /* logo-ANA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-ANA.png"; sourceTree = "<group>"; };
 		8CC7EDA1F26A424A49116D4A /* headshot-8478864.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "headshot-8478864.png"; sourceTree = "<group>"; };
 		90C89847EA4920543F24033B /* headshot-8480039.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "headshot-8480039.png"; sourceTree = "<group>"; };
+		923CB4E1AB8B7215A162CD33 /* hero-8475754.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "hero-8475754.jpg"; sourceTree = "<group>"; };
 		9697C831BDA6DB362534A02E /* iOSRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSRootView.swift; sourceTree = "<group>"; };
+		9802CD6AC4EA2A1929FCF329 /* hero-8479542.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "hero-8479542.jpg"; sourceTree = "<group>"; };
+		99ABB082DA6EBF24177422E1 /* hero-8475913.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "hero-8475913.jpg"; sourceTree = "<group>"; };
 		9B91818A8741AB24ECB0740D /* headshot-8479343.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "headshot-8479343.png"; sourceTree = "<group>"; };
 		9BE4AE05D94268C9E8DE9504 /* headshot-8480069.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "headshot-8480069.png"; sourceTree = "<group>"; };
+		9C3D3E032095BF81419A5F5B /* hero-8481557.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "hero-8481557.jpg"; sourceTree = "<group>"; };
+		9ECB7CC2D3B8871D32E8296C /* hero-8480018.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "hero-8480018.jpg"; sourceTree = "<group>"; };
 		A1B4DFDB24272754BDFD7CAC /* logo-BOS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-BOS.png"; sourceTree = "<group>"; };
+		A24C3FF3810F0CF5D1F9484F /* hero-8481540.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "hero-8481540.jpg"; sourceTree = "<group>"; };
 		A313CC129C3E33B3A6CEA03B /* LeaderboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardView.swift; sourceTree = "<group>"; };
 		A45DD40F99D1C2A6D82C4BA0 /* headshot-8478427.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "headshot-8478427.png"; sourceTree = "<group>"; };
 		A5F1DB1025760B04712AAF90 /* LeagueExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueExtensions.swift; sourceTree = "<group>"; };
 		A755FE7DF03053044F07A988 /* headshot-8478010.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "headshot-8478010.png"; sourceTree = "<group>"; };
 		A85134A1DD3B31EB42385279 /* PlayoffPool.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PlayoffPool.entitlements; sourceTree = "<group>"; };
+		A98E33A740BD954E758D7B79 /* hero-8485406.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "hero-8485406.jpg"; sourceTree = "<group>"; };
+		AE8A9F5794E1C8A8AB8CDA21 /* hero-8480839.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "hero-8480839.jpg"; sourceTree = "<group>"; };
+		AE92203BEA9316320158B482 /* hero-8479343.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "hero-8479343.jpg"; sourceTree = "<group>"; };
+		AEFF39E8B43C3714C07F020F /* hero-8480027.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "hero-8480027.jpg"; sourceTree = "<group>"; };
+		AF57FA56402B09AED714E642 /* hero-8478010.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "hero-8478010.jpg"; sourceTree = "<group>"; };
+		B686E153969DBC9B7938A00D /* hero-8480830.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "hero-8480830.jpg"; sourceTree = "<group>"; };
+		B82CA43FF55476939DB45C30 /* hero-8477404.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "hero-8477404.jpg"; sourceTree = "<group>"; };
+		B8CCE67DB147C827755CC8DE /* hero-8477476.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "hero-8477476.jpg"; sourceTree = "<group>"; };
 		BBEA87511BBEFD36E1076736 /* logo-LAK.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-LAK.png"; sourceTree = "<group>"; };
+		BD699AA4A65BB61B9806A921 /* SkaterHeroImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkaterHeroImage.swift; sourceTree = "<group>"; };
 		C1EEA359CB68C7D6E16313C3 /* headshot-8482740.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "headshot-8482740.png"; sourceTree = "<group>"; };
 		C600E45EC9EBC680184D86F7 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		C60AA52A176D77E5D136D8CA /* StandingsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingsService.swift; sourceTree = "<group>"; };
+		C7DD8BD57D7A67C3A19EB72E /* hero-8478427.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "hero-8478427.jpg"; sourceTree = "<group>"; };
 		C8619695F7F05A5DF98B315D /* logo-VGK.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-VGK.png"; sourceTree = "<group>"; };
 		C9D547AC34BDD76554CCBE8A /* ManagerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerDetailView.swift; sourceTree = "<group>"; };
 		CA2095696D242AA5150C95A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -211,12 +305,17 @@
 		D7AE25B4B0F10E9C27422306 /* logo-COL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-COL.png"; sourceTree = "<group>"; };
 		DA29CC1B9F72B76833CC9E2B /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
 		DA67C9B60335D6E1621B8EB0 /* PlayoffPool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayoffPool.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEC0686B2CFB8314AECEA777 /* hero-8478483.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "hero-8478483.jpg"; sourceTree = "<group>"; };
 		E0C2FE7F36A8F4743E308BFC /* logo-PHI.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-PHI.png"; sourceTree = "<group>"; };
+		E7AFBB25718BB4A80F632F45 /* hero-8482740.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "hero-8482740.jpg"; sourceTree = "<group>"; };
 		EA3B0230640A362C4545B3F8 /* headshot-8480018.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "headshot-8480018.png"; sourceTree = "<group>"; };
 		EAECFB1C73AF4A554AFC4DDF /* GameLandingCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLandingCache.swift; sourceTree = "<group>"; };
+		F122C5D6B518387AFE031B45 /* hero-8479420.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "hero-8479420.jpg"; sourceTree = "<group>"; };
 		F1A8195F0F60446136FE7CD1 /* logo-PIT.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-PIT.png"; sourceTree = "<group>"; };
+		F2F484BEE1FFA429B7C1C070 /* hero-8478864.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "hero-8478864.jpg"; sourceTree = "<group>"; };
 		FD13B0552BD88EC6FBA4E46D /* logo-UTA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-UTA.png"; sourceTree = "<group>"; };
 		FD9415DB466FDF19B14B9629 /* headshot-8481540.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "headshot-8481540.png"; sourceTree = "<group>"; };
+		FF5CB33651C1FD710AD3B435 /* hero-8478402.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "hero-8478402.jpg"; sourceTree = "<group>"; };
 		FF64AC9B39C53A281DF4C297 /* headshot-8475754.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "headshot-8475754.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -283,6 +382,45 @@
 			path = Headshots;
 			sourceTree = "<group>";
 		};
+		45F5173C3F5F43BD2ECFF5E9 /* Heroes */ = {
+			isa = PBXGroup;
+			children = (
+				923CB4E1AB8B7215A162CD33 /* hero-8475754.jpg */,
+				99ABB082DA6EBF24177422E1 /* hero-8475913.jpg */,
+				04D38561DED6DD31F5244B4A /* hero-8476453.jpg */,
+				B82CA43FF55476939DB45C30 /* hero-8477404.jpg */,
+				B8CCE67DB147C827755CC8DE /* hero-8477476.jpg */,
+				11E2660AB46C95AD5F900184 /* hero-8477492.jpg */,
+				3A3AFC9F4D20F74A61A2BDE3 /* hero-8477934.jpg */,
+				600B74FEF9C5A37A38C1B444 /* hero-8477940.jpg */,
+				23A1E722BA92080D8C39B4C3 /* hero-8477949.jpg */,
+				AF57FA56402B09AED714E642 /* hero-8478010.jpg */,
+				4F3308AB4E4D28D85C61EE25 /* hero-8478178.jpg */,
+				FF5CB33651C1FD710AD3B435 /* hero-8478402.jpg */,
+				7451D00D43AF7B2DDFA6DDEA /* hero-8478403.jpg */,
+				1418ABCC4905EF4EFCD4E897 /* hero-8478420.jpg */,
+				C7DD8BD57D7A67C3A19EB72E /* hero-8478427.jpg */,
+				DEC0686B2CFB8314AECEA777 /* hero-8478483.jpg */,
+				F2F484BEE1FFA429B7C1C070 /* hero-8478864.jpg */,
+				AE92203BEA9316320158B482 /* hero-8479343.jpg */,
+				F122C5D6B518387AFE031B45 /* hero-8479420.jpg */,
+				9802CD6AC4EA2A1929FCF329 /* hero-8479542.jpg */,
+				9ECB7CC2D3B8871D32E8296C /* hero-8480018.jpg */,
+				AEFF39E8B43C3714C07F020F /* hero-8480027.jpg */,
+				673F7BB3E502DB980F041939 /* hero-8480039.jpg */,
+				8058939F95E54F3522A78821 /* hero-8480069.jpg */,
+				646189771F200C58FC916730 /* hero-8480803.jpg */,
+				B686E153969DBC9B7938A00D /* hero-8480830.jpg */,
+				AE8A9F5794E1C8A8AB8CDA21 /* hero-8480839.jpg */,
+				A24C3FF3810F0CF5D1F9484F /* hero-8481540.jpg */,
+				9C3D3E032095BF81419A5F5B /* hero-8481557.jpg */,
+				7E0BBC59DFDDBF78D8D5A67A /* hero-8482093.jpg */,
+				E7AFBB25718BB4A80F632F45 /* hero-8482740.jpg */,
+				A98E33A740BD954E758D7B79 /* hero-8485406.jpg */,
+			);
+			path = Heroes;
+			sourceTree = "<group>";
+		};
 		5FB22B16E4A8FAE32758E79C /* PlayoffPool */ = {
 			isa = PBXGroup;
 			children = (
@@ -303,12 +441,14 @@
 				0F6010D09A4D7FEFE965D7C3 /* ScoringEngine.swift */,
 				4F28104B0172759056A68A36 /* SkaterDetailView.swift */,
 				7C6BB09C3682AD19EAA11421 /* SkaterHeadshotImage.swift */,
+				BD699AA4A65BB61B9806A921 /* SkaterHeroImage.swift */,
 				78B191AD9376EA9F4370EB54 /* SkaterRankingsView.swift */,
 				C60AA52A176D77E5D136D8CA /* StandingsService.swift */,
 				744BAF9369369E9064D89750 /* TeamLogoImage.swift */,
 				00FCFF4EECB81CF692365348 /* TeamRankingsView.swift */,
 				DA29CC1B9F72B76833CC9E2B /* TodayView.swift */,
 				1E2024E363B30053ACCCE8DC /* Headshots */,
+				45F5173C3F5F43BD2ECFF5E9 /* Heroes */,
 				165448F2CD73182AAC0EE669 /* Logos */,
 			);
 			path = PlayoffPool;
@@ -442,6 +582,38 @@
 				1AFAE3917AECE1F149F722F3 /* headshot-8482093.png in Resources */,
 				E16A4F6E1880B63C8022FD6B /* headshot-8482740.png in Resources */,
 				D5CCA26198BE72648C4D400B /* headshot-8485406.png in Resources */,
+				4FACC0FF07494092E0132E4D /* hero-8475754.jpg in Resources */,
+				3C6D87CFD05D0BA2ACE07F9F /* hero-8475913.jpg in Resources */,
+				83CAD5C5E10EC980DD8C1EA7 /* hero-8476453.jpg in Resources */,
+				D3B9C2450A1A85208A1EEBDB /* hero-8477404.jpg in Resources */,
+				FCCD5F2F88DCA895BBFE2A30 /* hero-8477476.jpg in Resources */,
+				C3CFB74016E6B8F09AE5DC29 /* hero-8477492.jpg in Resources */,
+				5C6CAE8048A46103128E317D /* hero-8477934.jpg in Resources */,
+				3415A284D487DD0556BE4340 /* hero-8477940.jpg in Resources */,
+				51F21AA51894EF881EC4C337 /* hero-8477949.jpg in Resources */,
+				5AC40B72F42B291E48680D6B /* hero-8478010.jpg in Resources */,
+				D1F40C9A2CEA04D4D7A162C0 /* hero-8478178.jpg in Resources */,
+				700F939C4D0A46B085235A84 /* hero-8478402.jpg in Resources */,
+				00781F3A56D84967BCB8CC6B /* hero-8478403.jpg in Resources */,
+				3E56FCC9F80B99C4B3C2F7BF /* hero-8478420.jpg in Resources */,
+				D3C02E5634ED608F7E2C4293 /* hero-8478427.jpg in Resources */,
+				808270EA88B8D3B233CC0CB5 /* hero-8478483.jpg in Resources */,
+				606696BBE3059AC75A200515 /* hero-8478864.jpg in Resources */,
+				7BBCC97490058ECAF3C76E82 /* hero-8479343.jpg in Resources */,
+				52AF7D817D5113FB8D78468D /* hero-8479420.jpg in Resources */,
+				41A1993AFEF6A027BA6E32FB /* hero-8479542.jpg in Resources */,
+				9AD3A812C8A1C3226A10A7C1 /* hero-8480018.jpg in Resources */,
+				F44CFBC7A3E90782CE827CAF /* hero-8480027.jpg in Resources */,
+				0C0E97049B8F84A8F8597736 /* hero-8480039.jpg in Resources */,
+				9D942F34AA07413961866953 /* hero-8480069.jpg in Resources */,
+				9220FF24DF15F11AF23CE755 /* hero-8480803.jpg in Resources */,
+				63AFB6A363C57E8F9EEA706B /* hero-8480830.jpg in Resources */,
+				DF5BD871E0D0FA8A22E4F0C0 /* hero-8480839.jpg in Resources */,
+				2E83CD10CAF1A0089357B4B7 /* hero-8481540.jpg in Resources */,
+				C46077F1A029886EB4402A2B /* hero-8481557.jpg in Resources */,
+				E32F635AF74681A6E879407C /* hero-8482093.jpg in Resources */,
+				69CBD89874069DA35A0B2EEE /* hero-8482740.jpg in Resources */,
+				A678BEB5F4FCDA22F5708DE1 /* hero-8485406.jpg in Resources */,
 				DC7C13438675D1C8A2FF9435 /* logo-ANA.png in Resources */,
 				F3220BC55DE99A976D33F1A0 /* logo-BOS.png in Resources */,
 				C16CEBAD6C6177E35EDCA2F4 /* logo-BUF.png in Resources */,
@@ -499,6 +671,38 @@
 				B8FE35E1F5A78E77179D91F3 /* headshot-8482093.png in Resources */,
 				E5BF10A8430EA1305AD3F540 /* headshot-8482740.png in Resources */,
 				60F1672D352A9A436A4D6421 /* headshot-8485406.png in Resources */,
+				48CDB03991435D5DCCAF4159 /* hero-8475754.jpg in Resources */,
+				208BB78D018A116EA0438B18 /* hero-8475913.jpg in Resources */,
+				322D0BB2B201604AB478A391 /* hero-8476453.jpg in Resources */,
+				2E008066BB47E6A43D8DB470 /* hero-8477404.jpg in Resources */,
+				5AD32AF99C9A2A7A71785077 /* hero-8477476.jpg in Resources */,
+				CED977BC21C160F1F9ADD807 /* hero-8477492.jpg in Resources */,
+				9F9AF640AC3E4550441B6F4D /* hero-8477934.jpg in Resources */,
+				69EA83BF0C2EC503A545C6BA /* hero-8477940.jpg in Resources */,
+				A4C65C637D6027AA41516274 /* hero-8477949.jpg in Resources */,
+				7C4DC8C77095E20996A8342C /* hero-8478010.jpg in Resources */,
+				6DBF78C6A051DA7B6896C1DF /* hero-8478178.jpg in Resources */,
+				40D650C6EC0BCBB245020679 /* hero-8478402.jpg in Resources */,
+				0108F86A04EC570DB5C47FCC /* hero-8478403.jpg in Resources */,
+				975D2BA233FC917C0251B03E /* hero-8478420.jpg in Resources */,
+				BBD5136F1B0A3C13D01B384F /* hero-8478427.jpg in Resources */,
+				DFD4AD3F54B6BB58F792718D /* hero-8478483.jpg in Resources */,
+				F6383D825BE7C229809D72FE /* hero-8478864.jpg in Resources */,
+				602229AFA04BE456000F369A /* hero-8479343.jpg in Resources */,
+				7F7AAFE16430CD5566E849B6 /* hero-8479420.jpg in Resources */,
+				FE3F2E74E0A637640BCA888C /* hero-8479542.jpg in Resources */,
+				1C3DE423CDB5220D26A8783C /* hero-8480018.jpg in Resources */,
+				A6D408A6AE23A997987525EC /* hero-8480027.jpg in Resources */,
+				8535CCF5AFDC0D5F7EB1D28B /* hero-8480039.jpg in Resources */,
+				8E407D056FE058588043C927 /* hero-8480069.jpg in Resources */,
+				729925B769FDEFCFEFAEBF60 /* hero-8480803.jpg in Resources */,
+				4B84D45C964394274D55ACFA /* hero-8480830.jpg in Resources */,
+				D4DF5223C7DDF521D37F1EEF /* hero-8480839.jpg in Resources */,
+				67A397B3C4B225C3AE0A2AF0 /* hero-8481540.jpg in Resources */,
+				1E0ABFED33BB0FC56FF4F0ED /* hero-8481557.jpg in Resources */,
+				5E1844ECEBD4125992D062DE /* hero-8482093.jpg in Resources */,
+				DFB3FB350C85E2D0142BF2AC /* hero-8482740.jpg in Resources */,
+				B198728A1E930FAF4DEC452C /* hero-8485406.jpg in Resources */,
 				7180D1C2F52C87C43114AD37 /* logo-ANA.png in Resources */,
 				E492632FA66A41F1837AC222 /* logo-BOS.png in Resources */,
 				D3CB08A8E85A517D2B5C0D16 /* logo-BUF.png in Resources */,
@@ -538,6 +742,7 @@
 				AC3028FFDAAFF769F9969A3B /* ScoringEngine.swift in Sources */,
 				F53B864356AEEDD1E1B48B46 /* SkaterDetailView.swift in Sources */,
 				9CFB9E596FF9DED53403FC9C /* SkaterHeadshotImage.swift in Sources */,
+				D5E513F540034F235B8D2805 /* SkaterHeroImage.swift in Sources */,
 				95CC5DC4CE2D29598C09ADCD /* SkaterRankingsView.swift in Sources */,
 				C073A3ED5F4CE960E0C8EAB8 /* StandingsService.swift in Sources */,
 				DFF366EDCC5794E58B4A4A2A /* TeamLogoImage.swift in Sources */,
@@ -563,6 +768,7 @@
 				BCB8F9A98DBBEA606C2BF22E /* ScoringEngine.swift in Sources */,
 				8459F5741D3929000AD07045 /* SkaterDetailView.swift in Sources */,
 				EF4C276C2C6FC78F6C4FC951 /* SkaterHeadshotImage.swift in Sources */,
+				668DCFEDC7012B06F5F692F6 /* SkaterHeroImage.swift in Sources */,
 				07C3CD2D9C323C05A75522B9 /* SkaterRankingsView.swift in Sources */,
 				F2D99190A01B218E86ED7480 /* StandingsService.swift in Sources */,
 				94CC242EBFFC2909235FB462 /* TeamLogoImage.swift in Sources */,

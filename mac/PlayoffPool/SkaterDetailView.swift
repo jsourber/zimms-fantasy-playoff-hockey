@@ -20,22 +20,10 @@ struct SkaterDetailView: View {
 
     private var hero: some View {
         ZStack(alignment: .bottomLeading) {
-            AsyncImage(url: skater.heroUrl) { phase in
-                switch phase {
-                case .success(let img):
-                    img.resizable().scaledToFill()
-                case .failure, .empty:
-                    LinearGradient(
-                        colors: [Color.accentColor.opacity(0.5), Color.accentColor.opacity(0.1)],
-                        startPoint: .topLeading, endPoint: .bottomTrailing
-                    )
-                @unknown default:
-                    EmptyView()
-                }
-            }
-            .frame(height: 240)
-            .frame(maxWidth: .infinity)
-            .clipped()
+            SkaterHeroImage(playerId: skater.playerId, fallbackURL: skater.heroUrl)
+                .frame(height: 240)
+                .frame(maxWidth: .infinity)
+                .clipped()
 
             // dark gradient for text legibility
             LinearGradient(
