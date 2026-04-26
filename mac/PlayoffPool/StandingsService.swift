@@ -14,13 +14,6 @@ final class StandingsService: ObservableObject {
     @Published var pythonPath: String = UserDefaults.standard.string(forKey: "pythonPath") ?? "/usr/bin/python3" {
         didSet { UserDefaults.standard.set(pythonPath, forKey: "pythonPath") }
     }
-    #else
-    /// iOS: URL of the hosted standings.json. Defaults to the league's GitHub-hosted feed.
-    static let defaultStandingsUrl = "https://raw.githubusercontent.com/jsourber/zimms-fantasy-playoff-hockey/main/public/standings.json"
-
-    @Published var standingsUrl: String = UserDefaults.standard.string(forKey: "standingsUrl") ?? StandingsService.defaultStandingsUrl {
-        didSet { UserDefaults.standard.set(standingsUrl, forKey: "standingsUrl") }
-    }
     #endif
 
     @Published var data: StandingsResponse?
@@ -32,11 +25,15 @@ final class StandingsService: ObservableObject {
         isLoading = true
         defer { isLoading = false }
         do {
+            #if os(iOS)
+            data = try await ScoringEngine.compute()
+            #else
             let json = try await fetchJSON()
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
             decoder.dateDecodingStrategy = .iso8601
             data = try decoder.decode(StandingsResponse.self, from: json)
+            #endif
             lastError = nil
             lastRefreshedAt = Date()
         } catch let e as DecodingError {
@@ -50,7 +47,9 @@ final class StandingsService: ObservableObject {
         #if os(macOS)
         return try await runScorer()
         #else
-        return try await fetchFromURL()
+        // iOS path uses native NHL fetching — never goes through JSON fetch.
+        throw NSError(domain: "PlayoffPool", code: 1,
+                      userInfo: [NSLocalizedDescriptionKey: "Use ScoringEngine on iOS"])
         #endif
     }
 
@@ -91,39 +90,6 @@ final class StandingsService: ObservableObject {
                 cont.resume(returning: outData)
             }
         }
-    }
-    #else
-    private func fetchFromURL() async throws -> Data {
-        let urlString = standingsUrl.trimmingCharacters(in: .whitespacesAndNewlines)
-        guard !urlString.isEmpty else {
-            throw NSError(
-                domain: "PlayoffPool",
-                code: 1,
-                userInfo: [NSLocalizedDescriptionKey: "Set the standings.json URL in Settings."]
-            )
-        }
-        // Append a cache-buster so the GitHub raw CDN (max-age=300) and any
-        // intermediate caches don't return a stale snapshot.
-        let bust = Int(Date().timeIntervalSince1970)
-        let separator = urlString.contains("?") ? "&" : "?"
-        guard let url = URL(string: "\(urlString)\(separator)t=\(bust)") else {
-            throw NSError(
-                domain: "PlayoffPool",
-                code: 1,
-                userInfo: [NSLocalizedDescriptionKey: "Invalid standings URL."]
-            )
-        }
-        var req = URLRequest(url: url)
-        req.cachePolicy = .reloadIgnoringLocalCacheData
-        let (data, resp) = try await URLSession.shared.data(for: req)
-        if let http = resp as? HTTPURLResponse, http.statusCode != 200 {
-            throw NSError(
-                domain: "PlayoffPool",
-                code: http.statusCode,
-                userInfo: [NSLocalizedDescriptionKey: "HTTP \(http.statusCode) from standings URL."]
-            )
-        }
-        return data
     }
     #endif
 }

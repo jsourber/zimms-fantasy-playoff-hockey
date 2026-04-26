@@ -151,23 +151,13 @@ struct iOSRootView: View {
         if let data = service.data {
             VStack(alignment: .leading, spacing: 4) {
                 Label("\(data.gamesProcessed) games processed", systemImage: "hockey.puck.fill")
-                Label("Data from \(relativeUpdated(data.updatedAt))",
-                      systemImage: "icloud.and.arrow.down")
                 if let t = service.lastRefreshedAt {
-                    Label("Fetched \(t.formatted(date: .omitted, time: .shortened))",
+                    Label("Refreshed \(t.formatted(date: .omitted, time: .shortened))",
                           systemImage: "clock")
                 }
             }
             .font(.caption)
         }
-    }
-
-    private func relativeUpdated(_ date: Date) -> String {
-        let f = RelativeDateTimeFormatter()
-        f.unitsStyle = .abbreviated
-        let rel = f.localizedString(for: date, relativeTo: Date())
-        let abs = date.formatted(date: .omitted, time: .shortened)
-        return "\(rel) (\(abs))"
     }
 }
 
@@ -179,29 +169,18 @@ private struct iOSSettingsSheet: View {
         NavigationStack {
             Form {
                 Section {
-                    TextField("standings.json URL",
-                              text: $service.standingsUrl, axis: .vertical)
-                        .textInputAutocapitalization(.never)
-                        .autocorrectionDisabled()
-                        .lineLimit(3, reservesSpace: true)
-                        .font(.footnote.monospaced())
-                    Button("Reset to default") {
-                        service.standingsUrl = StandingsService.defaultStandingsUrl
-                    }
-                    .font(.footnote)
-                } header: {
-                    Text("Standings JSON URL")
-                } footer: {
-                    Text("Defaults to Zimm's league feed on GitHub, which auto-refreshes every 10 minutes. Only change this if you know what you're doing.")
-                }
-
-                Section {
                     Button("Refresh Now") {
                         Task {
                             await service.refresh()
                             dismiss()
                         }
                     }
+                    Button("Clear cached player metadata", role: .destructive) {
+                        let dir = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first!
+                        try? FileManager.default.removeItem(at: dir.appendingPathComponent("nhl-player-meta.json"))
+                    }
+                } footer: {
+                    Text("Standings are computed live from the NHL API on each refresh. Player headshots and team info are cached locally to keep refreshes fast.")
                 }
             }
             .navigationTitle("Settings")
