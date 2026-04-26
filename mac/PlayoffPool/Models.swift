@@ -5,6 +5,43 @@ struct StandingsResponse: Codable {
     let playoffStartDate: String
     let gamesProcessed: Int
     let standings: [Manager]
+    let today: TodaySlate?
+}
+
+struct TodaySlate: Codable {
+    let date: String
+    let games: [TodayGame]
+}
+
+struct TodayGame: Codable, Identifiable {
+    let id: Int
+    let state: String?              // FUT/PRE/LIVE/CRIT/OFF/FINAL/OVER/INT
+    let startUtc: String?
+    let period: TodayPeriod?
+    let clock: TodayClock?
+    let away: TodayTeam
+    let home: TodayTeam
+    let seriesTitle: String?
+    let seriesStatus: String?
+}
+
+struct TodayPeriod: Codable {
+    let number: Int?
+    let type: String?  // REG/OT/SO
+}
+
+struct TodayClock: Codable {
+    let timeRemaining: String?
+    let inIntermission: Bool?
+    let running: Bool?
+}
+
+struct TodayTeam: Codable {
+    let tricode: String?
+    let name: String?
+    let logoUrl: URL?
+    let score: Int?
+    let record: String?
 }
 
 struct Manager: Codable, Identifiable {

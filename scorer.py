@@ -325,10 +325,78 @@ def cmd_score(args) -> int:
     standings.sort(key=lambda x: x["total"], reverse=True)
 
     if args.json:
+        # Pull today's playoff slate (live + scheduled + final).
+        today = end
+        try:
+            today_payload = score_for_date(today)
+        except Exception as e:
+            print(f"  warn: failed to fetch today's slate: {e}", file=sys.stderr)
+            today_payload = {"games": []}
+        today_games = []
+        for g in today_payload.get("games", []):
+            if g.get("gameType") != PLAYOFF_GAME_TYPE:
+                continue
+            away = g.get("awayTeam", {})
+            home = g.get("homeTeam", {})
+            pd = g.get("periodDescriptor") or {}
+            clock = g.get("clock") or {}
+            ss = g.get("seriesStatus") or {}
+            series_title = ss.get("seriesTitle") or ""
+            game_no = ss.get("gameNumberOfSeries")
+            if game_no:
+                series_title = f"{series_title} · Game {game_no}".strip(" ·")
+            top = ss.get("topSeedTeamAbbrev")
+            bot = ss.get("bottomSeedTeamAbbrev")
+            tw = ss.get("topSeedWins") or 0
+            bw = ss.get("bottomSeedWins") or 0
+            if top and bot:
+                if tw > bw:
+                    series_status = f"{top} leads {tw}-{bw}"
+                elif bw > tw:
+                    series_status = f"{bot} leads {bw}-{tw}"
+                else:
+                    series_status = f"Tied {tw}-{bw}"
+            else:
+                series_status = ""
+            today_games.append({
+                "id": g.get("id"),
+                "state": g.get("gameState"),  # FUT/PRE/LIVE/CRIT/OFF/FINAL/OVER/INT
+                "start_utc": g.get("startTimeUTC"),
+                "period": {
+                    "number": pd.get("number"),
+                    "type": pd.get("periodType"),
+                } if pd else None,
+                "clock": {
+                    "time_remaining": clock.get("timeRemaining"),
+                    "in_intermission": clock.get("inIntermission", False),
+                    "running": clock.get("running", False),
+                } if clock else None,
+                "away": {
+                    "tricode": away.get("abbrev"),
+                    "name": (away.get("name") or {}).get("default"),
+                    "logo_url": espn_logo_url(away.get("abbrev") or ""),
+                    "score": away.get("score"),
+                    "record": away.get("record"),
+                },
+                "home": {
+                    "tricode": home.get("abbrev"),
+                    "name": (home.get("name") or {}).get("default"),
+                    "logo_url": espn_logo_url(home.get("abbrev") or ""),
+                    "score": home.get("score"),
+                    "record": home.get("record"),
+                },
+                "series_title": series_title,
+                "series_status": series_status,
+            })
+
         out = {
             "updated_at": datetime.utcnow().isoformat(timespec="seconds") + "Z",
             "playoff_start_date": rosters["playoff_start_date"],
             "games_processed": len(games),
+            "today": {
+                "date": today.isoformat(),
+                "games": today_games,
+            },
             "standings": [
                 {
                     "rank": i,

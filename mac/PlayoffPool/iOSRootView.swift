@@ -7,6 +7,9 @@ struct iOSRootView: View {
 
     var body: some View {
         TabView {
+            todayTab
+                .tabItem { Label("Today", systemImage: "hockey.puck.fill") }
+
             standingsTab
                 .tabItem { Label("Standings", systemImage: "trophy.fill") }
 
@@ -19,6 +22,23 @@ struct iOSRootView: View {
         .task { await service.refresh() }
         .sheet(isPresented: $showSettings) {
             iOSSettingsSheet(service: service)
+        }
+    }
+
+    // MARK: - Today tab (live / upcoming / final games)
+
+    private var todayTab: some View {
+        NavigationStack {
+            Group {
+                if service.data != nil {
+                    TodayView(slate: service.data?.today)
+                } else {
+                    loadingOrError
+                }
+            }
+            .navigationTitle("Today")
+            .toolbar { commonToolbar }
+            .refreshable { await service.refresh() }
         }
     }
 
