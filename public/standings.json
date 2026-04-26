@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-26T19:09:30Z",
+  "updated_at": "2026-04-26T19:57:20Z",
   "playoff_start_date": "2026-04-18",
   "games_processed": 27,
   "today": {
@@ -14,8 +14,8 @@
           "type": "REG"
         },
         "clock": {
-          "time_remaining": "20:00",
-          "in_intermission": false,
+          "time_remaining": "06:15",
+          "in_intermission": true,
           "running": false
         },
         "away": {
