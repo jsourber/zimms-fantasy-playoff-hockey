@@ -93,11 +93,22 @@ final class StandingsService: ObservableObject {
     #else
     private func fetchFromURL() async throws -> Data {
         let urlString = standingsUrl.trimmingCharacters(in: .whitespacesAndNewlines)
-        guard !urlString.isEmpty, let url = URL(string: urlString) else {
+        guard !urlString.isEmpty else {
             throw NSError(
                 domain: "PlayoffPool",
                 code: 1,
                 userInfo: [NSLocalizedDescriptionKey: "Set the standings.json URL in Settings."]
+            )
+        }
+        // Append a cache-buster so the GitHub raw CDN (max-age=300) and any
+        // intermediate caches don't return a stale snapshot.
+        let bust = Int(Date().timeIntervalSince1970)
+        let separator = urlString.contains("?") ? "&" : "?"
+        guard let url = URL(string: "\(urlString)\(separator)t=\(bust)") else {
+            throw NSError(
+                domain: "PlayoffPool",
+                code: 1,
+                userInfo: [NSLocalizedDescriptionKey: "Invalid standings URL."]
             )
         }
         var req = URLRequest(url: url)
