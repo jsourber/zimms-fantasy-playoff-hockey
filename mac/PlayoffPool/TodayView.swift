@@ -137,16 +137,7 @@ private struct GameCard: View {
     @ViewBuilder
     private func teamCol(_ t: TodayTeam, alignTrailing: Bool = false) -> some View {
         VStack(alignment: alignTrailing ? .trailing : .leading, spacing: 4) {
-            AsyncImage(url: t.logoUrl) { phase in
-                switch phase {
-                case .success(let img): img.resizable().scaledToFit()
-                case .failure, .empty:
-                    Image(systemName: "shield.fill").resizable().scaledToFit()
-                        .foregroundStyle(.secondary.opacity(0.4))
-                @unknown default: EmptyView()
-                }
-            }
-            .frame(width: 44, height: 44)
+            TeamLogoImage(tricode: t.tricode, fallbackURL: t.logoUrl, size: 44)
 
             Text(t.tricode ?? "?")
                 .font(.subheadline.weight(.bold))

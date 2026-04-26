@@ -194,19 +194,7 @@ struct TeamLogo: View {
     var size: CGFloat = 32
 
     var body: some View {
-        AsyncImage(url: team.logoUrl) { phase in
-            switch phase {
-            case .success(let image):
-                image.resizable().scaledToFit()
-            case .failure, .empty:
-                Image(systemName: "shield.fill")
-                    .resizable().scaledToFit()
-                    .foregroundStyle(.secondary.opacity(0.4))
-            @unknown default:
-                EmptyView()
-            }
-        }
-        .frame(width: size, height: size)
+        TeamLogoImage(tricode: team.tricode, fallbackURL: team.logoUrl, size: size)
     }
 }
 
