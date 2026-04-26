@@ -1,7 +1,104 @@
 {
-  "updated_at": "2026-04-26T16:01:00Z",
+  "updated_at": "2026-04-26T16:50:10Z",
   "playoff_start_date": "2026-04-18",
   "games_processed": 27,
+  "today": {
+    "date": "2026-04-26",
+    "games": [
+      {
+        "id": 2025030114,
+        "state": "FUT",
+        "start_utc": "2026-04-26T18:00:00Z",
+        "period": null,
+        "clock": null,
+        "away": {
+          "tricode": "BUF",
+          "name": "Sabres",
+          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/buf.png",
+          "score": null,
+          "record": "2-1"
+        },
+        "home": {
+          "tricode": "BOS",
+          "name": "Bruins",
+          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/bos.png",
+          "score": null,
+          "record": "1-2"
+        },
+        "series_title": "1st Round \u00b7 Game 4",
+        "series_status": "BUF leads 2-1"
+      },
+      {
+        "id": 2025030154,
+        "state": "FUT",
+        "start_utc": "2026-04-26T20:30:00Z",
+        "period": null,
+        "clock": null,
+        "away": {
+          "tricode": "COL",
+          "name": "Avalanche",
+          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/col.png",
+          "score": null,
+          "record": "3-0"
+        },
+        "home": {
+          "tricode": "LAK",
+          "name": "Kings",
+          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/la.png",
+          "score": null,
+          "record": "0-3"
+        },
+        "series_title": "1st Round \u00b7 Game 4",
+        "series_status": "COL leads 3-0"
+      },
+      {
+        "id": 2025030124,
+        "state": "FUT",
+        "start_utc": "2026-04-26T23:00:00Z",
+        "period": null,
+        "clock": null,
+        "away": {
+          "tricode": "TBL",
+          "name": "Lightning",
+          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/tb.png",
+          "score": null,
+          "record": "1-2"
+        },
+        "home": {
+          "tricode": "MTL",
+          "name": "Canadiens",
+          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/mtl.png",
+          "score": null,
+          "record": "2-1"
+        },
+        "series_title": "1st Round \u00b7 Game 4",
+        "series_status": "MTL leads 2-1"
+      },
+      {
+        "id": 2025030184,
+        "state": "FUT",
+        "start_utc": "2026-04-27T01:30:00Z",
+        "period": null,
+        "clock": null,
+        "away": {
+          "tricode": "EDM",
+          "name": "Oilers",
+          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/edm.png",
+          "score": null,
+          "record": "1-2"
+        },
+        "home": {
+          "tricode": "ANA",
+          "name": "Ducks",
+          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/ana.png",
+          "score": null,
+          "record": "2-1"
+        },
+        "series_title": "1st Round \u00b7 Game 4",
+        "series_status": "ANA leads 2-1"
+      }
+    ]
+  },
   "standings": [
     {
       "rank": 1,
