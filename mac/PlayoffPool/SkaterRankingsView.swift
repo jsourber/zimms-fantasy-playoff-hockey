@@ -1,5 +1,6 @@
 import SwiftUI
 
+#if os(macOS)
 struct SkaterRankingsView: View {
     let skaters: [OwnedSkater]
 
@@ -85,3 +86,112 @@ struct SkaterRankingsView: View {
         (sorted.firstIndex(of: s) ?? 0) + 1
     }
 }
+#else
+// iOS: SwiftUI Table collapses to first column on phones, so use a List.
+
+enum SkaterSort: String, CaseIterable, Identifiable {
+    case points = "Points"
+    case goals  = "Goals"
+    case assists = "Assists"
+    var id: String { rawValue }
+}
+
+struct SkaterRankingsView: View {
+    let skaters: [OwnedSkater]
+    @State private var sort: SkaterSort = .points
+
+    private var sorted: [OwnedSkater] {
+        skaters.sorted { a, b in
+            switch sort {
+            case .points:  return a.skater.points  > b.skater.points
+            case .goals:   return a.skater.goals   > b.skater.goals
+            case .assists: return a.skater.assists > b.skater.assists
+            }
+        }
+    }
+
+    var body: some View {
+        List {
+            Section {
+                Picker("Sort by", selection: $sort) {
+                    ForEach(SkaterSort.allCases) { s in Text(s.rawValue).tag(s) }
+                }
+                .pickerStyle(.segmented)
+                .listRowInsets(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16))
+            }
+            Section {
+                ForEach(Array(sorted.enumerated()), id: \.element.id) { idx, s in
+                    NavigationLink(value: s.skater) {
+                        SkaterRowIOS(rank: idx + 1, owned: s)
+                    }
+                }
+            }
+        }
+        .listStyle(.insetGrouped)
+    }
+}
+
+private struct SkaterRowIOS: View {
+    let rank: Int
+    let owned: OwnedSkater
+
+    var body: some View {
+        HStack(spacing: 10) {
+            Text("\(rank)")
+                .font(.caption.weight(.bold).monospacedDigit())
+                .foregroundStyle(.secondary)
+                .frame(width: 24, alignment: .trailing)
+
+            AsyncImage(url: owned.skater.headshotUrl) { phase in
+                switch phase {
+                case .success(let img): img.resizable().scaledToFill()
+                case .failure, .empty:
+                    Image(systemName: "person.fill").resizable().scaledToFit()
+                        .padding(7).foregroundStyle(.secondary.opacity(0.6))
+                @unknown default: EmptyView()
+                }
+            }
+            .frame(width: 36, height: 36)
+            .background(Color.gray.opacity(0.15))
+            .clipShape(Circle())
+
+            VStack(alignment: .leading, spacing: 2) {
+                Text(owned.skater.name)
+                    .font(.subheadline.weight(.semibold))
+                    .lineLimit(1)
+                HStack(spacing: 4) {
+                    if let t = owned.skater.teamTricode {
+                        Text(t)
+                    }
+                    Text("·")
+                    Text(owned.owner)
+                }
+                .font(.caption)
+                .foregroundStyle(.secondary)
+                .lineLimit(1)
+            }
+
+            Spacer(minLength: 4)
+
+            HStack(spacing: 8) {
+                statCell(label: "G", value: owned.skater.goals,   color: .green)
+                statCell(label: "A", value: owned.skater.assists, color: .blue)
+                statCell(label: "Pts", value: owned.skater.points, color: .primary, bold: true)
+            }
+        }
+        .padding(.vertical, 2)
+    }
+
+    @ViewBuilder
+    private func statCell(label: String, value: Int, color: Color, bold: Bool = false) -> some View {
+        VStack(spacing: 1) {
+            Text("\(value)")
+                .font(bold ? .subheadline.weight(.bold).monospacedDigit()
+                            : .subheadline.weight(value > 0 ? .semibold : .regular).monospacedDigit())
+                .foregroundStyle(value > 0 || bold ? color : .secondary)
+            Text(label).font(.caption2).foregroundStyle(.secondary)
+        }
+        .frame(width: 32)
+    }
+}
+#endif

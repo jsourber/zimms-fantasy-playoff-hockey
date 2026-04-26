@@ -126,33 +126,42 @@ struct LeaderboardRow: View {
     let manager: Manager
 
     var body: some View {
-        HStack(spacing: 14) {
+        HStack(spacing: 12) {
             RankBadge(rank: manager.rank)
 
-            VStack(alignment: .leading, spacing: 6) {
+            VStack(alignment: .leading, spacing: 4) {
                 Text(manager.name)
                     .font(.headline)
-                HStack(spacing: 6) {
+                    .lineLimit(1)
+                HStack(spacing: 4) {
                     ForEach(manager.teams) { t in
-                        TeamLogo(team: t, size: 22)
+                        TeamLogo(team: t, size: 18)
                     }
                     Text(manager.teams.map(\.tricode).joined(separator: " · "))
-                        .font(.caption)
+                        .font(.caption2)
                         .foregroundStyle(.secondary)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.8)
                 }
             }
-            Spacer()
-            VStack(alignment: .trailing, spacing: 2) {
+            .layoutPriority(1)
+
+            Spacer(minLength: 4)
+
+            VStack(alignment: .trailing, spacing: 1) {
                 Text("\(manager.total)")
-                    .font(.system(.title2, design: .rounded).weight(.bold))
+                    .font(.system(.title3, design: .rounded).weight(.bold))
                     .monospacedDigit()
                 Text("T \(manager.teamPts) · S \(manager.skaterPts)")
                     .font(.caption2)
                     .foregroundStyle(.secondary)
                     .monospacedDigit()
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.8)
             }
+            .fixedSize(horizontal: true, vertical: false)
         }
-        .padding(.vertical, 6)
+        .padding(.vertical, 4)
     }
 }
 

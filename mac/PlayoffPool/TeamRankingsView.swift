@@ -1,5 +1,6 @@
 import SwiftUI
 
+#if os(macOS)
 struct TeamRankingsView: View {
     let teams: [OwnedTeam]
 
@@ -79,3 +80,100 @@ struct TeamRankingsView: View {
         (sorted.firstIndex(of: t) ?? 0) + 1
     }
 }
+#else
+enum TeamSort: String, CaseIterable, Identifiable {
+    case points = "Points"
+    case wins   = "Wins"
+    case record = "Record"
+    var id: String { rawValue }
+}
+
+struct TeamRankingsView: View {
+    let teams: [OwnedTeam]
+    @State private var sort: TeamSort = .points
+
+    private var sorted: [OwnedTeam] {
+        teams.sorted { a, b in
+            switch sort {
+            case .points: return a.team.points > b.team.points
+            case .wins:   return a.team.wins   > b.team.wins
+            case .record:
+                if a.team.wins != b.team.wins { return a.team.wins > b.team.wins }
+                return a.team.losses < b.team.losses
+            }
+        }
+    }
+
+    var body: some View {
+        List {
+            Section {
+                Picker("Sort by", selection: $sort) {
+                    ForEach(TeamSort.allCases) { s in Text(s.rawValue).tag(s) }
+                }
+                .pickerStyle(.segmented)
+                .listRowInsets(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16))
+            }
+            Section {
+                ForEach(Array(sorted.enumerated()), id: \.element.id) { idx, t in
+                    TeamRowIOS(rank: idx + 1, owned: t)
+                }
+            }
+        }
+        .listStyle(.insetGrouped)
+    }
+}
+
+private struct TeamRowIOS: View {
+    let rank: Int
+    let owned: OwnedTeam
+
+    var body: some View {
+        HStack(spacing: 10) {
+            Text("\(rank)")
+                .font(.caption.weight(.bold).monospacedDigit())
+                .foregroundStyle(.secondary)
+                .frame(width: 24, alignment: .trailing)
+
+            TeamLogo(team: owned.team, size: 36)
+
+            VStack(alignment: .leading, spacing: 2) {
+                HStack(spacing: 6) {
+                    Text(owned.team.tricode)
+                        .font(.subheadline.weight(.bold))
+                    Text(owned.team.record)
+                        .font(.caption.monospacedDigit())
+                        .foregroundStyle(.secondary)
+                }
+                Text(owned.owner)
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                    .lineLimit(1)
+            }
+
+            Spacer(minLength: 4)
+
+            HStack(spacing: 6) {
+                tag("SO", count: owned.team.shutouts, color: .blue)
+                tag("5+G", count: owned.team.fivePlus, color: .purple)
+                Text("\(owned.team.points)")
+                    .font(.subheadline.weight(.bold).monospacedDigit())
+                    .frame(minWidth: 24)
+            }
+        }
+        .padding(.vertical, 2)
+    }
+
+    @ViewBuilder
+    private func tag(_ label: String, count: Int, color: Color) -> some View {
+        if count > 0 {
+            HStack(spacing: 2) {
+                Text("\(count)").font(.caption2.weight(.bold).monospacedDigit())
+                Text(label).font(.caption2)
+            }
+            .foregroundStyle(color)
+            .padding(.horizontal, 5).padding(.vertical, 2)
+            .background(Capsule().fill(color.opacity(0.12)))
+        }
+    }
+}
+#endif
