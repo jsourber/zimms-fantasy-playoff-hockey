@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-26T22:29:59Z",
+  "updated_at": "2026-04-26T23:22:06Z",
   "playoff_start_date": "2026-04-18",
   "games_processed": 28,
   "today": {
@@ -37,22 +37,22 @@
       },
       {
         "id": 2025030154,
-        "state": "LIVE",
+        "state": "CRIT",
         "start_utc": "2026-04-26T20:30:00Z",
         "period": {
-          "number": 2,
+          "number": 3,
           "type": "REG"
         },
         "clock": {
-          "time_remaining": "16:12",
-          "in_intermission": true,
-          "running": false
+          "time_remaining": "03:59",
+          "in_intermission": false,
+          "running": true
         },
         "away": {
           "tricode": "COL",
           "name": "Avalanche",
           "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/col.png",
-          "score": 2,
+          "score": 5,
           "record": null
         },
         "home": {
@@ -67,23 +67,30 @@
       },
       {
         "id": 2025030124,
-        "state": "PRE",
+        "state": "LIVE",
         "start_utc": "2026-04-26T23:00:00Z",
-        "period": null,
-        "clock": null,
+        "period": {
+          "number": 1,
+          "type": "REG"
+        },
+        "clock": {
+          "time_remaining": "13:56",
+          "in_intermission": false,
+          "running": true
+        },
         "away": {
           "tricode": "TBL",
           "name": "Lightning",
           "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/tb.png",
-          "score": null,
-          "record": "1-2"
+          "score": 0,
+          "record": null
         },
         "home": {
           "tricode": "MTL",
           "name": "Canadiens",
           "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/mtl.png",
-          "score": null,
-          "record": "2-1"
+          "score": 0,
+          "record": null
         },
         "series_title": "1st Round \u00b7 Game 4",
         "series_status": "MTL leads 2-1"
