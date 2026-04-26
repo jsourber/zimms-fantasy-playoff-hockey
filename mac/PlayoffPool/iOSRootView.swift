@@ -31,7 +31,8 @@ struct iOSRootView: View {
         NavigationStack {
             Group {
                 if service.data != nil {
-                    TodayView(slate: service.data?.today)
+                    TodayView(slate: service.data?.today,
+                              roster: RosterIndex(service.data))
                 } else {
                     loadingOrError
                 }

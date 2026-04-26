@@ -11,6 +11,7 @@
 		07C3CD2D9C323C05A75522B9 /* SkaterRankingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B191AD9376EA9F4370EB54 /* SkaterRankingsView.swift */; };
 		0F6ACE70EB614309D4164FA2 /* PlayoffPoolApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6451D8B3CF7EADEA190384FB /* PlayoffPoolApp.swift */; };
 		1C671801A410C8BBBE3744D2 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA29CC1B9F72B76833CC9E2B /* TodayView.swift */; };
+		28F6BF1557776AA872123721 /* RosterIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D89C42D1E17615D5C6AF699 /* RosterIndex.swift */; };
 		36D7867D444EC0DFBB469405 /* ManagerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D547AC34BDD76554CCBE8A /* ManagerDetailView.swift */; };
 		37E3FEB45DEA642078DCD67A /* GameLandingCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAECFB1C73AF4A554AFC4DDF /* GameLandingCache.swift */; };
 		4676B6DD6ACC96F1109AECAD /* PlatformShim.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF85C41F17D31068F8BDE37F /* PlatformShim.swift */; };
@@ -22,6 +23,7 @@
 		65EDE7E8108A59F3EAA8C344 /* rosters.json in Resources */ = {isa = PBXBuildFile; fileRef = 36C599289EDB68D996C95D0B /* rosters.json */; };
 		6FBDD5A88D564B35515115CF /* iOSRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9697C831BDA6DB362534A02E /* iOSRootView.swift */; };
 		730BD5D4C8030F6F04E2AC87 /* TeamRankingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FCFF4EECB81CF692365348 /* TeamRankingsView.swift */; };
+		7BBE9B2F692DDFB3750C0B9F /* RosterIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D89C42D1E17615D5C6AF699 /* RosterIndex.swift */; };
 		7F69EC30D955C1214B801A27 /* PlayoffPoolApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6451D8B3CF7EADEA190384FB /* PlayoffPoolApp.swift */; };
 		8459F5741D3929000AD07045 /* SkaterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F28104B0172759056A68A36 /* SkaterDetailView.swift */; };
 		95CC5DC4CE2D29598C09ADCD /* SkaterRankingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B191AD9376EA9F4370EB54 /* SkaterRankingsView.swift */; };
@@ -53,6 +55,7 @@
 		6451D8B3CF7EADEA190384FB /* PlayoffPoolApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayoffPoolApp.swift; sourceTree = "<group>"; };
 		6E2ACCB2881EFFCB74B5C196 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		78B191AD9376EA9F4370EB54 /* SkaterRankingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkaterRankingsView.swift; sourceTree = "<group>"; };
+		7D89C42D1E17615D5C6AF699 /* RosterIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterIndex.swift; sourceTree = "<group>"; };
 		9697C831BDA6DB362534A02E /* iOSRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSRootView.swift; sourceTree = "<group>"; };
 		A313CC129C3E33B3A6CEA03B /* LeaderboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardView.swift; sourceTree = "<group>"; };
 		A5F1DB1025760B04712AAF90 /* LeagueExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueExtensions.swift; sourceTree = "<group>"; };
@@ -83,6 +86,7 @@
 				CF85C41F17D31068F8BDE37F /* PlatformShim.swift */,
 				A85134A1DD3B31EB42385279 /* PlayoffPool.entitlements */,
 				6451D8B3CF7EADEA190384FB /* PlayoffPoolApp.swift */,
+				7D89C42D1E17615D5C6AF699 /* RosterIndex.swift */,
 				36C599289EDB68D996C95D0B /* rosters.json */,
 				0F6010D09A4D7FEFE965D7C3 /* ScoringEngine.swift */,
 				4F28104B0172759056A68A36 /* SkaterDetailView.swift */,
@@ -218,6 +222,7 @@
 				966C3713C0FC5CCF67B32045 /* NHLAPI.swift in Sources */,
 				E31D4FB4809D05671E49272E /* PlatformShim.swift in Sources */,
 				7F69EC30D955C1214B801A27 /* PlayoffPoolApp.swift in Sources */,
+				28F6BF1557776AA872123721 /* RosterIndex.swift in Sources */,
 				AC3028FFDAAFF769F9969A3B /* ScoringEngine.swift in Sources */,
 				F53B864356AEEDD1E1B48B46 /* SkaterDetailView.swift in Sources */,
 				95CC5DC4CE2D29598C09ADCD /* SkaterRankingsView.swift in Sources */,
@@ -240,6 +245,7 @@
 				995E326216088B7DB109E46A /* NHLAPI.swift in Sources */,
 				4676B6DD6ACC96F1109AECAD /* PlatformShim.swift in Sources */,
 				0F6ACE70EB614309D4164FA2 /* PlayoffPoolApp.swift in Sources */,
+				7BBE9B2F692DDFB3750C0B9F /* RosterIndex.swift in Sources */,
 				BCB8F9A98DBBEA606C2BF22E /* ScoringEngine.swift in Sources */,
 				8459F5741D3929000AD07045 /* SkaterDetailView.swift in Sources */,
 				07C3CD2D9C323C05A75522B9 /* SkaterRankingsView.swift in Sources */,

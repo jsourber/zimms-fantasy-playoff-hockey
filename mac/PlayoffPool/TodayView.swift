@@ -3,6 +3,7 @@ import SwiftUI
 
 struct TodayView: View {
     let slate: TodaySlate?
+    let roster: RosterIndex
     @StateObject private var landings = GameLandingCache()
 
     var body: some View {
@@ -15,17 +16,17 @@ struct TodayView: View {
 
                     if !liveGames.isEmpty {
                         Section(header: sectionHeader("Live", color: .red, pulsing: true)) {
-                            ForEach(liveGames) { GameCard(game: $0).environmentObject(landings) }
+                            ForEach(liveGames) { GameCard(game: $0, roster: roster).environmentObject(landings) }
                         }
                     }
                     if !upcoming.isEmpty {
                         Section(header: sectionHeader("Upcoming", color: .secondary)) {
-                            ForEach(upcoming) { GameCard(game: $0).environmentObject(landings) }
+                            ForEach(upcoming) { GameCard(game: $0, roster: roster).environmentObject(landings) }
                         }
                     }
                     if !finals.isEmpty {
                         Section(header: sectionHeader("Final", color: .secondary)) {
-                            ForEach(finals) { GameCard(game: $0).environmentObject(landings) }
+                            ForEach(finals) { GameCard(game: $0, roster: roster).environmentObject(landings) }
                         }
                     }
                 }
@@ -73,6 +74,7 @@ private struct PulseModifier: ViewModifier {
 
 private struct GameCard: View {
     let game: TodayGame
+    let roster: RosterIndex
     @EnvironmentObject var landings: GameLandingCache
 
     var body: some View {
@@ -99,6 +101,23 @@ private struct GameCard: View {
                 teamCol(game.home, alignTrailing: true)
             }
 
+            // owner annotations under team row
+            if roster.owner(forTeam: game.away.tricode) != nil || roster.owner(forTeam: game.home.tricode) != nil {
+                HStack(spacing: 8) {
+                    if let o = roster.owner(forTeam: game.away.tricode) {
+                        OwnerBadge(name: o, color: roster.color(for: o))
+                    } else {
+                        Color.clear.frame(width: 1, height: 1)
+                    }
+                    Spacer()
+                    if let o = roster.owner(forTeam: game.home.tricode) {
+                        OwnerBadge(name: o, color: roster.color(for: o))
+                    } else {
+                        Color.clear.frame(width: 1, height: 1)
+                    }
+                }
+            }
+
             if let s = game.seriesStatus, !s.isEmpty {
                 Text(s)
                     .font(.caption2)
@@ -108,7 +127,7 @@ private struct GameCard: View {
 
             // scoring summary (only fetch for live or final)
             if game.isLive || game.isFinal {
-                ScoringSummaryView(gameId: game.id, isFinal: game.isFinal)
+                ScoringSummaryView(gameId: game.id, isFinal: game.isFinal, roster: roster)
                     .environmentObject(landings)
             }
         }
@@ -216,6 +235,7 @@ private struct GameCard: View {
 private struct ScoringSummaryView: View {
     let gameId: Int
     let isFinal: Bool
+    let roster: RosterIndex
     @EnvironmentObject var landings: GameLandingCache
 
     var body: some View {
@@ -237,7 +257,7 @@ private struct ScoringSummaryView: View {
                                     .font(.caption2.weight(.bold))
                                     .foregroundStyle(.secondary)
                                 ForEach(p.goals) { g in
-                                    GoalRowView(goal: g)
+                                    GoalRowView(goal: g, roster: roster)
                                 }
                             }
                         }
@@ -259,21 +279,37 @@ private struct ScoringSummaryView: View {
 
 private struct GoalRowView: View {
     let goal: GoalView
+    let roster: RosterIndex
 
     var body: some View {
-        HStack(alignment: .top, spacing: 8) {
-            // team tag
-            Text(goal.team)
-                .font(.caption2.weight(.bold))
-                .foregroundStyle(.white)
-                .padding(.horizontal, 5).padding(.vertical, 1)
-                .background(Capsule().fill(Color.accentColor))
-                .frame(minWidth: 36)
+        let scorerOwner = roster.owner(forPlayer: goal.scorerId)
+        let teamOwner = roster.owner(forTeam: goal.team)
+        let teamColor = roster.color(for: teamOwner)
 
-            VStack(alignment: .leading, spacing: 1) {
+        HStack(alignment: .top, spacing: 8) {
+            // team tag — colored by owner if rostered
+            VStack(spacing: 1) {
+                Text(goal.team)
+                    .font(.caption2.weight(.bold))
+                    .foregroundStyle(.white)
+                    .padding(.horizontal, 6).padding(.vertical, 2)
+                    .background(Capsule().fill(teamOwner != nil ? teamColor : Color.secondary))
+                    .frame(minWidth: 38)
+                if let o = teamOwner {
+                    Text(o)
+                        .font(.system(size: 9).weight(.semibold))
+                        .foregroundStyle(teamColor)
+                        .lineLimit(1)
+                }
+            }
+
+            VStack(alignment: .leading, spacing: 2) {
+                // scorer line
                 HStack(spacing: 6) {
-                    Text(goal.scorer)
-                        .font(.caption.weight(.semibold))
+                    PersonTag(name: goal.scorer,
+                              owner: scorerOwner,
+                              ownerColor: roster.color(for: scorerOwner),
+                              isScorer: true)
                     if let s = goal.strength {
                         Text(s)
                             .font(.caption2.weight(.bold))
@@ -285,10 +321,13 @@ private struct GoalRowView: View {
                             .foregroundStyle(.purple)
                     }
                 }
+                // assists line
                 if !goal.assists.isEmpty {
-                    Text("from " + goal.assists.joined(separator: ", "))
-                        .font(.caption2)
-                        .foregroundStyle(.secondary)
+                    let parts = goal.assists.map { a -> (String, String?, Color) in
+                        let o = roster.owner(forPlayer: a.id)
+                        return (a.name, o, roster.color(for: o))
+                    }
+                    AssistsLine(parts: parts)
                 } else {
                     Text("unassisted")
                         .font(.caption2)
@@ -306,7 +345,7 @@ private struct GoalRowView: View {
                     .foregroundStyle(.secondary)
             }
         }
-        .padding(.vertical, 2)
+        .padding(.vertical, 3)
     }
 
     private func modifierLabel(_ m: String) -> String {
@@ -316,6 +355,67 @@ private struct GoalRowView: View {
         case "own-goal": return "OG"
         default: return m.uppercased()
         }
+    }
+}
+
+/// Inline name + owner badge (highlighted background when the player is on someone's roster).
+private struct PersonTag: View {
+    let name: String
+    let owner: String?
+    let ownerColor: Color
+    let isScorer: Bool
+
+    var body: some View {
+        HStack(spacing: 3) {
+            Text(name)
+                .font(isScorer ? .caption.weight(.semibold) : .caption2)
+                .foregroundStyle(owner != nil ? ownerColor : .primary)
+            if let o = owner {
+                Text(o)
+                    .font(.system(size: 9).weight(.bold))
+                    .foregroundStyle(.white)
+                    .padding(.horizontal, 4).padding(.vertical, 1)
+                    .background(Capsule().fill(ownerColor))
+            }
+        }
+    }
+}
+
+private struct AssistsLine: View {
+    /// (name, owner?, ownerColor)
+    let parts: [(String, String?, Color)]
+
+    var body: some View {
+        HStack(spacing: 3) {
+            Text("from")
+                .font(.caption2)
+                .foregroundStyle(.secondary)
+            ForEach(0..<parts.count, id: \.self) { i in
+                let (name, owner, color) = parts[i]
+                PersonTag(name: name, owner: owner, ownerColor: color, isScorer: false)
+                if i < parts.count - 1 {
+                    Text(",")
+                        .font(.caption2)
+                        .foregroundStyle(.secondary)
+                }
+            }
+        }
+    }
+}
+
+private struct OwnerBadge: View {
+    let name: String
+    let color: Color
+
+    var body: some View {
+        HStack(spacing: 4) {
+            Circle().fill(color).frame(width: 6, height: 6)
+            Text(name)
+                .font(.caption2.weight(.semibold))
+                .foregroundStyle(color)
+        }
+        .padding(.horizontal, 7).padding(.vertical, 2)
+        .background(Capsule().fill(color.opacity(0.12)))
     }
 }
 

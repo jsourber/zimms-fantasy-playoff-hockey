@@ -13,13 +13,19 @@ struct ScoringPeriodView: Identifiable {
 struct GoalView: Identifiable {
     let id: Int          // index within game
     let scorer: String
-    let assists: [String]
+    let scorerId: Int
+    let assists: [GoalAssistView]
     let team: String
     let timeInPeriod: String
     let strength: String?     // "PP" | "SH" | nil for even
     let modifier: String?     // "EN" for empty-net, etc.
     let awayScore: Int
     let homeScore: Int
+}
+
+struct GoalAssistView: Identifiable {
+    let id: Int          // playerId
+    let name: String
 }
 
 @MainActor
@@ -56,7 +62,10 @@ final class GameLandingCache: ObservableObject {
                         GoalView(
                             id: n * 1000 + gi,
                             scorer: g.name?.default ?? "?",
-                            assists: (g.assists ?? []).compactMap { $0.name?.default },
+                            scorerId: g.playerId,
+                            assists: (g.assists ?? []).map { a in
+                                GoalAssistView(id: a.playerId, name: a.name?.default ?? "?")
+                            },
                             team: g.teamAbbrev?.default ?? "",
                             timeInPeriod: g.timeInPeriod ?? "",
                             strength: (g.strength ?? "ev").lowercased() == "ev" ? nil : (g.strength ?? "").uppercased(),
