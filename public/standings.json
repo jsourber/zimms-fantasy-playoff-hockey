@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-26T17:57:48Z",
+  "updated_at": "2026-04-26T19:09:30Z",
   "playoff_start_date": "2026-04-18",
   "games_processed": 27,
   "today": {
@@ -7,23 +7,30 @@
     "games": [
       {
         "id": 2025030114,
-        "state": "PRE",
+        "state": "LIVE",
         "start_utc": "2026-04-26T18:00:00Z",
-        "period": null,
-        "clock": null,
+        "period": {
+          "number": 2,
+          "type": "REG"
+        },
+        "clock": {
+          "time_remaining": "20:00",
+          "in_intermission": false,
+          "running": false
+        },
         "away": {
           "tricode": "BUF",
           "name": "Sabres",
           "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/buf.png",
-          "score": null,
-          "record": "2-1"
+          "score": 4,
+          "record": null
         },
         "home": {
           "tricode": "BOS",
           "name": "Bruins",
           "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/bos.png",
-          "score": null,
-          "record": "1-2"
+          "score": 0,
+          "record": null
         },
         "series_title": "1st Round \u00b7 Game 4",
         "series_status": "BUF leads 2-1"
