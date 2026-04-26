@@ -105,8 +105,10 @@ struct ScoringEngine {
                 if dStr == todayStr {
                     todayGames = playoffGames
                 }
-                let finished = playoffGames.filter { isFinished($0.gameState) }
-                allGames.append(contentsOf: finished)
+                // Include LIVE games too — skater goals/assists count in real time.
+                // (Team result classification still gates W/OTL/SO/5+G on game completion.)
+                let scorable = playoffGames.filter { isFinished($0.gameState) || isLive($0.gameState) }
+                allGames.append(contentsOf: scorable)
             } catch {
                 // Soft-fail individual days
             }
@@ -140,10 +142,16 @@ struct ScoringEngine {
         var skaterTotals: [Int: SkaterAccum] = [:]
 
         for game in allGames {
-            for tri in [game.awayTeam.abbrev, game.homeTeam.abbrev] {
-                let (pts, reasons) = classifyTeamResult(game: game, tricode: tri)
-                teamResults.append(TeamResult(gameId: game.id, tri: tri, pts: pts, reasons: reasons, game: game))
+            // Team points + game-log entries only get built for FINISHED games.
+            // Live games' team result is unknown until the buzzer.
+            if isFinished(game.gameState) {
+                for tri in [game.awayTeam.abbrev, game.homeTeam.abbrev] {
+                    let (pts, reasons) = classifyTeamResult(game: game, tricode: tri)
+                    teamResults.append(TeamResult(gameId: game.id, tri: tri, pts: pts, reasons: reasons, game: game))
+                }
             }
+            // Skater stats accumulate from all scorable games (live + finished),
+            // so a goal scored in a live game updates standings immediately.
             do {
                 let box: NHLBoxscore = try await NHLAPI.getJSON("gamecenter/\(game.id)/boxscore")
                 addSkaterStats(from: box, game: game, wanted: allSkaterIds, into: &skaterTotals)
@@ -254,6 +262,13 @@ struct ScoringEngine {
         }
     }
 
+    private static func isLive(_ state: String?) -> Bool {
+        switch (state ?? "").uppercased() {
+        case "LIVE", "CRIT": return true
+        default: return false
+        }
+    }
+
     private static func parseDate(_ s: String) -> Date {
         let f = DateFormatter()
         f.calendar = Calendar(identifier: .gregorian)
@@ -287,6 +302,8 @@ struct ScoringEngine {
     }
 
     private static func classifyTeamResult(game g: NHLScoreGame, tricode tri: String) -> (Int, [String]) {
+        // Team points only count for finished games; live games' final result is unknown.
+        guard isFinished(g.gameState) else { return (0, []) }
         let (mine, opp) = (g.awayTeam.abbrev == tri) ? (g.awayTeam, g.homeTeam)
                        : (g.homeTeam.abbrev == tri) ? (g.homeTeam, g.awayTeam)
                        : (g.awayTeam, g.homeTeam)

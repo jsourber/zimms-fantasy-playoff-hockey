@@ -89,7 +89,7 @@
 		45074BD59D24DCE90CEE32DA /* NHLAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NHLAPI.swift; sourceTree = "<group>"; };
 		4F28104B0172759056A68A36 /* SkaterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkaterDetailView.swift; sourceTree = "<group>"; };
 		591672C5AAC7A0BC311BE0DC /* logo-DAL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-DAL.png"; sourceTree = "<group>"; };
-		60F648ADBF0033C36A4FCF78 /* PlayoffPoolIOS.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = PlayoffPoolIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		60F648ADBF0033C36A4FCF78 /* PlayoffPool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayoffPool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61E321E7E96916566598B8B6 /* logo-MIN.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-MIN.png"; sourceTree = "<group>"; };
 		6451D8B3CF7EADEA190384FB /* PlayoffPoolApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayoffPoolApp.swift; sourceTree = "<group>"; };
 		682694418774AB6CE70AF675 /* logo-BUF.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-BUF.png"; sourceTree = "<group>"; };
@@ -178,7 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				DA67C9B60335D6E1621B8EB0 /* PlayoffPool.app */,
-				60F648ADBF0033C36A4FCF78 /* PlayoffPoolIOS.app */,
+				60F648ADBF0033C36A4FCF78 /* PlayoffPool.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -227,7 +227,7 @@
 			packageProductDependencies = (
 			);
 			productName = PlayoffPoolIOS;
-			productReference = 60F648ADBF0033C36A4FCF78 /* PlayoffPoolIOS.app */;
+			productReference = 60F648ADBF0033C36A4FCF78 /* PlayoffPool.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -498,6 +498,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KYC26745RW;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = PlayoffPoolIOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -554,6 +555,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KYC26745RW;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = PlayoffPoolIOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
