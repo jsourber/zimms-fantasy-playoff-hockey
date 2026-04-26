@@ -12,6 +12,7 @@
 		0F6ACE70EB614309D4164FA2 /* PlayoffPoolApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6451D8B3CF7EADEA190384FB /* PlayoffPoolApp.swift */; };
 		1C671801A410C8BBBE3744D2 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA29CC1B9F72B76833CC9E2B /* TodayView.swift */; };
 		36D7867D444EC0DFBB469405 /* ManagerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D547AC34BDD76554CCBE8A /* ManagerDetailView.swift */; };
+		37E3FEB45DEA642078DCD67A /* GameLandingCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAECFB1C73AF4A554AFC4DDF /* GameLandingCache.swift */; };
 		4676B6DD6ACC96F1109AECAD /* PlatformShim.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF85C41F17D31068F8BDE37F /* PlatformShim.swift */; };
 		49B5772A9A7F101774BFECBB /* LeagueExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F1DB1025760B04712AAF90 /* LeagueExtensions.swift */; };
 		5A4DBBB2F9E05D36B7F6092E /* TeamRankingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FCFF4EECB81CF692365348 /* TeamRankingsView.swift */; };
@@ -32,6 +33,7 @@
 		BCB8F9A98DBBEA606C2BF22E /* ScoringEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6010D09A4D7FEFE965D7C3 /* ScoringEngine.swift */; };
 		C073A3ED5F4CE960E0C8EAB8 /* StandingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60AA52A176D77E5D136D8CA /* StandingsService.swift */; };
 		C195F721DA6C375D5B81DC2F /* LeaderboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A313CC129C3E33B3A6CEA03B /* LeaderboardView.swift */; };
+		C832DBFF8ED447371686F944 /* GameLandingCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAECFB1C73AF4A554AFC4DDF /* GameLandingCache.swift */; };
 		D019CC14A29F2845D3584623 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = C600E45EC9EBC680184D86F7 /* Models.swift */; };
 		D079BB9EE6D803E665BBD26A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA2095696D242AA5150C95A9 /* Assets.xcassets */; };
 		E31D4FB4809D05671E49272E /* PlatformShim.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF85C41F17D31068F8BDE37F /* PlatformShim.swift */; };
@@ -47,7 +49,7 @@
 		36C599289EDB68D996C95D0B /* rosters.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = rosters.json; sourceTree = "<group>"; };
 		45074BD59D24DCE90CEE32DA /* NHLAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NHLAPI.swift; sourceTree = "<group>"; };
 		4F28104B0172759056A68A36 /* SkaterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkaterDetailView.swift; sourceTree = "<group>"; };
-		60F648ADBF0033C36A4FCF78 /* PlayoffPoolIOS.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = PlayoffPoolIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		60F648ADBF0033C36A4FCF78 /* PlayoffPool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayoffPool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6451D8B3CF7EADEA190384FB /* PlayoffPoolApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayoffPoolApp.swift; sourceTree = "<group>"; };
 		6E2ACCB2881EFFCB74B5C196 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		78B191AD9376EA9F4370EB54 /* SkaterRankingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkaterRankingsView.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 		CF85C41F17D31068F8BDE37F /* PlatformShim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformShim.swift; sourceTree = "<group>"; };
 		DA29CC1B9F72B76833CC9E2B /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
 		DA67C9B60335D6E1621B8EB0 /* PlayoffPool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayoffPool.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAECFB1C73AF4A554AFC4DDF /* GameLandingCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLandingCache.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -69,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				CA2095696D242AA5150C95A9 /* Assets.xcassets */,
+				EAECFB1C73AF4A554AFC4DDF /* GameLandingCache.swift */,
 				6E2ACCB2881EFFCB74B5C196 /* Info.plist */,
 				9697C831BDA6DB362534A02E /* iOSRootView.swift */,
 				A313CC129C3E33B3A6CEA03B /* LeaderboardView.swift */,
@@ -94,7 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				DA67C9B60335D6E1621B8EB0 /* PlayoffPool.app */,
-				60F648ADBF0033C36A4FCF78 /* PlayoffPoolIOS.app */,
+				60F648ADBF0033C36A4FCF78 /* PlayoffPool.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -143,7 +147,7 @@
 			packageProductDependencies = (
 			);
 			productName = PlayoffPoolIOS;
-			productReference = 60F648ADBF0033C36A4FCF78 /* PlayoffPoolIOS.app */;
+			productReference = 60F648ADBF0033C36A4FCF78 /* PlayoffPool.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -206,6 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C832DBFF8ED447371686F944 /* GameLandingCache.swift in Sources */,
 				ACB250B182478A0725D6E81D /* LeaderboardView.swift in Sources */,
 				046AAFE73D83AFC811140313 /* LeagueExtensions.swift in Sources */,
 				36D7867D444EC0DFBB469405 /* ManagerDetailView.swift in Sources */,
@@ -227,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37E3FEB45DEA642078DCD67A /* GameLandingCache.swift in Sources */,
 				C195F721DA6C375D5B81DC2F /* LeaderboardView.swift in Sources */,
 				49B5772A9A7F101774BFECBB /* LeagueExtensions.swift in Sources */,
 				640F08B55B411942153301E6 /* ManagerDetailView.swift in Sources */,
@@ -376,6 +382,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KYC26745RW;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = PlayoffPoolIOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -432,6 +439,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KYC26745RW;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = PlayoffPoolIOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

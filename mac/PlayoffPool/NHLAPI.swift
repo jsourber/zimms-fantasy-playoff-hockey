@@ -99,6 +99,43 @@ struct NHLBoxSkater: Decodable {
     let assists: Int?
 }
 
+// MARK: - Game landing (scoring summary)
+
+struct NHLGameLanding: Decodable {
+    let id: Int
+    let summary: NHLLandingSummary?
+}
+
+struct NHLLandingSummary: Decodable {
+    let scoring: [NHLLandingPeriod]?
+}
+
+struct NHLLandingPeriod: Decodable {
+    let periodDescriptor: NHLPeriod?
+    let goals: [NHLLandingGoal]?
+}
+
+struct NHLLandingGoal: Decodable {
+    let playerId: Int
+    let name: NHLLocalized?
+    let firstName: NHLLocalized?
+    let lastName: NHLLocalized?
+    let teamAbbrev: NHLLocalized?
+    let strength: String?       // "ev" | "pp" | "sh"
+    let timeInPeriod: String?
+    let awayScore: Int?
+    let homeScore: Int?
+    let goalModifier: String?   // e.g. "empty-net" | "none"
+    let assists: [NHLLandingAssist]?
+}
+
+struct NHLLandingAssist: Decodable {
+    let playerId: Int
+    let name: NHLLocalized?
+    let firstName: NHLLocalized?
+    let lastName: NHLLocalized?
+}
+
 // MARK: - Player landing
 
 struct NHLPlayerLanding: Decodable {

@@ -3,6 +3,7 @@ import SwiftUI
 
 struct TodayView: View {
     let slate: TodaySlate?
+    @StateObject private var landings = GameLandingCache()
 
     var body: some View {
         Group {
@@ -14,17 +15,17 @@ struct TodayView: View {
 
                     if !liveGames.isEmpty {
                         Section(header: sectionHeader("Live", color: .red, pulsing: true)) {
-                            ForEach(liveGames) { GameCard(game: $0) }
+                            ForEach(liveGames) { GameCard(game: $0).environmentObject(landings) }
                         }
                     }
                     if !upcoming.isEmpty {
                         Section(header: sectionHeader("Upcoming", color: .secondary)) {
-                            ForEach(upcoming) { GameCard(game: $0) }
+                            ForEach(upcoming) { GameCard(game: $0).environmentObject(landings) }
                         }
                     }
                     if !finals.isEmpty {
                         Section(header: sectionHeader("Final", color: .secondary)) {
-                            ForEach(finals) { GameCard(game: $0) }
+                            ForEach(finals) { GameCard(game: $0).environmentObject(landings) }
                         }
                     }
                 }
@@ -35,6 +36,13 @@ struct TodayView: View {
                 } description: {
                     Text("Check back tomorrow.")
                 }
+            }
+        }
+        .onChange(of: slate?.games.map(\.id) ?? []) { _, _ in
+            // When the parent reloads the slate, drop cached scoring summaries for live games
+            // so they get refetched with fresh goals.
+            for g in (slate?.games ?? []) where g.isLive {
+                landings.invalidate(gameId: g.id)
             }
         }
     }
@@ -65,9 +73,11 @@ private struct PulseModifier: ViewModifier {
 
 private struct GameCard: View {
     let game: TodayGame
+    @EnvironmentObject var landings: GameLandingCache
 
     var body: some View {
-        VStack(spacing: 8) {
+        VStack(spacing: 10) {
+            // header — series + status
             if let title = game.seriesTitle, !title.isEmpty {
                 HStack {
                     Text(title)
@@ -80,6 +90,7 @@ private struct GameCard: View {
                 HStack { Spacer(); statusPill }
             }
 
+            // teams + score
             HStack(spacing: 12) {
                 teamCol(game.away)
                 Spacer(minLength: 8)
@@ -93,6 +104,12 @@ private struct GameCard: View {
                     .font(.caption2)
                     .foregroundStyle(.secondary)
                     .frame(maxWidth: .infinity, alignment: .center)
+            }
+
+            // scoring summary (only fetch for live or final)
+            if game.isLive || game.isFinal {
+                ScoringSummaryView(gameId: game.id, isFinal: game.isFinal)
+                    .environmentObject(landings)
             }
         }
         .padding(.vertical, 4)
@@ -167,7 +184,6 @@ private struct GameCard: View {
 
     private var statusLabelAndColor: (String, Color) {
         if game.isLive {
-            // e.g. "P2 12:34" or "INT 2"
             if game.clock?.inIntermission == true, let n = game.period?.number {
                 return ("INT \(n)", .orange)
             }
@@ -194,6 +210,112 @@ private struct GameCard: View {
         let f = DateFormatter()
         f.dateFormat = "h:mm a"
         return f.string(from: d)
+    }
+}
+
+private struct ScoringSummaryView: View {
+    let gameId: Int
+    let isFinal: Bool
+    @EnvironmentObject var landings: GameLandingCache
+
+    var body: some View {
+        Group {
+            if let periods = landings.periodsByGame[gameId] {
+                let periodsWithGoals = periods.filter { !$0.goals.isEmpty }
+                if periodsWithGoals.isEmpty {
+                    Text("No goals yet.")
+                        .font(.caption2)
+                        .foregroundStyle(.secondary)
+                        .frame(maxWidth: .infinity, alignment: .center)
+                        .padding(.top, 6)
+                } else {
+                    VStack(alignment: .leading, spacing: 8) {
+                        Divider().padding(.top, 4)
+                        ForEach(periodsWithGoals) { p in
+                            VStack(alignment: .leading, spacing: 4) {
+                                Text("\(p.label) Period")
+                                    .font(.caption2.weight(.bold))
+                                    .foregroundStyle(.secondary)
+                                ForEach(p.goals) { g in
+                                    GoalRowView(goal: g)
+                                }
+                            }
+                        }
+                    }
+                }
+            } else {
+                HStack(spacing: 6) {
+                    ProgressView().scaleEffect(0.7)
+                    Text("Loading goals…")
+                        .font(.caption2)
+                        .foregroundStyle(.secondary)
+                }
+                .padding(.top, 6)
+            }
+        }
+        .onAppear { landings.ensureLoaded(gameId: gameId, isFinal: isFinal) }
+    }
+}
+
+private struct GoalRowView: View {
+    let goal: GoalView
+
+    var body: some View {
+        HStack(alignment: .top, spacing: 8) {
+            // team tag
+            Text(goal.team)
+                .font(.caption2.weight(.bold))
+                .foregroundStyle(.white)
+                .padding(.horizontal, 5).padding(.vertical, 1)
+                .background(Capsule().fill(Color.accentColor))
+                .frame(minWidth: 36)
+
+            VStack(alignment: .leading, spacing: 1) {
+                HStack(spacing: 6) {
+                    Text(goal.scorer)
+                        .font(.caption.weight(.semibold))
+                    if let s = goal.strength {
+                        Text(s)
+                            .font(.caption2.weight(.bold))
+                            .foregroundStyle(s == "PP" ? .orange : .blue)
+                    }
+                    if let m = goal.modifier, m != "none" {
+                        Text(modifierLabel(m))
+                            .font(.caption2.weight(.bold))
+                            .foregroundStyle(.purple)
+                    }
+                }
+                if !goal.assists.isEmpty {
+                    Text("from " + goal.assists.joined(separator: ", "))
+                        .font(.caption2)
+                        .foregroundStyle(.secondary)
+                } else {
+                    Text("unassisted")
+                        .font(.caption2)
+                        .foregroundStyle(.secondary)
+                }
+            }
+
+            Spacer(minLength: 4)
+
+            VStack(alignment: .trailing, spacing: 1) {
+                Text("\(goal.awayScore)–\(goal.homeScore)")
+                    .font(.caption.weight(.bold).monospacedDigit())
+                Text(goal.timeInPeriod)
+                    .font(.caption2.monospacedDigit())
+                    .foregroundStyle(.secondary)
+            }
+        }
+        .padding(.vertical, 2)
+    }
+
+    private func modifierLabel(_ m: String) -> String {
+        switch m {
+        case "empty-net": return "EN"
+        case "penalty-shot": return "PS"
+        case "own-goal": return "OG"
+        default: return m.uppercased()
+        }
     }
 }
 
