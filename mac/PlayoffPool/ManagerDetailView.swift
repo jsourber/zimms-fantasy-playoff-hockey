@@ -5,13 +5,18 @@ struct ManagerDetailView: View {
 
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 24) {
+            VStack(alignment: .leading, spacing: 20) {
                 header
                 statsBar
                 teamsSection
                 skatersSection
             }
+            #if os(iOS)
+            .padding(.horizontal, 14)
+            .padding(.vertical, 16)
+            #else
             .padding(24)
+            #endif
         }
         .navigationTitle(manager.name)
         .background(Color.platformBackground)
@@ -20,25 +25,33 @@ struct ManagerDetailView: View {
     // MARK: - Header
 
     private var header: some View {
-        HStack(alignment: .center, spacing: 18) {
-            RankBadge(rank: manager.rank).scaleEffect(1.4)
+        HStack(alignment: .center, spacing: 14) {
+            RankBadge(rank: manager.rank).scaleEffect(1.3)
             VStack(alignment: .leading, spacing: 4) {
                 Text(manager.name)
-                    .font(.system(.largeTitle, design: .rounded).weight(.bold))
-                HStack(spacing: 8) {
-                    ForEach(manager.teams) { TeamLogo(team: $0, size: 28) }
+                    .font(.system(.title, design: .rounded).weight(.bold))
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.7)
+                HStack(spacing: 6) {
+                    ForEach(manager.teams) { TeamLogo(team: $0, size: 22) }
                     Text(manager.teams.map(\.tricode).joined(separator: " · "))
-                        .font(.title3)
+                        .font(.subheadline)
                         .foregroundStyle(.secondary)
+                        .lineLimit(1)
                 }
             }
-            Spacer()
+            Spacer(minLength: 4)
             Text("\(manager.total)")
+                #if os(iOS)
+                .font(.system(size: 44, weight: .bold, design: .rounded))
+                #else
                 .font(.system(size: 64, weight: .bold, design: .rounded))
+                #endif
                 .monospacedDigit()
                 .foregroundStyle(LinearGradient(
                     colors: [.accentColor, .accentColor.opacity(0.6)],
                     startPoint: .top, endPoint: .bottom))
+                .fixedSize()
         }
     }
 
@@ -55,9 +68,15 @@ struct ManagerDetailView: View {
     private var teamsSection: some View {
         VStack(alignment: .leading, spacing: 12) {
             sectionTitle("Teams", system: "shield.lefthalf.filled")
+            #if os(iOS)
+            VStack(spacing: 12) {
+                ForEach(manager.teams) { TeamCard(team: $0) }
+            }
+            #else
             HStack(alignment: .top, spacing: 16) {
                 ForEach(manager.teams) { TeamCard(team: $0) }
             }
+            #endif
         }
     }
 
@@ -153,23 +172,22 @@ struct TeamCard: View {
 struct GameRow: View {
     let game: Game
     var body: some View {
-        HStack(spacing: 8) {
+        HStack(spacing: 6) {
             Text("vs")
                 .font(.caption2)
                 .foregroundStyle(.secondary)
             Text(game.opp)
-                .font(.subheadline.weight(.semibold))
-                .frame(width: 36, alignment: .leading)
+                .font(.footnote.weight(.semibold))
+                .lineLimit(1)
             Text("\(game.goalsFor)–\(game.goalsAgainst)")
-                .font(.subheadline)
-                .monospacedDigit()
-            Spacer()
+                .font(.footnote.monospacedDigit())
+                .foregroundStyle(.secondary)
+            Spacer(minLength: 4)
             TagsView(tags: game.tags)
             Text(game.points > 0 ? "+\(game.points)" : "0")
-                .font(.subheadline.weight(.semibold))
-                .monospacedDigit()
-                .frame(width: 28, alignment: .trailing)
+                .font(.footnote.weight(.bold).monospacedDigit())
                 .foregroundStyle(game.points > 0 ? .primary : .secondary)
+                .frame(minWidth: 22, alignment: .trailing)
         }
     }
 }
