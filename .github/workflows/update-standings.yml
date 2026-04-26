@@ -1,0 +1,49 @@
+name: Update standings
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"   # every 10 minutes
+  workflow_dispatch: {}       # manual trigger
+  push:
+    paths:
+      - "rosters.json"
+      - "scorer.py"
+      - ".github/workflows/update-standings.yml"
+
+# Allow this job to commit standings.json back to the repo
+permissions:
+  contents: write
+
+concurrency:
+  group: update-standings
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Generate standings.json
+        run: |
+          mkdir -p public
+          python3 scorer.py score --json > public/standings.json
+          echo "--- preview ---"
+          head -c 600 public/standings.json
+          echo
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet public/standings.json; then
+            echo "No changes."
+            exit 0
+          fi
+          git add public/standings.json
+          git commit -m "auto: refresh standings $(date -u +%FT%TZ)"
+          git push

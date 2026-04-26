@@ -1,0 +1,64 @@
+name: PlayoffPool
+options:
+  bundleIdPrefix: com.jacobsourber
+  deploymentTarget:
+    macOS: "14.0"
+    iOS: "17.0"
+settings:
+  base:
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    SWIFT_VERSION: "5.9"
+targets:
+  PlayoffPool:
+    type: application
+    platform: macOS
+    sources:
+      - PlayoffPool
+    entitlements:
+      path: PlayoffPool/PlayoffPool.entitlements
+      properties:
+        com.apple.security.app-sandbox: false
+    info:
+      path: PlayoffPool/Info.plist
+      properties:
+        CFBundleDisplayName: Playoff Pool
+        LSMinimumSystemVersion: "14.0"
+        NSHighResolutionCapable: true
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.jacobsourber.PlayoffPool
+        GENERATE_INFOPLIST_FILE: NO
+        ENABLE_HARDENED_RUNTIME: NO
+
+  PlayoffPoolIOS:
+    type: application
+    platform: iOS
+    sources:
+      - path: PlayoffPool
+        excludes:
+          - "Info.plist"
+          - "PlayoffPool.entitlements"
+    info:
+      path: PlayoffPoolIOS/Info.plist
+      properties:
+        CFBundleDisplayName: Playoff Pool
+        LSRequiresIPhoneOS: true
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        UISupportedInterfaceOrientations~ipad:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationPortraitUpsideDown
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+    settings:
+      base:
+        PRODUCT_NAME: PlayoffPool
+        PRODUCT_BUNDLE_IDENTIFIER: com.jacobsourber.PlayoffPool.ios
+        GENERATE_INFOPLIST_FILE: NO
+        TARGETED_DEVICE_FAMILY: "1,2"
+        SUPPORTS_MACCATALYST: NO
+        CODE_SIGN_STYLE: Automatic

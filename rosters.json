@@ -1,0 +1,78 @@
+{
+  "_comment": "Edit playoff_start_date and any roster as needed. Use `python scorer.py search \"Name\"` to find player IDs.",
+  "playoff_start_date": "2026-04-18",
+  "managers": {
+    "Aaron": {
+      "teams": ["OTT", "UTA"],
+      "skaters": [
+        {"name": "Nathan MacKinnon",  "id": 8477492},
+        {"name": "Cole Caufield",     "id": 8481540},
+        {"name": "Matt Boldy",        "id": 8481557},
+        {"name": "Brock Nelson",      "id": 8475754}
+      ]
+    },
+    "Gregg": {
+      "teams": ["MTL", "LAK"],
+      "skaters": [
+        {"name": "Connor McDavid",    "id": 8478402},
+        {"name": "Cale Makar",        "id": 8480069},
+        {"name": "Evan Bouchard",     "id": 8480803},
+        {"name": "Porter Martone",    "id": 8485406}
+      ]
+    },
+    "Jim": {
+      "teams": ["PHI", "EDM"],
+      "skaters": [
+        {"name": "Nikita Kucherov",   "id": 8476453},
+        {"name": "Mikko Rantanen",    "id": 8478420},
+        {"name": "Tage Thompson",     "id": 8479420},
+        {"name": "Andrei Svechnikov", "id": 8480830}
+      ]
+    },
+    "Mark": {
+      "teams": ["BOS", "DAL"],
+      "skaters": [
+        {"name": "Martin Necas",      "id": 8480039},
+        {"name": "Brandon Hagel",     "id": 8479542},
+        {"name": "Seth Jarvis",       "id": 8482093},
+        {"name": "Alex Tuch",         "id": 8477949}
+      ]
+    },
+    "OB": {
+      "teams": ["PIT", "MIN"],
+      "skaters": [
+        {"name": "Jason Robertson",   "id": 8480027},
+        {"name": "Wyatt Johnston",    "id": 8482740},
+        {"name": "Nick Suzuki",       "id": 8480018},
+        {"name": "Mitch Marner",      "id": 8478483}
+      ]
+    },
+    "Tim": {
+      "teams": ["BUF", "ANA"],
+      "skaters": [
+        {"name": "Jake Guentzel",     "id": 8477404},
+        {"name": "Jack Eichel",       "id": 8478403},
+        {"name": "Rasmus Dahlin",     "id": 8480839},
+        {"name": "Nikolaj Ehlers",    "id": 8477940}
+      ]
+    },
+    "Greg G": {
+      "teams": ["CAR", "VGK"],
+      "skaters": [
+        {"name": "Brayden Point",     "id": 8478010},
+        {"name": "Kirill Kaprizov",   "id": 8478864},
+        {"name": "Mark Stone",        "id": 8475913},
+        {"name": "Darren Raddysh",    "id": 8478178}
+      ]
+    },
+    "Jake": {
+      "teams": ["TBL", "COL"],
+      "skaters": [
+        {"name": "Sebastian Aho",     "id": 8478427},
+        {"name": "Leon Draisaitl",    "id": 8477934},
+        {"name": "Clayton Keller",    "id": 8479343},
+        {"name": "Artturi Lehkonen",  "id": 8477476}
+      ]
+    }
+  }
+}

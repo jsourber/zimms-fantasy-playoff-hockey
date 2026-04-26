@@ -1,0 +1,17 @@
+.DS_Store
+.player_cache.json
+
+# Built app bundles
+PlayoffPool.app/
+*.app/
+
+# Xcode build / user data
+mac/PlayoffPool.xcodeproj/xcuserdata/
+mac/PlayoffPool.xcodeproj/project.xcworkspace/xcuserdata/
+mac/build/
+mac/DerivedData/
+**/*.xcuserstate
+
+# Compiled Python
+__pycache__/
+*.pyc
