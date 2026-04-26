@@ -200,23 +200,11 @@ struct SkaterCard: View {
     var body: some View {
         HStack(spacing: 14) {
             ZStack(alignment: .bottomTrailing) {
-                AsyncImage(url: skater.headshotUrl) { phase in
-                    switch phase {
-                    case .success(let img):
-                        img.resizable().scaledToFill()
-                    case .failure, .empty:
-                        Image(systemName: "person.fill")
-                            .resizable().scaledToFit()
-                            .padding(14)
-                            .foregroundStyle(.secondary.opacity(0.5))
-                    @unknown default:
-                        EmptyView()
-                    }
-                }
-                .frame(width: 64, height: 64)
-                .background(Color.gray.opacity(0.15))
-                .clipShape(Circle())
-                .overlay(Circle().strokeBorder(.quaternary, lineWidth: 1))
+                SkaterHeadshotImage(playerId: skater.playerId, fallbackURL: skater.headshotUrl)
+                    .frame(width: 64, height: 64)
+                    .background(Color.gray.opacity(0.15))
+                    .clipShape(Circle())
+                    .overlay(Circle().strokeBorder(.quaternary, lineWidth: 1))
 
                 if let n = skater.sweaterNumber {
                     Text("#\(n)")

@@ -23,18 +23,10 @@ struct SkaterRankingsView: View {
 
             TableColumn("Player") { s in
                 HStack(spacing: 10) {
-                    AsyncImage(url: s.skater.headshotUrl) { phase in
-                        switch phase {
-                        case .success(let img): img.resizable().scaledToFill()
-                        case .failure, .empty:
-                            Image(systemName: "person.fill").resizable().scaledToFit()
-                                .padding(8).foregroundStyle(.secondary.opacity(0.5))
-                        @unknown default: EmptyView()
-                        }
-                    }
-                    .frame(width: 32, height: 32)
-                    .background(Color.gray.opacity(0.15))
-                    .clipShape(Circle())
+                    SkaterHeadshotImage(playerId: s.skater.playerId, fallbackURL: s.skater.headshotUrl)
+                        .frame(width: 32, height: 32)
+                        .background(Color.gray.opacity(0.15))
+                        .clipShape(Circle())
 
                     VStack(alignment: .leading, spacing: 1) {
                         Text(s.skater.name).font(.subheadline.weight(.semibold))
@@ -142,18 +134,10 @@ private struct SkaterRowIOS: View {
                 .foregroundStyle(.secondary)
                 .frame(width: 24, alignment: .trailing)
 
-            AsyncImage(url: owned.skater.headshotUrl) { phase in
-                switch phase {
-                case .success(let img): img.resizable().scaledToFill()
-                case .failure, .empty:
-                    Image(systemName: "person.fill").resizable().scaledToFit()
-                        .padding(7).foregroundStyle(.secondary.opacity(0.6))
-                @unknown default: EmptyView()
-                }
-            }
-            .frame(width: 36, height: 36)
-            .background(Color.gray.opacity(0.15))
-            .clipShape(Circle())
+            SkaterHeadshotImage(playerId: owned.skater.playerId, fallbackURL: owned.skater.headshotUrl)
+                .frame(width: 36, height: 36)
+                .background(Color.gray.opacity(0.15))
+                .clipShape(Circle())
 
             VStack(alignment: .leading, spacing: 2) {
                 Text(owned.skater.name)

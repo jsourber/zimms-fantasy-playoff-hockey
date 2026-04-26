@@ -45,22 +45,11 @@ struct SkaterDetailView: View {
             .frame(height: 240)
 
             HStack(alignment: .bottom, spacing: 16) {
-                AsyncImage(url: skater.headshotUrl) { phase in
-                    switch phase {
-                    case .success(let img):
-                        img.resizable().scaledToFill()
-                    case .failure, .empty:
-                        Image(systemName: "person.fill").resizable().scaledToFit()
-                            .padding(20)
-                            .foregroundStyle(.white.opacity(0.6))
-                    @unknown default:
-                        EmptyView()
-                    }
-                }
-                .frame(width: 100, height: 100)
-                .background(Color.gray.opacity(0.2))
-                .clipShape(Circle())
-                .overlay(Circle().strokeBorder(.white.opacity(0.85), lineWidth: 3))
+                SkaterHeadshotImage(playerId: skater.playerId, fallbackURL: skater.headshotUrl)
+                    .frame(width: 100, height: 100)
+                    .background(Color.gray.opacity(0.2))
+                    .clipShape(Circle())
+                    .overlay(Circle().strokeBorder(.white.opacity(0.85), lineWidth: 3))
 
                 VStack(alignment: .leading, spacing: 4) {
                     Text(skater.name)
