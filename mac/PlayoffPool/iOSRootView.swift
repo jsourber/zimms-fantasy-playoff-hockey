@@ -51,11 +51,12 @@ struct iOSRootView: View {
         NavigationStack {
             Group {
                 if let data = service.data {
+                    let roster = RosterIndex(service.data)
                     List {
                         Section {
                             ForEach(data.standings) { manager in
                                 NavigationLink(value: manager) {
-                                    LeaderboardRow(manager: manager)
+                                    LeaderboardRow(manager: manager, isFinal: roster.isManagerDone(manager))
                                 }
                             }
                         } footer: {

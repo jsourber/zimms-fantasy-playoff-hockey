@@ -71,6 +71,17 @@ struct RosterIndex {
         return false
     }
 
+    /// A manager is "done" when every one of their NHL teams AND drafted skaters
+    /// is eliminated — no more points can possibly be earned, so their total is final.
+    /// Returns false if elimination data isn't loaded yet.
+    func isManagerDone(_ manager: Manager) -> Bool {
+        guard !eliminatedTeams.isEmpty || !activePlayoffTeams.isEmpty else { return false }
+        if manager.teams.isEmpty && manager.skaters.isEmpty { return false }
+        for t in manager.teams where !isEliminated(team: t.tricode) { return false }
+        for s in manager.skaters where !isEliminated(skater: s) { return false }
+        return true
+    }
+
     func owner(forTeam tri: String?) -> String? {
         guard let tri else { return nil }
         return ownerByTeam[tri]

@@ -80,8 +80,9 @@ struct LeaderboardView: View {
                 }
 
                 Section("Managers") {
+                    let roster = RosterIndex(data)
                     ForEach(data.standings) { manager in
-                        LeaderboardRow(manager: manager)
+                        LeaderboardRow(manager: manager, isFinal: roster.isManagerDone(manager))
                             .tag(NavItem.manager(manager))
                             .listRowSeparator(.visible)
                     }
@@ -124,6 +125,7 @@ struct LeaderboardView: View {
 
 struct LeaderboardRow: View {
     let manager: Manager
+    var isFinal: Bool = false
 
     var body: some View {
         HStack(spacing: 12) {
@@ -149,9 +151,18 @@ struct LeaderboardRow: View {
             Spacer(minLength: 4)
 
             VStack(alignment: .trailing, spacing: 1) {
-                Text("\(manager.total)")
-                    .font(.system(.title3, design: .rounded).weight(.bold))
-                    .monospacedDigit()
+                HStack(spacing: 6) {
+                    if isFinal {
+                        Text("FINAL")
+                            .font(.system(size: 9).weight(.heavy))
+                            .foregroundStyle(.white)
+                            .padding(.horizontal, 5).padding(.vertical, 2)
+                            .background(Capsule().fill(Color.red.opacity(0.85)))
+                    }
+                    Text("\(manager.total)")
+                        .font(.system(.title3, design: .rounded).weight(.bold))
+                        .monospacedDigit()
+                }
                 Text("T \(manager.teamPts) · S \(manager.skaterPts)")
                     .font(.caption2)
                     .foregroundStyle(.secondary)
@@ -162,6 +173,7 @@ struct LeaderboardRow: View {
             .fixedSize(horizontal: true, vertical: false)
         }
         .padding(.vertical, 4)
+        .opacity(isFinal ? 0.85 : 1)
     }
 }
 
