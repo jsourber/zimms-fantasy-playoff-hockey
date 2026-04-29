@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-29T22:29:25Z",
+  "updated_at": "2026-04-29T23:31:22Z",
   "playoff_start_date": "2026-04-18",
   "games_processed": 36,
   "today": {
@@ -7,30 +7,37 @@
     "games": [
       {
         "id": 2025030125,
-        "state": "PRE",
+        "state": "LIVE",
         "start_utc": "2026-04-29T23:00:00Z",
-        "period": null,
-        "clock": null,
+        "period": {
+          "number": 1,
+          "type": "REG"
+        },
+        "clock": {
+          "time_remaining": "09:11",
+          "in_intermission": false,
+          "running": true
+        },
         "away": {
           "tricode": "MTL",
           "name": "Canadiens",
           "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/mtl.png",
-          "score": null,
-          "record": "2-2"
+          "score": 1,
+          "record": null
         },
         "home": {
           "tricode": "TBL",
           "name": "Lightning",
           "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/tb.png",
-          "score": null,
-          "record": "2-2"
+          "score": 0,
+          "record": null
         },
         "series_title": "1st Round \u00b7 Game 5",
         "series_status": "Tied 2-2"
       },
       {
         "id": 2025030146,
-        "state": "FUT",
+        "state": "PRE",
         "start_utc": "2026-04-29T23:30:00Z",
         "period": null,
         "clock": null,
