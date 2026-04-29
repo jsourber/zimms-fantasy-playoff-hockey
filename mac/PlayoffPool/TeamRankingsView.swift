@@ -90,6 +90,7 @@ enum TeamSort: String, CaseIterable, Identifiable {
 
 struct TeamRankingsView: View {
     let teams: [OwnedTeam]
+    var roster: RosterIndex = .empty
     @State private var sort: TeamSort = .points
 
     private var sorted: [OwnedTeam] {
@@ -115,7 +116,7 @@ struct TeamRankingsView: View {
             }
             Section {
                 ForEach(Array(sorted.enumerated()), id: \.element.id) { idx, t in
-                    TeamRowIOS(rank: idx + 1, owned: t)
+                    TeamRowIOS(rank: idx + 1, owned: t, isEliminated: roster.isEliminated(team: t.team.tricode))
                 }
             }
         }
@@ -126,6 +127,7 @@ struct TeamRankingsView: View {
 private struct TeamRowIOS: View {
     let rank: Int
     let owned: OwnedTeam
+    var isEliminated: Bool = false
 
     var body: some View {
         HStack(spacing: 10) {
@@ -135,6 +137,7 @@ private struct TeamRowIOS: View {
                 .frame(width: 24, alignment: .trailing)
 
             TeamLogo(team: owned.team, size: 36)
+                .opacity(isEliminated ? 0.55 : 1)
 
             VStack(alignment: .leading, spacing: 2) {
                 HStack(spacing: 6) {
@@ -143,6 +146,7 @@ private struct TeamRowIOS: View {
                     Text(owned.team.record)
                         .font(.caption.monospacedDigit())
                         .foregroundStyle(.secondary)
+                    if isEliminated { EliminatedBadge(compact: true) }
                 }
                 Text(owned.owner)
                     .font(.caption)

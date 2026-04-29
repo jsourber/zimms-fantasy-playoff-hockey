@@ -237,12 +237,45 @@ struct ScoringEngine {
             games: todayGames.map { mapTodayGame($0) }
         )
 
+        // 6. Elimination tracking
+        // Walk every game we've seen, group by series, take the latest seriesStatus
+        // (the one with the highest gameNumberOfSeries). If a side hit neededToWin,
+        // the other side is eliminated.
+        var latestStatusBySeries: [String: NHLSeriesStatus] = [:]
+        var latestGameNumBySeries: [String: Int] = [:]
+        var activeTeams: Set<String> = []
+        for g in (allGames + todayGames) {
+            activeTeams.insert(g.awayTeam.abbrev)
+            activeTeams.insert(g.homeTeam.abbrev)
+            guard let ss = g.seriesStatus,
+                  let top = ss.topSeedTeamAbbrev,
+                  let bot = ss.bottomSeedTeamAbbrev else { continue }
+            let key = [top, bot].sorted().joined(separator: "-")
+            let n = ss.gameNumberOfSeries ?? 0
+            if (latestGameNumBySeries[key] ?? -1) <= n {
+                latestStatusBySeries[key] = ss
+                latestGameNumBySeries[key] = n
+            }
+        }
+        var eliminated: Set<String> = []
+        for (_, ss) in latestStatusBySeries {
+            let need = ss.neededToWin ?? 4
+            let tw = ss.topSeedWins ?? 0
+            let bw = ss.bottomSeedWins ?? 0
+            guard let top = ss.topSeedTeamAbbrev,
+                  let bot = ss.bottomSeedTeamAbbrev else { continue }
+            if tw >= need { eliminated.insert(bot) }
+            else if bw >= need { eliminated.insert(top) }
+        }
+
         return StandingsResponse(
             updatedAt: Date(),
             playoffStartDate: rosters.playoffStartDate,
             gamesProcessed: allGames.count,
             standings: ranked,
-            today: today
+            today: today,
+            eliminatedTeams: Array(eliminated).sorted(),
+            activePlayoffTeams: Array(activeTeams).sorted()
         )
     }
 
@@ -269,7 +302,7 @@ struct ScoringEngine {
         }
     }
 
-    private static func parseDate(_ s: String) -> Date {
+    static func parseDate(_ s: String) -> Date {
         let f = DateFormatter()
         f.calendar = Calendar(identifier: .gregorian)
         f.locale = Locale(identifier: "en_US_POSIX")
@@ -278,7 +311,7 @@ struct ScoringEngine {
         return f.date(from: s) ?? Date()
     }
 
-    private static func isoDay(_ d: Date) -> String {
+    static func isoDay(_ d: Date) -> String {
         let f = DateFormatter()
         f.calendar = Calendar(identifier: .gregorian)
         f.locale = Locale(identifier: "en_US_POSIX")
@@ -361,7 +394,7 @@ struct ScoringEngine {
         }
     }
 
-    private static func mapTodayGame(_ g: NHLScoreGame) -> TodayGame {
+    static func mapTodayGame(_ g: NHLScoreGame) -> TodayGame {
         var seriesTitle = g.seriesStatus?.seriesTitle ?? ""
         if let n = g.seriesStatus?.gameNumberOfSeries {
             seriesTitle = seriesTitle.isEmpty ? "Game \(n)" : "\(seriesTitle) · Game \(n)"

@@ -90,6 +90,7 @@ enum SkaterSort: String, CaseIterable, Identifiable {
 
 struct SkaterRankingsView: View {
     let skaters: [OwnedSkater]
+    var roster: RosterIndex = .empty
     @State private var sort: SkaterSort = .points
 
     private var sorted: [OwnedSkater] {
@@ -114,7 +115,7 @@ struct SkaterRankingsView: View {
             Section {
                 ForEach(Array(sorted.enumerated()), id: \.element.id) { idx, s in
                     NavigationLink(value: s.skater) {
-                        SkaterRowIOS(rank: idx + 1, owned: s)
+                        SkaterRowIOS(rank: idx + 1, owned: s, isEliminated: roster.isEliminated(skater: s.skater))
                     }
                 }
             }
@@ -126,6 +127,7 @@ struct SkaterRankingsView: View {
 private struct SkaterRowIOS: View {
     let rank: Int
     let owned: OwnedSkater
+    var isEliminated: Bool = false
 
     var body: some View {
         HStack(spacing: 10) {
@@ -138,11 +140,16 @@ private struct SkaterRowIOS: View {
                 .frame(width: 36, height: 36)
                 .background(Color.gray.opacity(0.15))
                 .clipShape(Circle())
+                .opacity(isEliminated ? 0.55 : 1)
+                .grayscale(isEliminated ? 0.6 : 0)
 
             VStack(alignment: .leading, spacing: 2) {
-                Text(owned.skater.name)
-                    .font(.subheadline.weight(.semibold))
-                    .lineLimit(1)
+                HStack(spacing: 6) {
+                    Text(owned.skater.name)
+                        .font(.subheadline.weight(.semibold))
+                        .lineLimit(1)
+                    if isEliminated { EliminatedBadge(compact: true) }
+                }
                 HStack(spacing: 4) {
                     if let t = owned.skater.teamTricode {
                         Text(t)

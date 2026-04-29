@@ -30,14 +30,16 @@ struct iOSRootView: View {
     private var todayTab: some View {
         NavigationStack {
             Group {
-                if service.data != nil {
-                    TodayView(slate: service.data?.today,
-                              roster: RosterIndex(service.data))
+                if let data = service.data {
+                    TodayView(slate: data.today,
+                              roster: RosterIndex(service.data),
+                              playoffStartDate: data.playoffStartDate)
                 } else {
                     loadingOrError
                 }
             }
             .navigationTitle("Today")
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar { commonToolbar }
             .refreshable { await service.refresh() }
         }
@@ -66,7 +68,7 @@ struct iOSRootView: View {
                 }
             }
             .navigationTitle("Playoff Pool")
-            .navigationDestination(for: Manager.self) { ManagerDetailView(manager: $0) }
+            .navigationDestination(for: Manager.self) { ManagerDetailView(manager: $0, roster: RosterIndex(service.data)) }
             .navigationDestination(for: Skater.self) { SkaterDetailView(skater: $0) }
             .toolbar { commonToolbar }
             .refreshable { await service.refresh() }
@@ -77,7 +79,7 @@ struct iOSRootView: View {
         NavigationStack {
             Group {
                 if let data = service.data {
-                    SkaterRankingsView(skaters: data.allSkaters)
+                    SkaterRankingsView(skaters: data.allSkaters, roster: RosterIndex(service.data))
                 } else {
                     loadingOrError
                 }
@@ -93,7 +95,7 @@ struct iOSRootView: View {
         NavigationStack {
             Group {
                 if let data = service.data {
-                    TeamRankingsView(teams: data.allTeams)
+                    TeamRankingsView(teams: data.allTeams, roster: RosterIndex(service.data))
                 } else {
                     loadingOrError
                 }

@@ -2,6 +2,7 @@ import SwiftUI
 
 struct ManagerDetailView: View {
     let manager: Manager
+    var roster: RosterIndex = .empty
 
     var body: some View {
         ScrollView {
@@ -70,11 +71,11 @@ struct ManagerDetailView: View {
             sectionTitle("Teams", system: "shield.lefthalf.filled")
             #if os(iOS)
             VStack(spacing: 12) {
-                ForEach(manager.teams) { TeamCard(team: $0) }
+                ForEach(manager.teams) { TeamCard(team: $0, isEliminated: roster.isEliminated(team: $0.tricode)) }
             }
             #else
             HStack(alignment: .top, spacing: 16) {
-                ForEach(manager.teams) { TeamCard(team: $0) }
+                ForEach(manager.teams) { TeamCard(team: $0, isEliminated: roster.isEliminated(team: $0.tricode)) }
             }
             #endif
         }
@@ -88,7 +89,7 @@ struct ManagerDetailView: View {
             LazyVGrid(columns: [GridItem(.adaptive(minimum: 280), spacing: 14)], spacing: 14) {
                 ForEach(manager.skaters) { s in
                     NavigationLink(value: s) {
-                        SkaterCard(skater: s)
+                        SkaterCard(skater: s, isEliminated: roster.isEliminated(skater: s))
                     }
                     .buttonStyle(.plain)
                 }
@@ -135,14 +136,19 @@ struct StatPill: View {
 
 struct TeamCard: View {
     let team: TeamScore
+    var isEliminated: Bool = false
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             HStack(spacing: 12) {
                 TeamLogo(team: team, size: 56)
+                    .opacity(isEliminated ? 0.55 : 1)
                 VStack(alignment: .leading, spacing: 2) {
-                    Text(team.tricode)
-                        .font(.title2.weight(.bold))
+                    HStack(spacing: 6) {
+                        Text(team.tricode)
+                            .font(.title2.weight(.bold))
+                        if isEliminated { EliminatedBadge() }
+                    }
                     Text("\(team.points) pts")
                         .font(.subheadline)
                         .foregroundStyle(.secondary)
@@ -196,6 +202,7 @@ struct GameRow: View {
 
 struct SkaterCard: View {
     let skater: Skater
+    var isEliminated: Bool = false
 
     var body: some View {
         HStack(spacing: 14) {
@@ -205,6 +212,8 @@ struct SkaterCard: View {
                     .background(Color.gray.opacity(0.15))
                     .clipShape(Circle())
                     .overlay(Circle().strokeBorder(.quaternary, lineWidth: 1))
+                    .opacity(isEliminated ? 0.55 : 1)
+                    .grayscale(isEliminated ? 0.6 : 0)
 
                 if let n = skater.sweaterNumber {
                     Text("#\(n)")
@@ -217,9 +226,12 @@ struct SkaterCard: View {
             }
 
             VStack(alignment: .leading, spacing: 4) {
-                Text(skater.name)
-                    .font(.headline)
-                    .lineLimit(1)
+                HStack(spacing: 6) {
+                    Text(skater.name)
+                        .font(.headline)
+                        .lineLimit(1)
+                    if isEliminated { EliminatedBadge() }
+                }
                 HStack(spacing: 6) {
                     if let tri = skater.teamTricode {
                         Text(tri)

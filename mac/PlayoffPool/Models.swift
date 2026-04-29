@@ -6,6 +6,10 @@ struct StandingsResponse: Codable {
     let gamesProcessed: Int
     let standings: [Manager]
     let today: TodaySlate?
+    /// Tricodes of teams eliminated from the playoffs (lost their series).
+    let eliminatedTeams: [String]?
+    /// Tricodes of every team that's appeared in any playoff game so far.
+    let activePlayoffTeams: [String]?
 }
 
 struct TodaySlate: Codable {

@@ -2,46 +2,161 @@
 import SwiftUI
 
 struct TodayView: View {
-    let slate: TodaySlate?
+    let slate: TodaySlate?              // initial today slate (seeded from StandingsResponse)
     let roster: RosterIndex
+    let playoffStartDate: String        // earliest date the user can swipe back to
+    @StateObject private var loader = DaySlateLoader()
     @StateObject private var landings = GameLandingCache()
+    @State private var selectedOffset: Int = 0    // 0 = today, -1 = yesterday, etc.
+
+    private var earliestOffset: Int {
+        let start = ScoringEngine.parseDate(playoffStartDate)
+        let cal = Calendar(identifier: .gregorian)
+        let comps = cal.dateComponents([.day], from: cal.startOfDay(for: start),
+                                       to: cal.startOfDay(for: Date()))
+        return -(comps.day ?? 0)
+    }
+
+    private var allOffsets: [Int] { Array(earliestOffset...0) }
+
+    var body: some View {
+        VStack(spacing: 0) {
+            dayHeader
+
+            TabView(selection: $selectedOffset) {
+                ForEach(allOffsets, id: \.self) { offset in
+                    DaySlatePage(
+                        date: dateFor(offset: offset),
+                        roster: roster,
+                        loader: loader,
+                        landings: landings
+                    )
+                    .tag(offset)
+                }
+            }
+            .tabViewStyle(.page(indexDisplayMode: .never))
+        }
+        .onAppear {
+            loader.seed(slate)
+        }
+        .onChange(of: slate?.date ?? "") { _, _ in
+            loader.seed(slate)
+            // Refresh today's slate on parent refresh
+            if let s = slate { loader.invalidate(date: ScoringEngine.parseDate(s.date)); loader.seed(s) }
+        }
+    }
+
+    @ViewBuilder
+    private var dayHeader: some View {
+        HStack(spacing: 12) {
+            Button {
+                if selectedOffset > earliestOffset {
+                    withAnimation { selectedOffset -= 1 }
+                }
+            } label: { Image(systemName: "chevron.left") }
+                .disabled(selectedOffset <= earliestOffset)
+
+            Spacer()
+
+            VStack(spacing: 1) {
+                Text(headerTitle(for: selectedOffset))
+                    .font(.headline.weight(.semibold))
+                Text(headerSubtitle(for: selectedOffset))
+                    .font(.caption2)
+                    .foregroundStyle(.secondary)
+            }
+
+            Spacer()
+
+            Button {
+                if selectedOffset < 0 {
+                    withAnimation { selectedOffset += 1 }
+                }
+            } label: { Image(systemName: "chevron.right") }
+                .disabled(selectedOffset >= 0)
+        }
+        .padding(.horizontal, 16).padding(.vertical, 8)
+        .background(Color.platformGroupedBackground)
+    }
+
+    private func dateFor(offset: Int) -> Date {
+        Calendar.current.date(byAdding: .day, value: offset, to: Date()) ?? Date()
+    }
+
+    private func headerTitle(for offset: Int) -> String {
+        switch offset {
+        case 0: return "Today"
+        case -1: return "Yesterday"
+        default:
+            let f = DateFormatter()
+            f.dateFormat = "EEEE"
+            return f.string(from: dateFor(offset: offset))
+        }
+    }
+
+    private func headerSubtitle(for offset: Int) -> String {
+        let f = DateFormatter()
+        f.dateFormat = "MMM d"
+        return f.string(from: dateFor(offset: offset))
+    }
+}
+
+/// A single day's slate (one page in the swipeable TabView).
+private struct DaySlatePage: View {
+    let date: Date
+    let roster: RosterIndex
+    @ObservedObject var loader: DaySlateLoader
+    @ObservedObject var landings: GameLandingCache
+
+    private var key: String { ScoringEngine.isoDay(date) }
+    private var slate: TodaySlate? { loader.slatesByDay[key] }
 
     var body: some View {
         Group {
-            if let slate, !slate.games.isEmpty {
-                List {
-                    let liveGames = slate.games.filter { $0.isLive }
-                    let upcoming  = slate.games.filter { $0.isScheduled }
-                    let finals    = slate.games.filter { $0.isFinal }
+            if let slate {
+                if slate.games.isEmpty {
+                    ContentUnavailableView {
+                        Label("No playoff games", systemImage: "calendar.badge.exclamationmark")
+                    } description: {
+                        Text("No NHL playoff games on this date.")
+                    }
+                } else {
+                    List {
+                        let liveGames = slate.games.filter { $0.isLive }
+                        let upcoming  = slate.games.filter { $0.isScheduled }
+                        let finals    = slate.games.filter { $0.isFinal }
 
-                    if !liveGames.isEmpty {
-                        Section(header: sectionHeader("Live", color: .red, pulsing: true)) {
-                            ForEach(liveGames) { GameCard(game: $0, roster: roster).environmentObject(landings) }
+                        if !liveGames.isEmpty {
+                            Section(header: sectionHeader("Live", color: .red, pulsing: true)) {
+                                ForEach(liveGames) { GameCard(game: $0, roster: roster).environmentObject(landings) }
+                            }
+                        }
+                        if !upcoming.isEmpty {
+                            Section(header: sectionHeader("Upcoming", color: .secondary)) {
+                                ForEach(upcoming) { GameCard(game: $0, roster: roster).environmentObject(landings) }
+                            }
+                        }
+                        if !finals.isEmpty {
+                            Section(header: sectionHeader("Final", color: .secondary)) {
+                                ForEach(finals) { GameCard(game: $0, roster: roster).environmentObject(landings) }
+                            }
                         }
                     }
-                    if !upcoming.isEmpty {
-                        Section(header: sectionHeader("Upcoming", color: .secondary)) {
-                            ForEach(upcoming) { GameCard(game: $0, roster: roster).environmentObject(landings) }
-                        }
-                    }
-                    if !finals.isEmpty {
-                        Section(header: sectionHeader("Final", color: .secondary)) {
-                            ForEach(finals) { GameCard(game: $0, roster: roster).environmentObject(landings) }
-                        }
-                    }
+                    .listStyle(.insetGrouped)
                 }
-                .listStyle(.insetGrouped)
             } else {
-                ContentUnavailableView {
-                    Label("No playoff games today", systemImage: "calendar.badge.exclamationmark")
-                } description: {
-                    Text("Check back tomorrow.")
+                VStack(spacing: 12) {
+                    ProgressView()
+                    Text("Loading…").foregroundStyle(.secondary)
                 }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
         }
+        .onAppear {
+            loader.ensureLoaded(date: date)
+        }
         .onChange(of: slate?.games.map(\.id) ?? []) { _, _ in
-            // When the parent reloads the slate, drop cached scoring summaries for live games
-            // so they get refetched with fresh goals.
+            // Refetch live games' goals when the slate changes
             for g in (slate?.games ?? []) where g.isLive {
                 landings.invalidate(gameId: g.id)
             }

@@ -69,6 +69,9 @@ struct NHLClock: Decodable {
 
 struct NHLSeriesStatus: Decodable {
     let seriesTitle: String?
+    let seriesAbbrev: String?
+    let seriesLetter: String?
+    let neededToWin: Int?
     let gameNumberOfSeries: Int?
     let topSeedTeamAbbrev: String?
     let bottomSeedTeamAbbrev: String?

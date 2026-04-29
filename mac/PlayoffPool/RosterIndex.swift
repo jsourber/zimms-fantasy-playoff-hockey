@@ -6,17 +6,27 @@ import SwiftUI
 struct RosterIndex {
     let ownerByTeam: [String: String]
     let ownerByPlayerId: [Int: String]
-    /// Stable color per owner so the UI is consistent across rows.
     let colorByOwner: [String: Color]
+    /// Tricodes of NHL teams eliminated from the playoffs.
+    let eliminatedTeams: Set<String>
+    /// Tricodes of NHL teams that are/were in the playoffs at all.
+    let activePlayoffTeams: Set<String>
 
-    static let empty = RosterIndex(ownerByTeam: [:], ownerByPlayerId: [:], colorByOwner: [:])
+    static let empty = RosterIndex(
+        ownerByTeam: [:], ownerByPlayerId: [:], colorByOwner: [:],
+        eliminatedTeams: [], activePlayoffTeams: []
+    )
 
     init(ownerByTeam: [String: String],
          ownerByPlayerId: [Int: String],
-         colorByOwner: [String: Color]) {
+         colorByOwner: [String: Color],
+         eliminatedTeams: Set<String>,
+         activePlayoffTeams: Set<String>) {
         self.ownerByTeam = ownerByTeam
         self.ownerByPlayerId = ownerByPlayerId
         self.colorByOwner = colorByOwner
+        self.eliminatedTeams = eliminatedTeams
+        self.activePlayoffTeams = activePlayoffTeams
     }
 
     init(_ resp: StandingsResponse?) {
@@ -30,7 +40,6 @@ struct RosterIndex {
             for t in m.teams { teams[t.tricode] = m.name }
             for s in m.skaters { players[s.playerId] = m.name }
         }
-        // Distinct, deterministic palette so each manager keeps the same color.
         let palette: [Color] = [
             .red, .blue, .green, .orange, .purple,
             .pink, .teal, .indigo, .brown, .mint
@@ -42,6 +51,24 @@ struct RosterIndex {
         self.ownerByTeam = teams
         self.ownerByPlayerId = players
         self.colorByOwner = colors
+        self.eliminatedTeams = Set(resp.eliminatedTeams ?? [])
+        self.activePlayoffTeams = Set(resp.activePlayoffTeams ?? [])
+    }
+
+    /// True if this team has been eliminated from the playoffs.
+    func isEliminated(team tri: String?) -> Bool {
+        guard let tri else { return false }
+        return eliminatedTeams.contains(tri)
+    }
+
+    /// True if this skater's NHL team is eliminated, OR their team isn't in the playoffs at all.
+    func isEliminated(skater: Skater) -> Bool {
+        if let tri = skater.teamTricode {
+            if eliminatedTeams.contains(tri) { return true }
+            // Team isn't in any playoff series — counts as eliminated for fantasy purposes.
+            if !activePlayoffTeams.isEmpty && !activePlayoffTeams.contains(tri) { return true }
+        }
+        return false
     }
 
     func owner(forTeam tri: String?) -> String? {
