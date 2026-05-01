@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-05-01T04:32:54Z",
+  "updated_at": "2026-05-01T07:16:44Z",
   "playoff_start_date": "2026-04-18",
-  "games_processed": 40,
+  "games_processed": 41,
   "today": {
     "date": "2026-05-01",
     "games": [
@@ -503,9 +503,9 @@
     {
       "rank": 2,
       "name": "Jake",
-      "total": 45,
+      "total": 46,
       "team_pts": 15,
-      "skater_pts": 30,
+      "skater_pts": 31,
       "teams": [
         {
           "tricode": "TBL",
@@ -676,9 +676,9 @@
           "headshot_url": "https://assets.nhle.com/mugs/nhl/20252026/EDM/8477934.png",
           "hero_url": "https://assets.nhle.com/mugs/actionshots/1296x729/8477934.jpg",
           "goals": 3,
-          "assists": 6,
-          "games_played": 5,
-          "points": 12,
+          "assists": 7,
+          "games_played": 6,
+          "points": 13,
           "games": [
             {
               "date": "2026-04-20",
@@ -729,6 +729,16 @@
               "goals": 2,
               "assists": 0,
               "points": 4
+            },
+            {
+              "date": "2026-04-30",
+              "opp": "ANA",
+              "home_or_away": "away",
+              "team_score": 2,
+              "opp_score": 5,
+              "goals": 0,
+              "assists": 1,
+              "points": 1
             }
           ]
         },
@@ -855,8 +865,8 @@
     {
       "rank": 3,
       "name": "Tim",
-      "total": 39,
-      "team_pts": 16,
+      "total": 42,
+      "team_pts": 19,
       "skater_pts": 23,
       "teams": [
         {
@@ -920,7 +930,7 @@
         {
           "tricode": "ANA",
           "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/ana.png",
-          "points": 8,
+          "points": 11,
           "games": [
             {
               "opp": "EDM",
@@ -973,6 +983,17 @@
                 "L"
               ],
               "date": "2026-04-28"
+            },
+            {
+              "opp": "EDM",
+              "goals_for": 5,
+              "goals_against": 2,
+              "points": 3,
+              "tags": [
+                "W",
+                "5+G"
+              ],
+              "date": "2026-04-30"
             }
           ]
         }
@@ -1731,6 +1752,16 @@
                 "W"
               ],
               "date": "2026-04-28"
+            },
+            {
+              "opp": "ANA",
+              "goals_for": 2,
+              "goals_against": 5,
+              "points": 0,
+              "tags": [
+                "L"
+              ],
+              "date": "2026-04-30"
             }
           ]
         }
@@ -2848,7 +2879,7 @@
           "hero_url": "https://assets.nhle.com/mugs/actionshots/1296x729/8478402.jpg",
           "goals": 1,
           "assists": 5,
-          "games_played": 5,
+          "games_played": 6,
           "points": 7,
           "games": [
             {
@@ -2900,6 +2931,16 @@
               "goals": 0,
               "assists": 2,
               "points": 2
+            },
+            {
+              "date": "2026-04-30",
+              "opp": "ANA",
+              "home_or_away": "away",
+              "team_score": 2,
+              "opp_score": 5,
+              "goals": 0,
+              "assists": 0,
+              "points": 0
             }
           ]
         },
@@ -2966,7 +3007,7 @@
           "hero_url": "https://assets.nhle.com/mugs/actionshots/1296x729/8480803.jpg",
           "goals": 1,
           "assists": 6,
-          "games_played": 5,
+          "games_played": 6,
           "points": 8,
           "games": [
             {
@@ -3018,6 +3059,16 @@
               "goals": 0,
               "assists": 3,
               "points": 3
+            },
+            {
+              "date": "2026-04-30",
+              "opp": "ANA",
+              "home_or_away": "away",
+              "team_score": 2,
+              "opp_score": 5,
+              "goals": 0,
+              "assists": 0,
+              "points": 0
             }
           ]
         },
