@@ -1,78 +1,32 @@
 {
-  "updated_at": "2026-05-01T23:08:17Z",
+  "updated_at": "2026-05-02T00:07:01Z",
   "playoff_start_date": "2026-04-18",
   "games_processed": 41,
   "today": {
-    "date": "2026-05-01",
+    "date": "2026-05-02",
     "games": [
       {
-        "id": 2025030126,
-        "state": "PRE",
-        "start_utc": "2026-05-01T23:00:00Z",
-        "period": null,
-        "clock": null,
-        "away": {
-          "tricode": "TBL",
-          "name": "Lightning",
-          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/tb.png",
-          "score": null,
-          "record": "2-3"
-        },
-        "home": {
-          "tricode": "MTL",
-          "name": "Canadiens",
-          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/mtl.png",
-          "score": null,
-          "record": "3-2"
-        },
-        "series_title": "1st Round \u00b7 Game 6",
-        "series_status": "MTL leads 3-2"
-      },
-      {
-        "id": 2025030116,
-        "state": "PRE",
-        "start_utc": "2026-05-01T23:30:00Z",
-        "period": null,
-        "clock": null,
-        "away": {
-          "tricode": "BUF",
-          "name": "Sabres",
-          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/buf.png",
-          "score": null,
-          "record": "3-2"
-        },
-        "home": {
-          "tricode": "BOS",
-          "name": "Bruins",
-          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/bos.png",
-          "score": null,
-          "record": "2-3"
-        },
-        "series_title": "1st Round \u00b7 Game 6",
-        "series_status": "BUF leads 3-2"
-      },
-      {
-        "id": 2025030176,
+        "id": 2025030221,
         "state": "FUT",
-        "start_utc": "2026-05-02T02:00:00Z",
+        "start_utc": "2026-05-03T00:00:00Z",
         "period": null,
         "clock": null,
         "away": {
-          "tricode": "VGK",
-          "name": "Golden Knights",
-          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/vgk.png",
+          "tricode": "PHI",
+          "name": "Flyers",
+          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/phi.png",
           "score": null,
-          "record": "3-2"
+          "record": "4-2"
         },
         "home": {
-          "tricode": "UTA",
-          "name": "Mammoth",
-          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/uta.png",
+          "tricode": "CAR",
+          "name": "Hurricanes",
+          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/car.png",
           "score": null,
-          "record": "2-3"
+          "record": "4-0"
         },
-        "series_title": "1st Round \u00b7 Game 6",
-        "series_status": "VGK leads 3-2"
+        "series_title": "2nd Round \u00b7 Game 1",
+        "series_status": "Tied 0-0"
       }
     ]
   },
