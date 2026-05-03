@@ -145,7 +145,7 @@ private struct SkaterRowIOS: View {
 
             VStack(alignment: .leading, spacing: 2) {
                 HStack(spacing: 6) {
-                    Text(owned.skater.name)
+                    Text(shortName(owned.skater.name))
                         .font(.subheadline.weight(.semibold))
                         .lineLimit(1)
                     if isEliminated { EliminatedBadge(compact: true) }
@@ -171,6 +171,13 @@ private struct SkaterRowIOS: View {
             }
         }
         .padding(.vertical, 2)
+    }
+
+    /// "Connor McDavid" → "C. McDavid"; multi-part last names preserved.
+    private func shortName(_ full: String) -> String {
+        let parts = full.split(separator: " ", maxSplits: 1, omittingEmptySubsequences: true)
+        guard parts.count == 2, let initial = parts[0].first else { return full }
+        return "\(initial). \(parts[1])"
     }
 
     @ViewBuilder
