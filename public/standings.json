@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-03T22:09:26Z",
+  "updated_at": "2026-05-03T23:05:04Z",
   "playoff_start_date": "2026-04-18",
   "games_processed": 45,
   "today": {
@@ -10,7 +10,7 @@
         "state": "LIVE",
         "start_utc": "2026-05-03T22:00:00Z",
         "period": {
-          "number": 1,
+          "number": 2,
           "type": "REG"
         },
         "clock": {
@@ -22,7 +22,7 @@
           "tricode": "MTL",
           "name": "Canadiens",
           "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/mtl.png",
-          "score": 0,
+          "score": 1,
           "record": null
         },
         "home": {
