@@ -1,32 +1,55 @@
 {
-  "updated_at": "2026-05-05T23:02:24Z",
+  "updated_at": "2026-05-06T00:01:55Z",
   "playoff_start_date": "2026-04-18",
   "games_processed": 49,
   "today": {
-    "date": "2026-05-05",
+    "date": "2026-05-06",
     "games": [
       {
-        "id": 2025030232,
+        "id": 2025030211,
         "state": "FUT",
-        "start_utc": "2026-05-06T00:00:00Z",
+        "start_utc": "2026-05-06T23:00:00Z",
         "period": null,
         "clock": null,
         "away": {
-          "tricode": "MIN",
-          "name": "Wild",
-          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/min.png",
+          "tricode": "MTL",
+          "name": "Canadiens",
+          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/mtl.png",
           "score": null,
           "record": "4-3"
         },
         "home": {
-          "tricode": "COL",
-          "name": "Avalanche",
-          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/col.png",
+          "tricode": "BUF",
+          "name": "Sabres",
+          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/buf.png",
           "score": null,
-          "record": "5-0"
+          "record": "4-2"
+        },
+        "series_title": "2nd Round \u00b7 Game 1",
+        "series_status": "Tied 0-0"
+      },
+      {
+        "id": 2025030242,
+        "state": "FUT",
+        "start_utc": "2026-05-07T01:30:00Z",
+        "period": null,
+        "clock": null,
+        "away": {
+          "tricode": "ANA",
+          "name": "Ducks",
+          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/ana.png",
+          "score": null,
+          "record": "4-3"
+        },
+        "home": {
+          "tricode": "VGK",
+          "name": "Golden Knights",
+          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/vgk.png",
+          "score": null,
+          "record": "5-2"
         },
         "series_title": "2nd Round \u00b7 Game 2",
-        "series_status": "COL leads 1-0"
+        "series_status": "VGK leads 1-0"
       }
     ]
   },
