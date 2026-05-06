@@ -44,6 +44,8 @@ targets:
       path: PlayoffPoolIOS/Info.plist
       properties:
         CFBundleDisplayName: Playoff Pool
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        CFBundleShortVersionString: $(MARKETING_VERSION)
         LSRequiresIPhoneOS: true
         UILaunchScreen: {}
         UISupportedInterfaceOrientations:
