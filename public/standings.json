@@ -1,62 +1,32 @@
 {
-  "updated_at": "2026-05-06T23:36:41Z",
+  "updated_at": "2026-05-07T01:23:37Z",
   "playoff_start_date": "2026-04-18",
   "games_processed": 50,
   "today": {
-    "date": "2026-05-06",
+    "date": "2026-05-07",
     "games": [
       {
-        "id": 2025030211,
-        "state": "LIVE",
-        "start_utc": "2026-05-06T23:00:00Z",
-        "period": {
-          "number": 1,
-          "type": "REG"
-        },
-        "clock": {
-          "time_remaining": "05:02",
-          "in_intermission": false,
-          "running": false
-        },
-        "away": {
-          "tricode": "MTL",
-          "name": "Canadiens",
-          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/mtl.png",
-          "score": 0,
-          "record": null
-        },
-        "home": {
-          "tricode": "BUF",
-          "name": "Sabres",
-          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/buf.png",
-          "score": 2,
-          "record": null
-        },
-        "series_title": "2nd Round \u00b7 Game 1",
-        "series_status": "Tied 0-0"
-      },
-      {
-        "id": 2025030242,
+        "id": 2025030223,
         "state": "FUT",
-        "start_utc": "2026-05-07T01:30:00Z",
+        "start_utc": "2026-05-08T00:00:00Z",
         "period": null,
         "clock": null,
         "away": {
-          "tricode": "ANA",
-          "name": "Ducks",
-          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/ana.png",
+          "tricode": "CAR",
+          "name": "Hurricanes",
+          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/car.png",
           "score": null,
-          "record": "4-3"
+          "record": "6-0"
         },
         "home": {
-          "tricode": "VGK",
-          "name": "Golden Knights",
-          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/vgk.png",
+          "tricode": "PHI",
+          "name": "Flyers",
+          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/phi.png",
           "score": null,
-          "record": "5-2"
+          "record": "4-4"
         },
-        "series_title": "2nd Round \u00b7 Game 2",
-        "series_status": "VGK leads 1-0"
+        "series_title": "2nd Round \u00b7 Game 3",
+        "series_status": "CAR leads 2-0"
       }
     ]
   },
