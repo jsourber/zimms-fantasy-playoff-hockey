@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-08T22:41:25Z",
+  "updated_at": "2026-05-08T23:42:22Z",
   "playoff_start_date": "2026-04-18",
   "games_processed": 53,
   "today": {
@@ -7,23 +7,30 @@
     "games": [
       {
         "id": 2025030212,
-        "state": "PRE",
+        "state": "LIVE",
         "start_utc": "2026-05-08T23:00:00Z",
-        "period": null,
-        "clock": null,
+        "period": {
+          "number": 1,
+          "type": "REG"
+        },
+        "clock": {
+          "time_remaining": "03:11",
+          "in_intermission": false,
+          "running": false
+        },
         "away": {
           "tricode": "MTL",
           "name": "Canadiens",
           "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/mtl.png",
-          "score": null,
-          "record": "4-4"
+          "score": 2,
+          "record": null
         },
         "home": {
           "tricode": "BUF",
           "name": "Sabres",
           "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/buf.png",
-          "score": null,
-          "record": "5-2"
+          "score": 0,
+          "record": null
         },
         "series_title": "2nd Round \u00b7 Game 2",
         "series_status": "BUF leads 1-0"
