@@ -1,62 +1,55 @@
 {
-  "updated_at": "2026-05-08T23:42:22Z",
+  "updated_at": "2026-05-09T01:25:48Z",
   "playoff_start_date": "2026-04-18",
   "games_processed": 53,
   "today": {
-    "date": "2026-05-08",
+    "date": "2026-05-09",
     "games": [
       {
-        "id": 2025030212,
-        "state": "LIVE",
-        "start_utc": "2026-05-08T23:00:00Z",
-        "period": {
-          "number": 1,
-          "type": "REG"
-        },
-        "clock": {
-          "time_remaining": "03:11",
-          "in_intermission": false,
-          "running": false
-        },
-        "away": {
-          "tricode": "MTL",
-          "name": "Canadiens",
-          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/mtl.png",
-          "score": 2,
-          "record": null
-        },
-        "home": {
-          "tricode": "BUF",
-          "name": "Sabres",
-          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/buf.png",
-          "score": 0,
-          "record": null
-        },
-        "series_title": "2nd Round \u00b7 Game 2",
-        "series_status": "BUF leads 1-0"
-      },
-      {
-        "id": 2025030243,
+        "id": 2025030224,
         "state": "FUT",
-        "start_utc": "2026-05-09T01:30:00Z",
+        "start_utc": "2026-05-09T22:00:00Z",
         "period": null,
         "clock": null,
         "away": {
-          "tricode": "VGK",
-          "name": "Golden Knights",
-          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/vgk.png",
+          "tricode": "CAR",
+          "name": "Hurricanes",
+          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/car.png",
           "score": null,
-          "record": "5-3"
+          "record": "7-0"
         },
         "home": {
-          "tricode": "ANA",
-          "name": "Ducks",
-          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/ana.png",
+          "tricode": "PHI",
+          "name": "Flyers",
+          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/phi.png",
           "score": null,
-          "record": "5-3"
+          "record": "4-5"
+        },
+        "series_title": "2nd Round \u00b7 Game 4",
+        "series_status": "CAR leads 3-0"
+      },
+      {
+        "id": 2025030233,
+        "state": "FUT",
+        "start_utc": "2026-05-10T01:00:00Z",
+        "period": null,
+        "clock": null,
+        "away": {
+          "tricode": "COL",
+          "name": "Avalanche",
+          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/col.png",
+          "score": null,
+          "record": "6-0"
+        },
+        "home": {
+          "tricode": "MIN",
+          "name": "Wild",
+          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/min.png",
+          "score": null,
+          "record": "4-4"
         },
         "series_title": "2nd Round \u00b7 Game 3",
-        "series_status": "Tied 1-1"
+        "series_status": "COL leads 2-0"
       }
     ]
   },
