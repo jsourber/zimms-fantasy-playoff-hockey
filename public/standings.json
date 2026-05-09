@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-09T22:10:34Z",
+  "updated_at": "2026-05-09T23:09:17Z",
   "playoff_start_date": "2026-04-18",
   "games_processed": 55,
   "today": {
@@ -7,23 +7,30 @@
     "games": [
       {
         "id": 2025030224,
-        "state": "PRE",
+        "state": "LIVE",
         "start_utc": "2026-05-09T22:00:00Z",
-        "period": null,
-        "clock": null,
+        "period": {
+          "number": 1,
+          "type": "REG"
+        },
+        "clock": {
+          "time_remaining": "01:32",
+          "in_intermission": true,
+          "running": false
+        },
         "away": {
           "tricode": "CAR",
           "name": "Hurricanes",
           "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/car.png",
-          "score": null,
-          "record": "7-0"
+          "score": 0,
+          "record": null
         },
         "home": {
           "tricode": "PHI",
           "name": "Flyers",
           "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/phi.png",
-          "score": null,
-          "record": "4-5"
+          "score": 1,
+          "record": null
         },
         "series_title": "2nd Round \u00b7 Game 4",
         "series_status": "CAR leads 3-0"
