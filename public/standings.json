@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-09T21:23:37Z",
+  "updated_at": "2026-05-09T22:10:34Z",
   "playoff_start_date": "2026-04-18",
   "games_processed": 55,
   "today": {
@@ -7,7 +7,7 @@
     "games": [
       {
         "id": 2025030224,
-        "state": "FUT",
+        "state": "PRE",
         "start_utc": "2026-05-09T22:00:00Z",
         "period": null,
         "clock": null,
