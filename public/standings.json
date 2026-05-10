@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-10T21:29:03Z",
+  "updated_at": "2026-05-10T22:26:57Z",
   "playoff_start_date": "2026-04-18",
   "games_processed": 57,
   "today": {
@@ -4156,7 +4156,7 @@
           "hero_url": "https://assets.nhle.com/mugs/actionshots/1296x729/8485406.jpg",
           "goals": 2,
           "assists": 3,
-          "games_played": 9,
+          "games_played": 10,
           "points": 7,
           "games": [
             {
@@ -4188,6 +4188,16 @@
               "goals": 0,
               "assists": 1,
               "points": 1
+            },
+            {
+              "date": "2026-04-25",
+              "opp": "PIT",
+              "home_or_away": "home",
+              "team_score": 2,
+              "opp_score": 4,
+              "goals": 0,
+              "assists": 0,
+              "points": 0
             },
             {
               "date": "2026-04-27",
