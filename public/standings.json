@@ -1,32 +1,55 @@
 {
-  "updated_at": "2026-05-11T23:15:50Z",
+  "updated_at": "2026-05-12T00:15:17Z",
   "playoff_start_date": "2026-04-18",
   "games_processed": 59,
   "today": {
-    "date": "2026-05-11",
+    "date": "2026-05-12",
     "games": [
       {
-        "id": 2025030234,
+        "id": 2025030214,
         "state": "FUT",
-        "start_utc": "2026-05-12T00:00:00Z",
+        "start_utc": "2026-05-12T23:00:00Z",
         "period": null,
         "clock": null,
         "away": {
-          "tricode": "COL",
-          "name": "Avalanche",
-          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/col.png",
-          "score": null,
-          "record": "6-1"
-        },
-        "home": {
-          "tricode": "MIN",
-          "name": "Wild",
-          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/min.png",
+          "tricode": "BUF",
+          "name": "Sabres",
+          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/buf.png",
           "score": null,
           "record": "5-4"
         },
+        "home": {
+          "tricode": "MTL",
+          "name": "Canadiens",
+          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/mtl.png",
+          "score": null,
+          "record": "6-4"
+        },
         "series_title": "2nd Round \u00b7 Game 4",
-        "series_status": "COL leads 2-1"
+        "series_status": "MTL leads 2-1"
+      },
+      {
+        "id": 2025030245,
+        "state": "FUT",
+        "start_utc": "2026-05-13T01:30:00Z",
+        "period": null,
+        "clock": null,
+        "away": {
+          "tricode": "ANA",
+          "name": "Ducks",
+          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/ana.png",
+          "score": null,
+          "record": "6-4"
+        },
+        "home": {
+          "tricode": "VGK",
+          "name": "Golden Knights",
+          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/vgk.png",
+          "score": null,
+          "record": "6-4"
+        },
+        "series_title": "2nd Round \u00b7 Game 5",
+        "series_status": "Tied 2-2"
       }
     ]
   },
