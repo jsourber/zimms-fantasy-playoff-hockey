@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-05-12T00:15:17Z",
+  "updated_at": "2026-05-12T04:11:03Z",
   "playoff_start_date": "2026-04-18",
-  "games_processed": 59,
+  "games_processed": 60,
   "today": {
     "date": "2026-05-12",
     "games": [
@@ -225,6 +225,16 @@
                 "5+G"
               ],
               "date": "2026-05-09"
+            },
+            {
+              "opp": "COL",
+              "goals_for": 2,
+              "goals_against": 5,
+              "points": 0,
+              "tags": [
+                "L"
+              ],
+              "date": "2026-05-11"
             }
           ]
         }
@@ -910,7 +920,7 @@
           "hero_url": "https://assets.nhle.com/mugs/actionshots/1296x729/8478864.jpg",
           "goals": 4,
           "assists": 10,
-          "games_played": 9,
+          "games_played": 10,
           "points": 18,
           "games": [
             {
@@ -1002,6 +1012,16 @@
               "goals": 1,
               "assists": 2,
               "points": 4
+            },
+            {
+              "date": "2026-05-11",
+              "opp": "COL",
+              "home_or_away": "home",
+              "team_score": 2,
+              "opp_score": 5,
+              "goals": 0,
+              "assists": 0,
+              "points": 0
             }
           ]
         },
@@ -1803,8 +1823,8 @@
     {
       "rank": 4,
       "name": "Jake",
-      "total": 59,
-      "team_pts": 24,
+      "total": 62,
+      "team_pts": 27,
       "skater_pts": 35,
       "teams": [
         {
@@ -1888,7 +1908,7 @@
         {
           "tricode": "COL",
           "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/col.png",
-          "points": 15,
+          "points": 18,
           "games": [
             {
               "opp": "LAK",
@@ -1962,6 +1982,17 @@
                 "L"
               ],
               "date": "2026-05-09"
+            },
+            {
+              "opp": "MIN",
+              "goals_for": 5,
+              "goals_against": 2,
+              "points": 3,
+              "tags": [
+                "W",
+                "5+G"
+              ],
+              "date": "2026-05-11"
             }
           ]
         }
@@ -2298,9 +2329,9 @@
     {
       "rank": 5,
       "name": "Aaron",
-      "total": 52,
+      "total": 56,
       "team_pts": 7,
-      "skater_pts": 45,
+      "skater_pts": 49,
       "teams": [
         {
           "tricode": "OTT",
@@ -2425,10 +2456,10 @@
           "sweater_number": 29,
           "headshot_url": "https://assets.nhle.com/mugs/nhl/20252026/COL/8477492.png",
           "hero_url": "https://assets.nhle.com/mugs/actionshots/1296x729/8477492.jpg",
-          "goals": 5,
+          "goals": 6,
           "assists": 6,
-          "games_played": 7,
-          "points": 16,
+          "games_played": 8,
+          "points": 18,
           "games": [
             {
               "date": "2026-04-19",
@@ -2496,6 +2527,16 @@
               "home_or_away": "away",
               "team_score": 1,
               "opp_score": 5,
+              "goals": 1,
+              "assists": 0,
+              "points": 2
+            },
+            {
+              "date": "2026-05-11",
+              "opp": "MIN",
+              "home_or_away": "away",
+              "team_score": 5,
+              "opp_score": 2,
               "goals": 1,
               "assists": 0,
               "points": 2
@@ -2625,7 +2666,7 @@
           "hero_url": "https://assets.nhle.com/mugs/actionshots/1296x729/8481557.jpg",
           "goals": 7,
           "assists": 4,
-          "games_played": 9,
+          "games_played": 10,
           "points": 18,
           "games": [
             {
@@ -2717,6 +2758,16 @@
               "goals": 1,
               "assists": 0,
               "points": 2
+            },
+            {
+              "date": "2026-05-11",
+              "opp": "COL",
+              "home_or_away": "home",
+              "team_score": 2,
+              "opp_score": 5,
+              "goals": 0,
+              "assists": 0,
+              "points": 0
             }
           ]
         },
@@ -2727,10 +2778,10 @@
           "sweater_number": 11,
           "headshot_url": "https://assets.nhle.com/mugs/nhl/20252026/COL/8475754.png",
           "hero_url": "https://assets.nhle.com/mugs/actionshots/1296x729/8475754.jpg",
-          "goals": 1,
+          "goals": 2,
           "assists": 1,
-          "games_played": 7,
-          "points": 3,
+          "games_played": 8,
+          "points": 5,
           "games": [
             {
               "date": "2026-04-19",
@@ -2801,6 +2852,16 @@
               "goals": 0,
               "assists": 0,
               "points": 0
+            },
+            {
+              "date": "2026-05-11",
+              "opp": "MIN",
+              "home_or_away": "away",
+              "team_score": 5,
+              "opp_score": 2,
+              "goals": 1,
+              "assists": 0,
+              "points": 2
             }
           ]
         }
@@ -3352,523 +3413,10 @@
     },
     {
       "rank": 7,
-      "name": "Gregg",
-      "total": 48,
-      "team_pts": 17,
-      "skater_pts": 31,
-      "teams": [
-        {
-          "tricode": "MTL",
-          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/mtl.png",
-          "points": 16,
-          "games": [
-            {
-              "opp": "TBL",
-              "goals_for": 4,
-              "goals_against": 3,
-              "points": 2,
-              "tags": [
-                "W"
-              ],
-              "date": "2026-04-19"
-            },
-            {
-              "opp": "TBL",
-              "goals_for": 2,
-              "goals_against": 3,
-              "points": 1,
-              "tags": [
-                "OTL"
-              ],
-              "date": "2026-04-21"
-            },
-            {
-              "opp": "TBL",
-              "goals_for": 3,
-              "goals_against": 2,
-              "points": 2,
-              "tags": [
-                "W"
-              ],
-              "date": "2026-04-24"
-            },
-            {
-              "opp": "TBL",
-              "goals_for": 2,
-              "goals_against": 3,
-              "points": 0,
-              "tags": [
-                "L"
-              ],
-              "date": "2026-04-26"
-            },
-            {
-              "opp": "TBL",
-              "goals_for": 3,
-              "goals_against": 2,
-              "points": 2,
-              "tags": [
-                "W"
-              ],
-              "date": "2026-04-29"
-            },
-            {
-              "opp": "TBL",
-              "goals_for": 0,
-              "goals_against": 1,
-              "points": 1,
-              "tags": [
-                "OTL"
-              ],
-              "date": "2026-05-01"
-            },
-            {
-              "opp": "TBL",
-              "goals_for": 2,
-              "goals_against": 1,
-              "points": 2,
-              "tags": [
-                "W"
-              ],
-              "date": "2026-05-03"
-            },
-            {
-              "opp": "BUF",
-              "goals_for": 2,
-              "goals_against": 4,
-              "points": 0,
-              "tags": [
-                "L"
-              ],
-              "date": "2026-05-06"
-            },
-            {
-              "opp": "BUF",
-              "goals_for": 5,
-              "goals_against": 1,
-              "points": 3,
-              "tags": [
-                "W",
-                "5+G"
-              ],
-              "date": "2026-05-08"
-            },
-            {
-              "opp": "BUF",
-              "goals_for": 6,
-              "goals_against": 2,
-              "points": 3,
-              "tags": [
-                "W",
-                "5+G"
-              ],
-              "date": "2026-05-10"
-            }
-          ]
-        },
-        {
-          "tricode": "LAK",
-          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/la.png",
-          "points": 1,
-          "games": [
-            {
-              "opp": "COL",
-              "goals_for": 1,
-              "goals_against": 2,
-              "points": 0,
-              "tags": [
-                "L"
-              ],
-              "date": "2026-04-19"
-            },
-            {
-              "opp": "COL",
-              "goals_for": 1,
-              "goals_against": 2,
-              "points": 1,
-              "tags": [
-                "OTL"
-              ],
-              "date": "2026-04-21"
-            },
-            {
-              "opp": "COL",
-              "goals_for": 2,
-              "goals_against": 4,
-              "points": 0,
-              "tags": [
-                "L"
-              ],
-              "date": "2026-04-23"
-            },
-            {
-              "opp": "COL",
-              "goals_for": 1,
-              "goals_against": 5,
-              "points": 0,
-              "tags": [
-                "L"
-              ],
-              "date": "2026-04-26"
-            }
-          ]
-        }
-      ],
-      "skaters": [
-        {
-          "name": "Connor McDavid",
-          "player_id": 8478402,
-          "team_tricode": "EDM",
-          "sweater_number": 97,
-          "headshot_url": "https://assets.nhle.com/mugs/nhl/20252026/EDM/8478402.png",
-          "hero_url": "https://assets.nhle.com/mugs/actionshots/1296x729/8478402.jpg",
-          "goals": 1,
-          "assists": 5,
-          "games_played": 6,
-          "points": 7,
-          "games": [
-            {
-              "date": "2026-04-20",
-              "opp": "ANA",
-              "home_or_away": "home",
-              "team_score": 4,
-              "opp_score": 3,
-              "goals": 0,
-              "assists": 0,
-              "points": 0
-            },
-            {
-              "date": "2026-04-22",
-              "opp": "ANA",
-              "home_or_away": "home",
-              "team_score": 4,
-              "opp_score": 6,
-              "goals": 0,
-              "assists": 0,
-              "points": 0
-            },
-            {
-              "date": "2026-04-24",
-              "opp": "ANA",
-              "home_or_away": "away",
-              "team_score": 4,
-              "opp_score": 7,
-              "goals": 1,
-              "assists": 1,
-              "points": 3
-            },
-            {
-              "date": "2026-04-26",
-              "opp": "ANA",
-              "home_or_away": "away",
-              "team_score": 3,
-              "opp_score": 4,
-              "goals": 0,
-              "assists": 2,
-              "points": 2
-            },
-            {
-              "date": "2026-04-28",
-              "opp": "ANA",
-              "home_or_away": "home",
-              "team_score": 4,
-              "opp_score": 1,
-              "goals": 0,
-              "assists": 2,
-              "points": 2
-            },
-            {
-              "date": "2026-04-30",
-              "opp": "ANA",
-              "home_or_away": "away",
-              "team_score": 2,
-              "opp_score": 5,
-              "goals": 0,
-              "assists": 0,
-              "points": 0
-            }
-          ]
-        },
-        {
-          "name": "Cale Makar",
-          "player_id": 8480069,
-          "team_tricode": "COL",
-          "sweater_number": 8,
-          "headshot_url": "https://assets.nhle.com/mugs/nhl/20252026/COL/8480069.png",
-          "hero_url": "https://assets.nhle.com/mugs/actionshots/1296x729/8480069.jpg",
-          "goals": 4,
-          "assists": 1,
-          "games_played": 7,
-          "points": 9,
-          "games": [
-            {
-              "date": "2026-04-19",
-              "opp": "LAK",
-              "home_or_away": "home",
-              "team_score": 2,
-              "opp_score": 1,
-              "goals": 0,
-              "assists": 0,
-              "points": 0
-            },
-            {
-              "date": "2026-04-21",
-              "opp": "LAK",
-              "home_or_away": "home",
-              "team_score": 2,
-              "opp_score": 1,
-              "goals": 0,
-              "assists": 0,
-              "points": 0
-            },
-            {
-              "date": "2026-04-23",
-              "opp": "LAK",
-              "home_or_away": "away",
-              "team_score": 4,
-              "opp_score": 2,
-              "goals": 1,
-              "assists": 0,
-              "points": 2
-            },
-            {
-              "date": "2026-04-26",
-              "opp": "LAK",
-              "home_or_away": "away",
-              "team_score": 5,
-              "opp_score": 1,
-              "goals": 1,
-              "assists": 0,
-              "points": 2
-            },
-            {
-              "date": "2026-05-03",
-              "opp": "MIN",
-              "home_or_away": "home",
-              "team_score": 9,
-              "opp_score": 6,
-              "goals": 2,
-              "assists": 1,
-              "points": 5
-            },
-            {
-              "date": "2026-05-05",
-              "opp": "MIN",
-              "home_or_away": "home",
-              "team_score": 5,
-              "opp_score": 2,
-              "goals": 0,
-              "assists": 0,
-              "points": 0
-            },
-            {
-              "date": "2026-05-09",
-              "opp": "MIN",
-              "home_or_away": "away",
-              "team_score": 1,
-              "opp_score": 5,
-              "goals": 0,
-              "assists": 0,
-              "points": 0
-            }
-          ]
-        },
-        {
-          "name": "Evan Bouchard",
-          "player_id": 8480803,
-          "team_tricode": "EDM",
-          "sweater_number": 2,
-          "headshot_url": "https://assets.nhle.com/mugs/nhl/20252026/EDM/8480803.png",
-          "hero_url": "https://assets.nhle.com/mugs/actionshots/1296x729/8480803.jpg",
-          "goals": 1,
-          "assists": 6,
-          "games_played": 6,
-          "points": 8,
-          "games": [
-            {
-              "date": "2026-04-20",
-              "opp": "ANA",
-              "home_or_away": "home",
-              "team_score": 4,
-              "opp_score": 3,
-              "goals": 0,
-              "assists": 0,
-              "points": 0
-            },
-            {
-              "date": "2026-04-22",
-              "opp": "ANA",
-              "home_or_away": "home",
-              "team_score": 4,
-              "opp_score": 6,
-              "goals": 0,
-              "assists": 0,
-              "points": 0
-            },
-            {
-              "date": "2026-04-24",
-              "opp": "ANA",
-              "home_or_away": "away",
-              "team_score": 4,
-              "opp_score": 7,
-              "goals": 0,
-              "assists": 2,
-              "points": 2
-            },
-            {
-              "date": "2026-04-26",
-              "opp": "ANA",
-              "home_or_away": "away",
-              "team_score": 3,
-              "opp_score": 4,
-              "goals": 1,
-              "assists": 1,
-              "points": 3
-            },
-            {
-              "date": "2026-04-28",
-              "opp": "ANA",
-              "home_or_away": "home",
-              "team_score": 4,
-              "opp_score": 1,
-              "goals": 0,
-              "assists": 3,
-              "points": 3
-            },
-            {
-              "date": "2026-04-30",
-              "opp": "ANA",
-              "home_or_away": "away",
-              "team_score": 2,
-              "opp_score": 5,
-              "goals": 0,
-              "assists": 0,
-              "points": 0
-            }
-          ]
-        },
-        {
-          "name": "Porter Martone",
-          "player_id": 8485406,
-          "team_tricode": "PHI",
-          "sweater_number": 94,
-          "headshot_url": "https://assets.nhle.com/mugs/nhl/20252026/PHI/8485406.png",
-          "hero_url": "https://assets.nhle.com/mugs/actionshots/1296x729/8485406.jpg",
-          "goals": 2,
-          "assists": 3,
-          "games_played": 10,
-          "points": 7,
-          "games": [
-            {
-              "date": "2026-04-18",
-              "opp": "PIT",
-              "home_or_away": "away",
-              "team_score": 3,
-              "opp_score": 2,
-              "goals": 1,
-              "assists": 0,
-              "points": 2
-            },
-            {
-              "date": "2026-04-20",
-              "opp": "PIT",
-              "home_or_away": "away",
-              "team_score": 3,
-              "opp_score": 0,
-              "goals": 1,
-              "assists": 0,
-              "points": 2
-            },
-            {
-              "date": "2026-04-22",
-              "opp": "PIT",
-              "home_or_away": "home",
-              "team_score": 5,
-              "opp_score": 2,
-              "goals": 0,
-              "assists": 1,
-              "points": 1
-            },
-            {
-              "date": "2026-04-25",
-              "opp": "PIT",
-              "home_or_away": "home",
-              "team_score": 2,
-              "opp_score": 4,
-              "goals": 0,
-              "assists": 0,
-              "points": 0
-            },
-            {
-              "date": "2026-04-27",
-              "opp": "PIT",
-              "home_or_away": "away",
-              "team_score": 2,
-              "opp_score": 3,
-              "goals": 0,
-              "assists": 0,
-              "points": 0
-            },
-            {
-              "date": "2026-04-29",
-              "opp": "PIT",
-              "home_or_away": "home",
-              "team_score": 1,
-              "opp_score": 0,
-              "goals": 0,
-              "assists": 0,
-              "points": 0
-            },
-            {
-              "date": "2026-05-02",
-              "opp": "CAR",
-              "home_or_away": "away",
-              "team_score": 0,
-              "opp_score": 3,
-              "goals": 0,
-              "assists": 0,
-              "points": 0
-            },
-            {
-              "date": "2026-05-04",
-              "opp": "CAR",
-              "home_or_away": "away",
-              "team_score": 2,
-              "opp_score": 3,
-              "goals": 0,
-              "assists": 0,
-              "points": 0
-            },
-            {
-              "date": "2026-05-07",
-              "opp": "CAR",
-              "home_or_away": "home",
-              "team_score": 1,
-              "opp_score": 4,
-              "goals": 0,
-              "assists": 1,
-              "points": 1
-            },
-            {
-              "date": "2026-05-09",
-              "opp": "CAR",
-              "home_or_away": "home",
-              "team_score": 2,
-              "opp_score": 3,
-              "goals": 0,
-              "assists": 1,
-              "points": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "rank": 8,
       "name": "Mark",
-      "total": 47,
+      "total": 49,
       "team_pts": 9,
-      "skater_pts": 38,
+      "skater_pts": 40,
       "teams": [
         {
           "tricode": "BOS",
@@ -4014,9 +3562,9 @@
           "headshot_url": "https://assets.nhle.com/mugs/nhl/20252026/COL/8480039.png",
           "hero_url": "https://assets.nhle.com/mugs/actionshots/1296x729/8480039.jpg",
           "goals": 1,
-          "assists": 6,
-          "games_played": 7,
-          "points": 8,
+          "assists": 8,
+          "games_played": 8,
+          "points": 10,
           "games": [
             {
               "date": "2026-04-19",
@@ -4087,6 +3635,16 @@
               "goals": 0,
               "assists": 0,
               "points": 0
+            },
+            {
+              "date": "2026-05-11",
+              "opp": "MIN",
+              "home_or_away": "away",
+              "team_score": 5,
+              "opp_score": 2,
+              "goals": 0,
+              "assists": 2,
+              "points": 2
             }
           ]
         },
@@ -4369,6 +3927,529 @@
               "goals": 0,
               "assists": 0,
               "points": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rank": 8,
+      "name": "Gregg",
+      "total": 48,
+      "team_pts": 17,
+      "skater_pts": 31,
+      "teams": [
+        {
+          "tricode": "MTL",
+          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/mtl.png",
+          "points": 16,
+          "games": [
+            {
+              "opp": "TBL",
+              "goals_for": 4,
+              "goals_against": 3,
+              "points": 2,
+              "tags": [
+                "W"
+              ],
+              "date": "2026-04-19"
+            },
+            {
+              "opp": "TBL",
+              "goals_for": 2,
+              "goals_against": 3,
+              "points": 1,
+              "tags": [
+                "OTL"
+              ],
+              "date": "2026-04-21"
+            },
+            {
+              "opp": "TBL",
+              "goals_for": 3,
+              "goals_against": 2,
+              "points": 2,
+              "tags": [
+                "W"
+              ],
+              "date": "2026-04-24"
+            },
+            {
+              "opp": "TBL",
+              "goals_for": 2,
+              "goals_against": 3,
+              "points": 0,
+              "tags": [
+                "L"
+              ],
+              "date": "2026-04-26"
+            },
+            {
+              "opp": "TBL",
+              "goals_for": 3,
+              "goals_against": 2,
+              "points": 2,
+              "tags": [
+                "W"
+              ],
+              "date": "2026-04-29"
+            },
+            {
+              "opp": "TBL",
+              "goals_for": 0,
+              "goals_against": 1,
+              "points": 1,
+              "tags": [
+                "OTL"
+              ],
+              "date": "2026-05-01"
+            },
+            {
+              "opp": "TBL",
+              "goals_for": 2,
+              "goals_against": 1,
+              "points": 2,
+              "tags": [
+                "W"
+              ],
+              "date": "2026-05-03"
+            },
+            {
+              "opp": "BUF",
+              "goals_for": 2,
+              "goals_against": 4,
+              "points": 0,
+              "tags": [
+                "L"
+              ],
+              "date": "2026-05-06"
+            },
+            {
+              "opp": "BUF",
+              "goals_for": 5,
+              "goals_against": 1,
+              "points": 3,
+              "tags": [
+                "W",
+                "5+G"
+              ],
+              "date": "2026-05-08"
+            },
+            {
+              "opp": "BUF",
+              "goals_for": 6,
+              "goals_against": 2,
+              "points": 3,
+              "tags": [
+                "W",
+                "5+G"
+              ],
+              "date": "2026-05-10"
+            }
+          ]
+        },
+        {
+          "tricode": "LAK",
+          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/la.png",
+          "points": 1,
+          "games": [
+            {
+              "opp": "COL",
+              "goals_for": 1,
+              "goals_against": 2,
+              "points": 0,
+              "tags": [
+                "L"
+              ],
+              "date": "2026-04-19"
+            },
+            {
+              "opp": "COL",
+              "goals_for": 1,
+              "goals_against": 2,
+              "points": 1,
+              "tags": [
+                "OTL"
+              ],
+              "date": "2026-04-21"
+            },
+            {
+              "opp": "COL",
+              "goals_for": 2,
+              "goals_against": 4,
+              "points": 0,
+              "tags": [
+                "L"
+              ],
+              "date": "2026-04-23"
+            },
+            {
+              "opp": "COL",
+              "goals_for": 1,
+              "goals_against": 5,
+              "points": 0,
+              "tags": [
+                "L"
+              ],
+              "date": "2026-04-26"
+            }
+          ]
+        }
+      ],
+      "skaters": [
+        {
+          "name": "Connor McDavid",
+          "player_id": 8478402,
+          "team_tricode": "EDM",
+          "sweater_number": 97,
+          "headshot_url": "https://assets.nhle.com/mugs/nhl/20252026/EDM/8478402.png",
+          "hero_url": "https://assets.nhle.com/mugs/actionshots/1296x729/8478402.jpg",
+          "goals": 1,
+          "assists": 5,
+          "games_played": 6,
+          "points": 7,
+          "games": [
+            {
+              "date": "2026-04-20",
+              "opp": "ANA",
+              "home_or_away": "home",
+              "team_score": 4,
+              "opp_score": 3,
+              "goals": 0,
+              "assists": 0,
+              "points": 0
+            },
+            {
+              "date": "2026-04-22",
+              "opp": "ANA",
+              "home_or_away": "home",
+              "team_score": 4,
+              "opp_score": 6,
+              "goals": 0,
+              "assists": 0,
+              "points": 0
+            },
+            {
+              "date": "2026-04-24",
+              "opp": "ANA",
+              "home_or_away": "away",
+              "team_score": 4,
+              "opp_score": 7,
+              "goals": 1,
+              "assists": 1,
+              "points": 3
+            },
+            {
+              "date": "2026-04-26",
+              "opp": "ANA",
+              "home_or_away": "away",
+              "team_score": 3,
+              "opp_score": 4,
+              "goals": 0,
+              "assists": 2,
+              "points": 2
+            },
+            {
+              "date": "2026-04-28",
+              "opp": "ANA",
+              "home_or_away": "home",
+              "team_score": 4,
+              "opp_score": 1,
+              "goals": 0,
+              "assists": 2,
+              "points": 2
+            },
+            {
+              "date": "2026-04-30",
+              "opp": "ANA",
+              "home_or_away": "away",
+              "team_score": 2,
+              "opp_score": 5,
+              "goals": 0,
+              "assists": 0,
+              "points": 0
+            }
+          ]
+        },
+        {
+          "name": "Cale Makar",
+          "player_id": 8480069,
+          "team_tricode": "COL",
+          "sweater_number": 8,
+          "headshot_url": "https://assets.nhle.com/mugs/nhl/20252026/COL/8480069.png",
+          "hero_url": "https://assets.nhle.com/mugs/actionshots/1296x729/8480069.jpg",
+          "goals": 4,
+          "assists": 1,
+          "games_played": 8,
+          "points": 9,
+          "games": [
+            {
+              "date": "2026-04-19",
+              "opp": "LAK",
+              "home_or_away": "home",
+              "team_score": 2,
+              "opp_score": 1,
+              "goals": 0,
+              "assists": 0,
+              "points": 0
+            },
+            {
+              "date": "2026-04-21",
+              "opp": "LAK",
+              "home_or_away": "home",
+              "team_score": 2,
+              "opp_score": 1,
+              "goals": 0,
+              "assists": 0,
+              "points": 0
+            },
+            {
+              "date": "2026-04-23",
+              "opp": "LAK",
+              "home_or_away": "away",
+              "team_score": 4,
+              "opp_score": 2,
+              "goals": 1,
+              "assists": 0,
+              "points": 2
+            },
+            {
+              "date": "2026-04-26",
+              "opp": "LAK",
+              "home_or_away": "away",
+              "team_score": 5,
+              "opp_score": 1,
+              "goals": 1,
+              "assists": 0,
+              "points": 2
+            },
+            {
+              "date": "2026-05-03",
+              "opp": "MIN",
+              "home_or_away": "home",
+              "team_score": 9,
+              "opp_score": 6,
+              "goals": 2,
+              "assists": 1,
+              "points": 5
+            },
+            {
+              "date": "2026-05-05",
+              "opp": "MIN",
+              "home_or_away": "home",
+              "team_score": 5,
+              "opp_score": 2,
+              "goals": 0,
+              "assists": 0,
+              "points": 0
+            },
+            {
+              "date": "2026-05-09",
+              "opp": "MIN",
+              "home_or_away": "away",
+              "team_score": 1,
+              "opp_score": 5,
+              "goals": 0,
+              "assists": 0,
+              "points": 0
+            },
+            {
+              "date": "2026-05-11",
+              "opp": "MIN",
+              "home_or_away": "away",
+              "team_score": 5,
+              "opp_score": 2,
+              "goals": 0,
+              "assists": 0,
+              "points": 0
+            }
+          ]
+        },
+        {
+          "name": "Evan Bouchard",
+          "player_id": 8480803,
+          "team_tricode": "EDM",
+          "sweater_number": 2,
+          "headshot_url": "https://assets.nhle.com/mugs/nhl/20252026/EDM/8480803.png",
+          "hero_url": "https://assets.nhle.com/mugs/actionshots/1296x729/8480803.jpg",
+          "goals": 1,
+          "assists": 6,
+          "games_played": 6,
+          "points": 8,
+          "games": [
+            {
+              "date": "2026-04-20",
+              "opp": "ANA",
+              "home_or_away": "home",
+              "team_score": 4,
+              "opp_score": 3,
+              "goals": 0,
+              "assists": 0,
+              "points": 0
+            },
+            {
+              "date": "2026-04-22",
+              "opp": "ANA",
+              "home_or_away": "home",
+              "team_score": 4,
+              "opp_score": 6,
+              "goals": 0,
+              "assists": 0,
+              "points": 0
+            },
+            {
+              "date": "2026-04-24",
+              "opp": "ANA",
+              "home_or_away": "away",
+              "team_score": 4,
+              "opp_score": 7,
+              "goals": 0,
+              "assists": 2,
+              "points": 2
+            },
+            {
+              "date": "2026-04-26",
+              "opp": "ANA",
+              "home_or_away": "away",
+              "team_score": 3,
+              "opp_score": 4,
+              "goals": 1,
+              "assists": 1,
+              "points": 3
+            },
+            {
+              "date": "2026-04-28",
+              "opp": "ANA",
+              "home_or_away": "home",
+              "team_score": 4,
+              "opp_score": 1,
+              "goals": 0,
+              "assists": 3,
+              "points": 3
+            },
+            {
+              "date": "2026-04-30",
+              "opp": "ANA",
+              "home_or_away": "away",
+              "team_score": 2,
+              "opp_score": 5,
+              "goals": 0,
+              "assists": 0,
+              "points": 0
+            }
+          ]
+        },
+        {
+          "name": "Porter Martone",
+          "player_id": 8485406,
+          "team_tricode": "PHI",
+          "sweater_number": 94,
+          "headshot_url": "https://assets.nhle.com/mugs/nhl/20252026/PHI/8485406.png",
+          "hero_url": "https://assets.nhle.com/mugs/actionshots/1296x729/8485406.jpg",
+          "goals": 2,
+          "assists": 3,
+          "games_played": 10,
+          "points": 7,
+          "games": [
+            {
+              "date": "2026-04-18",
+              "opp": "PIT",
+              "home_or_away": "away",
+              "team_score": 3,
+              "opp_score": 2,
+              "goals": 1,
+              "assists": 0,
+              "points": 2
+            },
+            {
+              "date": "2026-04-20",
+              "opp": "PIT",
+              "home_or_away": "away",
+              "team_score": 3,
+              "opp_score": 0,
+              "goals": 1,
+              "assists": 0,
+              "points": 2
+            },
+            {
+              "date": "2026-04-22",
+              "opp": "PIT",
+              "home_or_away": "home",
+              "team_score": 5,
+              "opp_score": 2,
+              "goals": 0,
+              "assists": 1,
+              "points": 1
+            },
+            {
+              "date": "2026-04-25",
+              "opp": "PIT",
+              "home_or_away": "home",
+              "team_score": 2,
+              "opp_score": 4,
+              "goals": 0,
+              "assists": 0,
+              "points": 0
+            },
+            {
+              "date": "2026-04-27",
+              "opp": "PIT",
+              "home_or_away": "away",
+              "team_score": 2,
+              "opp_score": 3,
+              "goals": 0,
+              "assists": 0,
+              "points": 0
+            },
+            {
+              "date": "2026-04-29",
+              "opp": "PIT",
+              "home_or_away": "home",
+              "team_score": 1,
+              "opp_score": 0,
+              "goals": 0,
+              "assists": 0,
+              "points": 0
+            },
+            {
+              "date": "2026-05-02",
+              "opp": "CAR",
+              "home_or_away": "away",
+              "team_score": 0,
+              "opp_score": 3,
+              "goals": 0,
+              "assists": 0,
+              "points": 0
+            },
+            {
+              "date": "2026-05-04",
+              "opp": "CAR",
+              "home_or_away": "away",
+              "team_score": 2,
+              "opp_score": 3,
+              "goals": 0,
+              "assists": 0,
+              "points": 0
+            },
+            {
+              "date": "2026-05-07",
+              "opp": "CAR",
+              "home_or_away": "home",
+              "team_score": 1,
+              "opp_score": 4,
+              "goals": 0,
+              "assists": 1,
+              "points": 1
+            },
+            {
+              "date": "2026-05-09",
+              "opp": "CAR",
+              "home_or_away": "home",
+              "team_score": 2,
+              "opp_score": 3,
+              "goals": 0,
+              "assists": 1,
+              "points": 1
             }
           ]
         }
