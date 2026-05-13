@@ -1,62 +1,32 @@
 {
-  "updated_at": "2026-05-12T23:35:13Z",
+  "updated_at": "2026-05-13T01:28:23Z",
   "playoff_start_date": "2026-04-18",
   "games_processed": 60,
   "today": {
-    "date": "2026-05-12",
+    "date": "2026-05-13",
     "games": [
       {
-        "id": 2025030214,
-        "state": "LIVE",
-        "start_utc": "2026-05-12T23:00:00Z",
-        "period": {
-          "number": 1,
-          "type": "REG"
-        },
-        "clock": {
-          "time_remaining": "11:58",
-          "in_intermission": false,
-          "running": false
-        },
-        "away": {
-          "tricode": "BUF",
-          "name": "Sabres",
-          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/buf.png",
-          "score": 1,
-          "record": null
-        },
-        "home": {
-          "tricode": "MTL",
-          "name": "Canadiens",
-          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/mtl.png",
-          "score": 0,
-          "record": null
-        },
-        "series_title": "2nd Round \u00b7 Game 4",
-        "series_status": "MTL leads 2-1"
-      },
-      {
-        "id": 2025030245,
+        "id": 2025030235,
         "state": "FUT",
-        "start_utc": "2026-05-13T01:30:00Z",
+        "start_utc": "2026-05-14T00:00:00Z",
         "period": null,
         "clock": null,
         "away": {
-          "tricode": "ANA",
-          "name": "Ducks",
-          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/ana.png",
+          "tricode": "MIN",
+          "name": "Wild",
+          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/min.png",
           "score": null,
-          "record": "6-4"
+          "record": "5-5"
         },
         "home": {
-          "tricode": "VGK",
-          "name": "Golden Knights",
-          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/vgk.png",
+          "tricode": "COL",
+          "name": "Avalanche",
+          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/col.png",
           "score": null,
-          "record": "6-4"
+          "record": "7-1"
         },
         "series_title": "2nd Round \u00b7 Game 5",
-        "series_status": "Tied 2-2"
+        "series_status": "COL leads 3-1"
       }
     ]
   },
