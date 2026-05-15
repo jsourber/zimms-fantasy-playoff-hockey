@@ -1,64 +1,10 @@
 {
-  "updated_at": "2026-05-14T23:42:18Z",
+  "updated_at": "2026-05-15T01:46:14Z",
   "playoff_start_date": "2026-04-18",
   "games_processed": 63,
   "today": {
-    "date": "2026-05-14",
-    "games": [
-      {
-        "id": 2025030215,
-        "state": "LIVE",
-        "start_utc": "2026-05-14T23:00:00Z",
-        "period": {
-          "number": 1,
-          "type": "REG"
-        },
-        "clock": {
-          "time_remaining": "03:28",
-          "in_intermission": false,
-          "running": false
-        },
-        "away": {
-          "tricode": "MTL",
-          "name": "Canadiens",
-          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/mtl.png",
-          "score": 2,
-          "record": null
-        },
-        "home": {
-          "tricode": "BUF",
-          "name": "Sabres",
-          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/buf.png",
-          "score": 3,
-          "record": null
-        },
-        "series_title": "2nd Round \u00b7 Game 5",
-        "series_status": "Tied 2-2"
-      },
-      {
-        "id": 2025030246,
-        "state": "FUT",
-        "start_utc": "2026-05-15T01:30:00Z",
-        "period": null,
-        "clock": null,
-        "away": {
-          "tricode": "VGK",
-          "name": "Golden Knights",
-          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/vgk.png",
-          "score": null,
-          "record": "7-4"
-        },
-        "home": {
-          "tricode": "ANA",
-          "name": "Ducks",
-          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/ana.png",
-          "score": null,
-          "record": "6-5"
-        },
-        "series_title": "2nd Round \u00b7 Game 6",
-        "series_status": "VGK leads 3-2"
-      }
-    ]
+    "date": "2026-05-15",
+    "games": []
   },
   "standings": [
     {
