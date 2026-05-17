@@ -1,34 +1,10 @@
 {
-  "updated_at": "2026-05-16T23:02:29Z",
+  "updated_at": "2026-05-17T00:08:03Z",
   "playoff_start_date": "2026-04-18",
   "games_processed": 65,
   "today": {
-    "date": "2026-05-16",
-    "games": [
-      {
-        "id": 2025030216,
-        "state": "FUT",
-        "start_utc": "2026-05-17T00:00:00Z",
-        "period": null,
-        "clock": null,
-        "away": {
-          "tricode": "BUF",
-          "name": "Sabres",
-          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/buf.png",
-          "score": null,
-          "record": "6-5"
-        },
-        "home": {
-          "tricode": "MTL",
-          "name": "Canadiens",
-          "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/mtl.png",
-          "score": null,
-          "record": "7-5"
-        },
-        "series_title": "2nd Round \u00b7 Game 6",
-        "series_status": "MTL leads 3-2"
-      }
-    ]
+    "date": "2026-05-17",
+    "games": []
   },
   "standings": [
     {
